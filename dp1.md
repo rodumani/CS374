@@ -42,6 +42,35 @@ So, We interviewed 7 graduate students with all different majors, face to face.
 - Breakdowns: Sometimes she forget to attach a file to an email. 
 - Photo or Sketch: Nope: 이메일 파일 첨부 실패하는 사진 첨부 예정
 
+
+### Interview4 - done by Rohjoon 
+- Ph.D student in Department of Biology
+- She is Ph.D student in Department of Biology. She runs a protein synthesis experiment. The interview was done on the first floor of building where her laboratory is located. 
+- Observations: 
+She rarely shares documents, except for making an annual report or a conference presentation. When writing a paper, she shares documents only with her professor. The professor prefers old method especially email, and she follows that. She usually do her experiment alone, and there is no case sharing the experiment data before it is finished. Even for a joint research, only the result paper / documents are shared, not the intermediate data. In case of sharing simple data / document / image to other researcher or co-worker, she use Kakao-talk messenger.
+
+- Interesting moments and Breakdowns: 
+As the computer is rarely used during the experiment, the data is shared through research notes by showing it. For a joint research, there is no shared document of their work so that it is hard to follow the progress of each work. 
+
+- Photo or Sketch: 
+![](./image.jpeg)
+Photo of the lab. Every researcher has their own table, and there is no computer on the table as it is useless. 
+
+
+### Interview5 - done by Rohjoon 
+- Ph.D student in Department of Quantum Engineering 
+- He is Ph.D student in Department of Quantum Engineering, conducting research on the material reaction. The interview took place in the laboratory building. 
+- Observations: 
+He usually shares presentation document, weekly report, assignment planning paper, and budget document. As he do his research alone, the data related to the research is not shared anyone excluding the professor. When sharing the document, he use email to the professor, and Kakao-talk to co-worker and other researcher on his lab.  
+
+- Interesting moments and Breakdowns: 
+The laboratory uses Google drive and Band by Naver, to archive documents, lead by the Professor. Basically, documents consist of presentation, and the archived data are used only for displaying the information to other people, not used within the lab.
+
+- Photo or Sketch
+![](./image.jpeg)
+The photo of the instrument of Quantum Engineering laboratory. The research is done individually. If instruments don’t support saving digital data, researcher never have to use the computer during the experiment. 
+
+
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
 - It is necessary to unify the format of the shared document. 
