@@ -72,6 +72,48 @@ The laboratory uses Google drive and Band by Naver, to archive documents, lead b
 The photo of the instrument of Quantum Engineering laboratory. The research is done individually. If instruments don’t support saving digital data, researcher never have to use the computer during the experiment. 
 
 
+### Interview6 - Changje Jeong
+- Interviewee: Ph.D student in KAIST School of Computing Human Computer Interaction Lab.
+- Observations and Iterviews:
+The interviewee shares document very frequently via various ways. He has 8 channels to share files between his lab colleagues and TAs. The main channel is OneNote. Each channels has its own type of documents.
+    1. Microsoft OneNote
+    2. E-Mail
+    3. Overleaf
+    4. G-Box
+    5. Wiki
+    6. Google Groups
+    7. Gitlab
+    8. KakaoTalk.
+
+    He's using Microsoft OneNote for text-sharing. It is the main sharing channel in his lab. It contains minutes and notes. **Although it supports file upload, he's not using it** because download/upload are slow and it's hard to search a file since a file should be embeded in a note. The file list is not supported in OneNote. He also argued **each notes has different format and title** because there isn't standard rule and **it's hard to reformat each documents later**.
+
+    When he needs to report documents (mainly PDFs) to Professor, he's using E-Mail. 
+
+    A Overleaf is a service which supports Latex online editing and sharing. He is using Latex for his thesis and sharing it on Overleaf with professor. **He receives feedback comments as Latex comments.**
+
+    A G-Box is a NAS(Network Attached Storage) and it serves as Shared Storage between lab colleagues. Because it's shared file system, there are many kinds of **uncategorized files, e.g. PDF, word, raw experiment data files, images and videos.**
+
+    Wiki contains manuals of devices and rules of the lab.
+
+    They are using Google Groups for sharing contexts of lab seminars. The files which is related to lab seminars shared in Google Groups as attachments. **He said it's hard to find files in Google Groups because it's rarely used and it's hidden in conversation threads.**
+
+    For sharing codes, they use [Gitlab](https://gitlab.com).
+
+    The last one is KakaoTalk. He uses it to share a file to the TA group talk.
+    ![Changje Jeong Interview6](images/CJ-Interview6.jpg)
+
+
+### Interview7 - Changje Jeong
+- Interviewee: Ph.D student in KAIST Gradudate School of Information Security Multimedia Computing lab.
+- Observations: The interviewee shares documents mainly on NAS. He also uses Google Drive but not often because of HWP file which is not supported on Google Drive to edit. Because his professor is preparing retirement, his lab is not try to adopt new ways of sharing files.
+- Interesting moments:
+1. Manage google docs on NAS by link file because Google Drive's shared documents are hard to organize.
+![Changje Jeong Interview7](images/CJ-Interview7.jpg)
+2. Hard to use Google Docs because of HWP files. They are using HWP because national research proposals should use HWP.
+3. When outside, he asks others in lab to forward file on NAS via Kakaotalk because NAS doens't support mobile.
+- Breackdowns: 
+    - Cannot open file on NAS simultaneously if someone is opening the file. 
+
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
 - It is necessary to unify the format of the shared document. 
