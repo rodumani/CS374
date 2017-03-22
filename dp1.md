@@ -7,6 +7,12 @@ Redesigning the experience of sharing documents by graduate students.
 At the begging of the project, our team wanted to redesign experience about co-working.
 And then, we choose graduate student as our target user population, because we expected that graduate students share documents frequently with professor or labmates in the lab.
 
+We interviewed seven people face to face.
+What we asked to people was as follow.
+``` 
+1. When, where, and how do you share documents?
+2. Why you use that method or channels for sharing?
+```
 
 ## Observations & Interviews
 
