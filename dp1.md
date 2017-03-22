@@ -39,8 +39,10 @@ So, We interviewed 7 graduate students with all different majors, face to face.
 - Interesting moments:
 >1. Because they share many documents with mail, they set the mail sendig format of some documents. 
 >2. When she and her teammates send documents to their advisor, they only use mail. They never use Kakaotalk for public affairs.
-- Breakdowns: Sometimes she forget to attach a file to an email. 
-- Photo or Sketch: Nope: 이메일 파일 첨부 실패하는 사진 첨부 예정
+- Breakdowns: Sometimes she forget to attach a file to an email. And she showed me some mail which she sent a mail with out attachment.
+- Photo:
+![interview of seongwon](/images/interviewee_seongwon.jpg 'Failed mail')
+![interview of seongwon detail](./images/interviewee_seongwon2.jpg 'Detail of the failed mail')
 
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
