@@ -1,11 +1,25 @@
-Design Project 1: Needfinding
-
-
+# Design Project 1: Needfinding
 
 ## Experience 
+Redesigning the experience of sharing documents by graduate students.
 
 ## Observations & Interviews
 
+Interview1 - Seungmin Lee
+---
+- Interviewee: M.S. student in Department of Materials Science and Engineering
+- Observations: Rare use of computers especially on experiments. Only use computers for writing thesis, making posters or PPTs. Shares documents and communicates about the document by off-line.
+- Interesting moments: Uses network folder for archiving and sharing documents, but do not co-work at the archived document.
+- Breakdowns: NEVER USAGE of document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
+- Photo or Sketch: ???
+
+Interview2 - Seungmin Lee
+---
+- Interviewee: M.S. student in Department of Mechanical Engineering
+- Observations: E-mail to professor with a document, then professor replies for deciding meeting appointment. He communicates with his professor almost by off-line.
+- Interesting moments: He said that most of laboratories might not need document sharing tools. From morning to evening, all of the lab members stay and work together in the lab, so they prefer and think efficient to share the document and communicate by off-line.
+- Breakdowns: NEVER USAGE of document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
+- Photo or Sketch: ???
 
 
 ## Needs
