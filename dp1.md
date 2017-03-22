@@ -3,22 +3,25 @@
 ## Experience 
 Redesigning the experience of sharing documents by graduate students.
 
+??? 이 내용을 넣어야 할까요? 넣는다면 여기다 넣는게 맞을까요?
+At the begging of the project, our team wanted to redesign experience about co-working.
+And then, we choose graduate student as our target user population, because we expected that graduate students share documents frequently with professor or labmates in the lab.
+
+
 ## Observations & Interviews
 
-Interview1 - Seungmin Lee
----
+### Interview1 - Seungmin Lee
 - Interviewee: M.S. student in Department of Materials Science and Engineering
-- Observations: Rare use of computers especially on experiments. Only use computers for writing thesis, making posters or PPTs. Shares documents and communicates about the document by off-line.
-- Interesting moments: Uses network folder for archiving and sharing documents, but do not co-work at the archived document.
-- Breakdowns: NEVER USAGE of document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
+- Observations: Rare use of computers especially on experiments. Only use computers for writing thesis, making posters or PPTs. Share documents and communicate about it by off-line.
+- Interesting moments: Use network folder for archiving and sharing documents, but do not co-work with the archived document. Only finished documents are archived.
+- Breakdowns: NEVER USE document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
 - Photo or Sketch: ???
 
-Interview2 - Seungmin Lee
----
+### Interview2 - Seungmin Lee
 - Interviewee: M.S. student in Department of Mechanical Engineering
-- Observations: E-mail to professor with a document, then professor replies for deciding meeting appointment. He communicates with his professor almost by off-line.
-- Interesting moments: He said that most of laboratories might not need document sharing tools. From morning to evening, all of the lab members stay and work together in the lab, so they prefer and think efficient to share the document and communicate by off-line.
-- Breakdowns: NEVER USAGE of document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
+- Observations: Interviewee E-mails to professor with attaching a document, then professor replies to decide off-line meeting appointment. Interviewee communicates with his professor almost by off-line.
+- Interesting moments: He said that most of laboratories might not need document sharing tools. From morning to evening, all of the lab members stay and work together in the lab, so they prefer and think it's efficient to share the document and communicate by off-line.
+- Breakdowns: NEVER USE document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
 - Photo or Sketch: ???
 
 
