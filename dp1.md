@@ -45,7 +45,7 @@ Interview2 - Seungmin Lee
 - If professor do not feel uncomfortable, there won’t any improvements, EVER.
 - If they do not start document sharing from the beginning, it is almost impossible to organize the documents created before they start sharing documents.
 - Needs about sharing way are totally different, as lab’s character different.
-- 공유의 방식은 일의 진행을 위한 공유와 아카이빙을 위한 공유로 크게 구분된다.
+- Sharing way can be largely divided into sharing for the progress of work and sharing for archiving.
 
 
 
