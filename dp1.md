@@ -41,7 +41,7 @@ So, We interviewed 7 graduate students with all different majors, face to face.
 >2. When she and her teammates send documents to their advisor, they only use mail. They never use Kakaotalk for public affairs.
 - Breakdowns: Sometimes she forget to attach a file to an email. And she showed me some mail which she sent a mail with out attachment.
 - Photo:
-|![interview of seongwon](/images/interviewee_seongwon.jpg 'Failed mail')|![interview of seongwon detail](./images/interviewee_seongwon2.jpg 'Detail of the failed mail')|
+| ![interview of seongwon](/images/interviewee_seongwon.jpg 'Failed mail' | ![interview of seongwon detail](./images/interviewee_seongwon2.jpg 'Detail of the failed mail') |
 
 
 ### Interview4 - done by Rohjoon 
