@@ -30,8 +30,8 @@ We interviewed seven people face to face.
 - Interviewee: M.S. student in Department of Civil and Environmental Engineering
 - Observations: Interviewee shared documents rarely. Actually she don't have to share her documents with her team mates in real time with others, so her sharing experience is closer to submission than sharing.
 - Interesting memets:
--Breakdowns:
--Photo or Sketch: Nope (아마 삭제??)
+- Breakdowns:
+- Photo or Sketch: Nope (아마 삭제??)
 
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
