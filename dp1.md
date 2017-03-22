@@ -10,7 +10,8 @@ And then, we choose graduate student as our target user population, because we e
 
 ## Observations & Interviews
 
-We interviewed seven people face to face.
+We wanted to hear about the sharing experiences of various graduate students.
+So, We interviewed 7 graduate students with all different majors, face to face.
 
 ### Interview1 - Seungmin Lee
 - Interviewee: M.S. student in Department of Materials Science and Engineering
@@ -27,11 +28,13 @@ We interviewed seven people face to face.
 - Photo or Sketch: ???
 
 ### Interview3 - Seongwon Lee
-- Interviewee: M.S. student in Department of Civil and Environmental Engineering
-- Observations: Interviewee shared documents rarely. Actually she don't have to share her documents with her team mates in real time with others, so her sharing experience is closer to submission than sharing.
-- Interesting memets:
-- Breakdowns:
-- Photo or Sketch: Nope (아마 삭제??)
+- Interviewee: M.S. student in Department of Civil and Environmental Engineering. She works in tiny lab.
+- Observations: Interviewee shared documents rarely. Actually she don't have to share her documents with her team mates in real time with others, so her sharing experience is closer to submission than sharing. She used only mail for sharing documents. her lab mates use Kakaotalk for sharing a file, but they also only use mail and Kakaotalk. Do not use other methods never. 
+- Interesting moments:
+>1. Because they share many documents with mail, they set the mail sendig format of some documents. 
+>2. When she and her teammates send documents to their advisor, they only use mail. They never use Kakaotalk for public affairs.
+- Breakdowns: Sometimes she forget to attach a file to an email. 
+- Photo or Sketch: Nope: 이메일 파일 첨부 실패하는 사진 첨부 예정
 
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
