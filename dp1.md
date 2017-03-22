@@ -10,6 +10,8 @@ And then, we choose graduate student as our target user population, because we e
 
 ## Observations & Interviews
 
+We interviewed seven people face to face.
+
 ### Interview1 - Seungmin Lee
 - Interviewee: M.S. student in Department of Materials Science and Engineering
 - Observations: Rare use of computers especially on experiments. Only use computers for writing thesis, making posters or PPTs. Share documents and communicate about it by off-line.
@@ -24,6 +26,12 @@ And then, we choose graduate student as our target user population, because we e
 - Breakdowns: NEVER USE document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
 - Photo or Sketch: ???
 
+### Interview3 - Seongwon Lee
+- Interviewee: M.S. student in Department of Civil and Environmental Engineering
+- Observations: Interviewee shared documents rarely. Actually she don't have to share her documents with her team mates in real time with others, so her sharing experience is closer to submission than sharing.
+- Interesting memets:
+-Breakdowns:
+-Photo or Sketch: Nope (아마 삭제??)
 
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
