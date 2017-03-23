@@ -24,14 +24,18 @@ So, We interviewed 7 graduate students with all different majors, face to face.
 - Observations: Rare use of computers especially on experiments. Only use computers for writing thesis, making posters or PPTs. Share documents and communicate about it by off-line.
 - Interesting moments: Use network folder for archiving and sharing documents, but do not co-work with the archived document. Only finished documents are archived.
 - Breakdowns: NEVER USE document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
-- Photo or Sketch: ???
+- Photo or Sketch: 
+![SeungMin Interview1](images/Interview1.jpg)
+In the interviewee's lab, they use network folder to archive documents and files.
 
 ### Interview2 - Seungmin Lee
 - Interviewee: M.S. student in Department of Mechanical Engineering
 - Observations: Interviewee E-mails to professor with attaching a document, then professor replies to decide off-line meeting appointment. Interviewee communicates with his professor almost by off-line.
 - Interesting moments: He said that most of laboratories might not need document sharing tools. From morning to evening, all of the lab members stay and work together in the lab, so they prefer and think it's efficient to share the document and communicate by off-line.
 - Breakdowns: NEVER USE document sharing tools such as google drive, dropbox. And DO NOT see the necessity to introduce any document sharing tools.
-- Photo or Sketch: ???
+- Photo or Sketch: 
+![SeungMin Interview2](images/Interview2.jpg)
+Lab members stay and work together in the lab all day long.
 
 ### Interview3 - Seongwon Lee
 - Interviewee: M.S. student in Department of Civil and Environmental Engineering. She works in tiny lab.
