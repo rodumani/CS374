@@ -83,31 +83,25 @@ The photo of the instrument of Quantum Engineering laboratory. The research is d
 - Interviewee: Ph.D student in KAIST School of Computing Human Computer Interaction Lab.
 - Observations and Iterviews:
 The interviewee shares document very frequently via various ways. He has 8 channels to share files between his lab colleagues and TAs. The main channel is OneNote. Each channels has its own type of documents.
-    1. Microsoft OneNote
-    2. E-Mail
-    3. Overleaf
-    4. G-Box
-    5. Wiki
-    6. Google Groups
-    7. Gitlab
-    8. KakaoTalk.
 
-    He's using Microsoft OneNote for text-sharing. It is the main sharing channel in his lab. It contains minutes and notes. **Although it supports file upload, he's not using it** because download/upload are slow and it's hard to search a file since a file should be embeded in a note. The file list is not supported in OneNote. He also argued **each notes has different format and title** because there isn't standard rule and **it's hard to reformat each documents later**.
+> Breakdowns are styled with bold texts.
 
-    When he needs to report documents (mainly PDFs) to Professor, he's using E-Mail. 
+He's using Microsoft OneNote for text-sharing. It is the main sharing channel in his lab. It contains minutes and notes. **Although it supports file upload, he's not using it** because download/upload are slow and it's hard to search a file since a file should be embeded in a note. The file list is not supported in OneNote. He also argued **each notes has different format and title** because there isn't standard rule and **it's hard to reformat each documents later**.
 
-    A Overleaf is a service which supports Latex online editing and sharing. He is using Latex for his thesis and sharing it on Overleaf with professor. **He receives feedback comments as Latex comments.**
+When he needs to report documents (mainly PDFs) to Professor, he's using E-Mail. 
 
-    A G-Box is a NAS(Network Attached Storage) and it serves as Shared Storage between lab colleagues. Because it's shared file system, there are many kinds of **uncategorized files, e.g. PDF, word, raw experiment data files, images and videos.**
+A Overleaf is a service which supports Latex online editing and sharing. He is using Latex for his thesis and sharing it on Overleaf with professor. **He receives feedback comments as Latex comments.**
 
-    Wiki contains manuals of devices and rules of the lab.
+A G-Box is a NAS(Network Attached Storage) and it serves as Shared Storage between lab colleagues. Because it's shared file system, there are many kinds of **uncategorized files, e.g. PDF, word, raw experiment data files, images and videos.**
 
-    They are using Google Groups for sharing contexts of lab seminars. The files which is related to lab seminars shared in Google Groups as attachments. **He said it's hard to find files in Google Groups because it's rarely used and it's hidden in conversation threads.**
+Wiki contains manuals of devices and rules of the lab.
 
-    For sharing codes, they use [Gitlab](https://gitlab.com).
+They are using Google Groups for sharing contexts of lab seminars. The files which is related to lab seminars shared in Google Groups as attachments. **He said it's hard to find files in Google Groups because it's rarely used and it's hidden in conversation threads.**
 
-    The last one is KakaoTalk. He uses it to share a file to the TA group talk.
-    ![Changje Jeong Interview6](images/CJ-Interview6.jpg)
+For sharing codes, they use [Gitlab](https://gitlab.com).
+
+The last one is KakaoTalk. He uses it to share a file to the TA group talk.
+![Changje Jeong Interview6](images/CJ-Interview6.jpg)
 
 
 ### Interview7
@@ -119,8 +113,7 @@ The interviewee shares document very frequently via various ways. He has 8 chann
 ![Changje Jeong Interview7](images/CJ-Interview7.jpg)
 2. Hard to use Google Docs because of HWP files. They are using HWP because national research proposals should use HWP.
 3. When outside, he asks others in lab to forward file on NAS via Kakaotalk because NAS doens't support mobile.
-- Breackdowns: 
-    - Cannot open file on NAS simultaneously if someone is opening the file. 
+- Breackdowns: Cannot open file on NAS simultaneously if someone is opening the file. 
 
 ## Needs
 - It is necessary for multiple people to see the shared document at the same time. 
@@ -142,13 +135,12 @@ The interviewee shares document very frequently via various ways. He has 8 chann
 - MANY files are sharing with mail than expected.
 - Document sharing channel is more than one.  (At least, Kakaotalk and mail)
 - Sharing way of simple informations and organized documents are different.
-- If professor do not feel uncomfortable, there won’t any improvements, EVER.
+- In the lab, the professor decides the rule of sharing things, so that it is hard to change or improve it. 
 - If they do not start document sharing from the beginning, it is almost impossible to organize the documents created before they start sharing documents.
 - Needs about sharing way are totally different, as lab’s character different.
 - Sharing way can be largely divided into sharing for the progress of work and sharing for archiving.
 
-
-
 ## Studio Reflections
-
+- Some students was confused because some sentences in `Insights` section were not concrete, so we changed them. 
+- TA said that everything was clear, from the target user to needs of them. But he was concerned about developing a solution program. He suggested to utilize GoogleDrive as a base program of the solution. But right now, we should focus on the `needfinding` parts, so we will consider the feedback later when we design the concrete solution.
 
