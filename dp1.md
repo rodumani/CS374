@@ -58,7 +58,7 @@ She rarely shares documents, except for making an annual report or a conference 
 As the computer is rarely used during the experiment, the data is shared through research notes by showing it. For a joint research, there is no shared document of their work so that it is hard to follow the progress of each work. 
 
 - Photo or Sketch: 
-![](./image.jpeg)
+![Rohjoon Interview #4](./images/MJ_biology_lab.jpg)
 Photo of the lab. Every researcher has their own table, and there is no computer on the table as it is useless. 
 
 
@@ -72,7 +72,7 @@ He usually shares presentation document, weekly report, assignment planning pape
 The laboratory uses Google drive and Band by Naver, to archive documents, lead by the Professor. Basically, documents consist of presentation, and the archived data are used only for displaying the information to other people, not used within the lab.
 
 - Photo or Sketch
-![](./image.jpeg)
+![Rohjoon Interview #5](./images/MJ_quantum.jpg)
 The photo of the instrument of Quantum Engineering laboratory. The research is done individually. If instruments don’t support saving digital data, researcher never have to use the computer during the experiment. 
 
 
