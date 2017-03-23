@@ -47,7 +47,7 @@ Lab members stay and work together in the lab all day long.
 
 ![interview of seongwon](/images/interviewee_seongwon.jpg 'Failed mail') | ![interview of seongwon detail](./images/interviewee_seongwon2.jpg 'Detail of the failed mail')
 :---:|:---:
-1|2
+She forgot to attach file|Mail's detail
 
 
 ### Interview4
