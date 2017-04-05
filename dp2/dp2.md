@@ -13,6 +13,7 @@ We were amazed to realize: they are sharing many files with E-mail
 
 1. demographic information such as name, occupation, age, and gender
     ![Photo](./persona.jpg)
+    
     name | age | gender | occupation
     -- | -- | -- | -- 
     김공유 | 28 | male | Ph.D studnet in KAIST SoC
