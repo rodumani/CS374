@@ -54,7 +54,7 @@ We were amazed to realize: they are sharing many files with E-mail
 
 ## Solution Ideas
 1. **HMW remove attachments from mail?**
-    1. Create a cloud storage integrated to save attachments of email
+    1. **Create a cloud storage integrated to save attachments of email**
     2. Save files outside and share only link of the files?
     3. When a user uploads a file, connect it to external service.
     4. If a user share a document on external service, send it to the mail.
@@ -66,19 +66,19 @@ We were amazed to realize: they are sharing many files with E-mail
     10.
 
 2. **HMW give a better way to manage attachment files?**
-    1. Browse files like a folder
+    1. **Browse files like a folder**
     2. Make several cloud folder for attached files, for each mail sharing team.
     3. Make a folder of emails with something attached.
     4. Automatically save the attached files at external file server and browse them.
     5. Filter mail with and without attached files.
     6. Automatically upload it on drive.
     7. Suggest attachment title if it's title is not clear e.g. document.pdf, thesis.docx
-    8. 
-    9.
-    10. 
+    8. Support mark star on attachment.
+    9. Rename attachment.
+    10. Apply plug-ins to an attachment when it arrives.
 
 3. **HMW prevent from forgetting the attachment?**
-    1. Set different background color on editor if attachment exists or not
+    1. **Set different background color on editor if attachment exists or not**
     2. Set different background color on mail-list if attachment exists or not
     3. Automatically group mail by file types
     4. Separate “Send a mail” and “Send file” button
