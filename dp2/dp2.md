@@ -41,19 +41,19 @@ We were amazed to realize: they are sharing many files with E-mail
 
 ## HMW questions
 1. HMW improve E-mail attaching document system?
-2. HMW remove attachments from mail?
+2. **HMW remove attachments from mail?**
 3. HMW do not use E-mail when sharing file?
-4. HMW treat attachments of mails as typical files?
+4. **HMW give a better way to manage attachment files?**
 5. HMW should not make a file needed to be shared?
 6. HMW directly share a document via email when it is saved?
 7. HMW a lab leader take care of all file managements?
-8. HMW treat a mail with/without attachment in different way?
+8. **HMW prevent from forgetting the attachment?**
 9. HMW save attachments from the email automatically on the local computer, when the mail is received. 
 10. HMW support deep search inside to attachments.
 
 
 ## Solution Ideas
-1. HMW remove attachments from mail?
+1. **HMW remove attachments from mail?**
     1. Create a cloud storage integrated to save attachments of email
     2. Save files outside and share only link of the files?
     3. When a user uploads a file, connect it to external service.
@@ -65,7 +65,7 @@ We were amazed to realize: they are sharing many files with E-mail
     9.
     10.
 
-2. HMW treat attachments of mails as typical files?
+2. **HMW give a better way to manage attachment files?**
     1. Browse files like a folder
     2. Make several cloud folder for attached files, for each mail sharing team.
     3. Make a folder of emails with something attached.
@@ -77,7 +77,7 @@ We were amazed to realize: they are sharing many files with E-mail
     9.
     10. 
 
-3. HMW treat a mail with/without attachment in different way?
+3. **HMW prevent from forgetting the attachment?**
     1. Set different background color on editor if attachment exists or not
     2. Set different background color on mail-list if attachment exists or not
     3. Automatically group mail by file types
