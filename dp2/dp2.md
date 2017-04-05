@@ -52,7 +52,7 @@ We were amazed to realize: they are sharing many files with E-mail
 10. HMW support deep search inside to attachments.
 
 > How did we select our solution ideas?
-> We voted on each HMW-solutions
+> List solution ideas using post-its and we voted using pen to mark on the post-its.
 
 ## Solution Ideas
 1. **HMW remove attachments from mail?**
@@ -63,9 +63,9 @@ We were amazed to realize: they are sharing many files with E-mail
     5. Put the content of attachment into body of a mail.
     6. Share a document in hard-copy.
     7. Remove attachment feature from mail and force to use other share tools.
-    8. 
-    9.
-    10.
+    8. Use other solutions except mail. e.g. Kakaotalk or slack.
+    9. 
+    10. 
 
 2. **HMW give a better way to manage attachment files?**
     1. **Browse files like a folder**
