@@ -16,7 +16,7 @@ We were amazed to realize: they are sharing many files with E-mail
     
     name | age | gender | occupation
     -- | -- | -- | -- 
-    김공유 | 28 | male | Ph.D studnet in KAIST SoC
+    김공유 Gongyu Kim | 28 | male | Ph.D studnet in KAIST SoC
 
 2. motivations
 
@@ -54,21 +54,28 @@ We were amazed to realize: they are sharing many files with E-mail
 
 ## Solution Ideas
 1. HMW remove attachments from mail?
-    1. create a cloud storage integrated to save attachments of email
-    2. save files outside and share only link of the files?
-    3. 파일을 업로드하면 외부 서비스로 연결한다
-    4. 다른 서비스를 통해 문서를 공유하면 메일을 자동으로 보내준다
-    5. 문서의 업로드하면 문서의 내용을 메일의 본문으로 발송한다
-    6. 랩의 규모가 크지 않다면 구두로(오프라인으로) 문서를 공유하는 것은 어떨까
+    1. Create a cloud storage integrated to save attachments of email
+    2. Save files outside and share only link of the files?
+    3. When a user uploads a file, connect it to external service.
+    4. If a user share a document on external service, send it to the mail.
+    5. Put the content of attachment into body of mail.
+    6. Share a document in hard-copy.
+    7. 
+    8.
+    9.
+    10.
 
 2. HMW treat attachments of mails as typical files?
-    1. browse files like a folder
+    1. Browse files like a folder
     2. Make several cloud folder for attached files, for each mail sharing team.
-    3. make a folder of emails with something attached.
-    4. automatically save the attached files at external file server and browse them.
+    3. Make a folder of emails with something attached.
+    4. Automatically save the attached files at external file server and browse them.
     5. Filter mail with and without attached files.
     6. Automatically upload it on drive.
-    7. 첨부된 파일의 이름이 불명확한 경우 파일의 이름을 바꿔준다.
+    7. Suggest attachment title if it's title is not clear e.g. document.pdf, thesis.docx
+    8. 
+    9.
+    10. 
 
 3. HMW treat a mail with/without attachment in different way?
     1. Set different background color on editor if attachment exists or not
@@ -79,6 +86,9 @@ We were amazed to realize: they are sharing many files with E-mail
     6. Make thread for related files.(version control system for mail.)
     7. Add a tag or an image on the title of a mail, which represents attachments.
     8. When an attachment doesn’t exists, show an alert message to get confirm from the user.
+    9. Modify attachment before a receiver didn't open yet.
+    10. Support receiving check on attachments.
+
 
 ## Top3 Solution
 1. Create a cloud storage integrated to save attachments of email
