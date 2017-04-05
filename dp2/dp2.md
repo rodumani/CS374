@@ -51,17 +51,19 @@ We were amazed to realize: they are sharing many files with E-mail
 9. HMW save attachments from the email automatically on the local computer, when the mail is received. 
 10. HMW support deep search inside to attachments.
 
+> How did we select our solution ideas?
+> We voted on each HMW-solutions
 
 ## Solution Ideas
 1. **HMW remove attachments from mail?**
     1. **Create a cloud storage integrated to save attachments of email**
     2. Save files outside and share only link of the files?
     3. When a user uploads a file, connect it to external service.
-    4. If a user share a document on external service, send it to the mail.
-    5. Put the content of attachment into body of mail.
+    4. Share a document to an external service, send it to a mail.
+    5. Put the content of attachment into body of a mail.
     6. Share a document in hard-copy.
-    7. 
-    8.
+    7. Remove attachment feature from mail and force to use other share tools.
+    8. 
     9.
     10.
 
@@ -104,3 +106,15 @@ We were amazed to realize: they are sharing many files with E-mail
 
 3. Set different background color on editor if attachment exists or not
 ![story-editor](./story-editor.png)
+
+
+## Studio Feedbacks
+1. (Student) Can you make in on the existing mail system? 
+  
+  Yes. We can make it over the existing mail system. There are already external mail apps which support POP3 or IMAP.
+ 
+2. (TA) I like the storyboard about TA who receive homework mails from students. It's hard to combine and manage files. However, sometimes there is no information on the file name and it's written in the mail body.
+
+  We didn't think about this kind of problem before. However, we agree that it'll be good to use mail body's keywords to tag attachment.
+
+3. (TA) Suggest to support e-mail address as a rule of grouping attachments. Because TA already know students' mail addresses, it'll be very helpful.
