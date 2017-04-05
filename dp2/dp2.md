@@ -51,8 +51,7 @@ We were amazed to realize: they are sharing many files with E-mail
 9. HMW save attachments from the email automatically on the local computer, when the mail is received. 
 10. HMW support deep search inside to attachments.
 
-> How did we select our solution ideas?
-> 
+#### How did we select our solution ideas?
 > List solution ideas using post-its and we voted using pen to mark on the post-its.
 
 ## Solution Ideas
