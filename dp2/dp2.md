@@ -3,14 +3,9 @@
 
 ## POV: Point Of View
 Graduate Student needs to manage the documents received on E-mail because they are sharing many files with E-mail and it’s uncomfortable.
-We met: Graduate Student in Multimedia computing lab
-It’d be game-changing to: manage the documents received via E-mail
-We were amazed to realize: they are sharing many files with E-mail
 
 
 ## Persona
-다양한 채널을 통해 사람들과 자잘한 information (text, image, excel, documents, etc) 공유를 많이 함
-
 1. demographic information such as name, occupation, age, and gender
     ![Photo](./persona.jpg)
     
@@ -51,8 +46,13 @@ We were amazed to realize: they are sharing many files with E-mail
 9. HMW save attachments from the email automatically on the local computer, when the mail is received. 
 10. HMW support deep search inside to attachments.
 
-#### How did we select our solution ideas?
-> List solution ideas using post-its and we voted using pen to mark on the post-its.
+## Top3 HMW questions
+1. HMW remove attachments from mail?
+2. HMW give a better way to manage attachment files?
+3. HMW prevent from forgetting the attachment?
+
+#### How did we select our HMW questions?
+> List HMW questions using post-its and we voted using pen to mark on the post-its.
 
 ## Solution Ideas
 1. **HMW remove attachments from mail?**
@@ -74,10 +74,11 @@ We were amazed to realize: they are sharing many files with E-mail
     4. Automatically save the attached files at external file server and browse them.
     5. Filter mail with and without attached files.
     6. Automatically upload it on drive.
-    7. Suggest attachment title if it's title is not clear e.g. document.pdf, thesis.docx
+    7. Suggest subtitle of the attachment if attachment's title is not clear e.g. document.pdf, thesis.docx
     8. Support mark star on attachment.
     9. Rename attachment.
     10. Apply plug-ins to an attachment when it arrives.
+    11. Suggest to group attachments in each folders by e-mail address which TA already knows.
 
 3. **HMW prevent from forgetting the attachment?**
     1. **Set different background color on editor if attachment exists or not**
@@ -97,6 +98,9 @@ We were amazed to realize: they are sharing many files with E-mail
 2. Browse files attached to mail system like a folder
 3. Set different background color on editor if attachment exists or not
 
+#### How did we select our solution ideas?
+> List solution ideas using post-its and we voted using pen to mark on the post-its.
+
 ## Storyboards
 1. Create a cloud storage integrated to save attachments of email
 ![story-cloud](./story-cloud.png)
@@ -108,13 +112,15 @@ We were amazed to realize: they are sharing many files with E-mail
 ![story-editor](./story-editor.png)
 
 
-## Studio Feedbacks
+## Studio Reflections
 1. (Student) Can you make in on the existing mail system? 
   
   Yes. We can make it over the existing mail system. There are already external mail apps which support POP3 or IMAP.
  
 2. (TA) I like the storyboard about TA who receive homework mails from students. It's hard to combine and manage files. However, sometimes there is no information on the file name and it's written in the mail body.
 
-  We didn't think about this kind of problem before. However, we agree that it'll be good to use mail body's keywords to tag attachment.
+  We didn't think about this kind of problem before. However, we agree that it'll be good to use mail body's keywords to tag attachment. We added it to our second HMW question's 7th and 9th solution idea.
 
-3. (TA) Suggest to support e-mail address as a rule of grouping attachments. Because TA already know students' mail addresses, it'll be very helpful.
+3. (TA) Suggest to use e-mail address as a rule to group attachments in each folders. Because TA already know students' mail addresses, it'll be very helpful.
+
+    We added it to our second HMW question's 11th solution idea.
