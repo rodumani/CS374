@@ -7,6 +7,7 @@ Graduate Student needs to manage the documents received on E-mail because they a
 
 ## Persona
 1. demographic information such as name, occupation, age, and gender
+
     ![Photo](./persona.jpg)
     
     name | age | gender | occupation
