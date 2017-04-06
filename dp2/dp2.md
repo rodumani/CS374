@@ -23,9 +23,12 @@ Graduate Student needs to manage the documents received on E-mail because they a
 
 4. preferences
     * Professor
+        * He follows his professor's instructions as much as possible whether his own will or not.
     * Early off work
+        * Life with evening - Everyone's hope.
     * Efficient work
     * Hates the situation where things are delayed with minor mistakes
+        * He hopes to concentrate on what he mainly does.
 
 5. a story or a scenario that captures a task the persona has in mind, with surrounding context.
 
