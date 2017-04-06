@@ -6,7 +6,7 @@ Graduate Student needs to manage the documents received on E-mail because they a
 
 
 ## Persona
-1. demographic information such as name, occupation, age, and gender
+1. Demographic information such as name, occupation, age, and gender
 
     ![Photo](./persona.jpg)
     
@@ -14,15 +14,15 @@ Graduate Student needs to manage the documents received on E-mail because they a
     -- | -- | -- | -- 
     김공유 Gongyu Kim | 28 | male | Ph.D studnet in KAIST SoC
 
-2. motivations
+2. Motivations
 
     I want to finish work quickly. I want to reduce the inefficiency like the useless time of finding a document.
 
-3. beliefs
+3. Beliefs
     * Work must be handled efficiently.
     * Respect the way the group prefers rather than personal preference.
 
-4. preferences
+4. Preferences
     * Professor
         * He follows his professor's instructions as much as possible whether his own will or not.
     * Early off work
@@ -31,7 +31,7 @@ Graduate Student needs to manage the documents received on E-mail because they a
     * Hates the situation where things are delayed with minor mistakes
         * He hopes to concentrate on what he mainly does.
 
-5. a story or a scenario that captures a task the persona has in mind, with surrounding context.
+5. A story or a scenario that captures a task the persona has in mind, with surrounding context.
 
     I’m 28 years old, Ph.D student in KAIST SoC. A week ago, I had tried to send an email to professor, my research advisor, to share a paper. I personally like Dropbox and Google Drive, but I’m trying to use email as the most lab people, including the professor, are primarily communicating via email.
     However, I was annoyed because I could not get a reply from my professor for a week. When I checked my mail again, I realized that I sent the mail without attaching my paper. I think the mail-sharing system is really uncomfortable.
