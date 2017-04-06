@@ -64,7 +64,7 @@ Graduate Student needs to manage the documents received on E-mail because they a
     6. Share a document in hard-copy.
     7. Remove attachment feature from mail and force to use other share tools.
     8. Use other solutions except mail. e.g. Kakaotalk or slack.
-    9. 
+    9. If someone try to attach a file, only the preview is attached, and if it is clicked, then the file is downloaded from external server. 
     10. 
 
 2. **HMW give a better way to manage attachment files?**
