@@ -66,6 +66,7 @@ Graduate Student needs to manage the documents received on E-mail because they a
     8. Use other solutions except mail. e.g. Kakaotalk or slack.
     9. If someone try to attach a file, only the preview is attached, and if it is clicked, then the file is downloaded from external server. 
     10. Use an external file sharing tool, and the tool support creating a simple link of a file and mail it. 
+    11. The file is automatically uploaded to the shared folder associated with the receiver's mail.
 
 2. **HMW give a better way to manage attachment files?**
     1. **Browse files like a folder**
