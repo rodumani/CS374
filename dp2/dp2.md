@@ -59,14 +59,13 @@ Graduate Student needs to manage the documents received on E-mail because they a
     1. **Create a cloud storage integrated to save attachments of email**
     2. Save files outside and share only link of the files?
     3. When a user uploads a file, connect it to external service.
-    4. Share a document to an external service, send it to a mail.
-    5. Put the content of attachment into body of a mail.
-    6. Share a document in hard-copy.
-    7. Remove attachment feature from mail and force to use other share tools.
-    8. Use other solutions except mail. e.g. Kakaotalk or slack.
-    9. If someone try to attach a file, only the preview is attached, and if it is clicked, then the file is downloaded from external server. 
-    10. Use an external file sharing tool, and the tool support creating a simple link of a file and mail it. 
-    11. The file is automatically uploaded to the shared folder associated with the receiver's mail.
+    4. Put the content of attachment into body of a mail.
+    5. Share a document in hard-copy.
+    6. Remove attachment feature from mail and force to use other share tools.
+    7. Use other solutions except mail. e.g. Kakaotalk or slack.
+    8. If someone try to attach a file, only the preview is attached, and if it is clicked, then the file is downloaded from external server. 
+    9. Use an external file sharing tool, and the tool support creating a simple link of a file and mail it. 
+    10. The file is automatically uploaded to the shared folder associated with the receiver's mail.
 
 2. **HMW give a better way to manage attachment files?**
     1. **Browse files like a folder**
