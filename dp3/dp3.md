@@ -64,7 +64,19 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 
 ## Individual Reflections
 ### Rohjoon Myung (20090336)
-blah blah blah 
+
+#### What role did you play in each round?
+Facilitator, Observer
+
+#### What were some of the difficulties you faced playing the role(s)?
+Sometimes, people didn’t understand about the task or the question. I had explained about confused one, and lead the test, but I was wonder I was good or not. After reading the reading-material of user testing, I’d reviewed what I was doing, and found that it was a bit hard for me to telling interviewer saying what they’re thinking and what they are going to do.  
+
+#### In what way was paper prototyping useful in your project?
+We could consider about the real UI interface in advance. And we could check the feasibility of it by experiecing it.  
+
+#### What did your paper prototype not cover or test?
+One of problems our solution should handle is `a mail with missing attachment`.  We’re trying to reduce an error of sending email without attachment, and made some solutions. But as one of the best solution detects error situation through a body of the email, it might be hard to test it through paper prototype. So, we’re going to test it on mid-fi prototype or hi-fi prototype. 
+
 ### Chang-je (id)
 
 ### sungwon (id)
