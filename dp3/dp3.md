@@ -2,19 +2,19 @@
 ### Team NanoMario
 
 ## Photos of prototype
-![Base](./IMG_4802.jpg)
+![Base](./IMG_4802.JPG)
 This is the initial view of our prototype.
  
-![Send Mail](./IMG_4803.jpg)
+![Send Mail](./IMG_4803.JPG)
 Default mail send editor with yellow background color which appears when a user clicks `New Mail` button.
 
-![Send Mail with attachment](./IMG_4805.jpg)
+![Send Mail with attachment](./IMG_4805.JPG)
 Mail send editor when a file is attached. The background color is changed to blue and `Send` button is changed to `Send file` with red color.
 
-![File list](./IMG_7342.jpg)
+![File list](./IMG_7342.JPG)
 A view of attachment files which is filtered by tag #KAIST. When a user click `New Tag` button at left down corner, he/she can add a new tag.
 
-![Add a tag on file](./IMG_7161.jpg)
+![Add a tag on file](./IMG_7161.JPG)
 The popup shows when a user clicks `+` button in tags column to attach/detach tags from the file.
 
 
