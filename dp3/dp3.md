@@ -39,7 +39,7 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 ### 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
 * [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.
   * On low-fi prototype, we're going to add some colors on buttons, and other elements.
-* [Mid] Because "Add new tag" button is at the bottom of tag list, it took long time to find it.
+* [Mid] Because `Add new tag` button is at the bottom of tag list, it took long time to find it.
   * On low-fi prototype, `Add new tag` button will be on the top of the list or proper position after doing a simple survey on target users. 
 * [Low] Needs searching tag feature. He was confused because there wasn't searching feature on tag lists.
   * It will be added on mid-fi prototype. Before that, we should consider about a proper position of a search bar and it will be added on low-fi prototype. 
