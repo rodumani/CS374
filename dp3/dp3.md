@@ -18,7 +18,7 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 * 11' SoC Student / Male / use gmail client
 
 ## Observations
-### Write a new mail to Prof. Juho Kim, attaching a report file.
+### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
 * [High] They didn’t recognize changing background color of mail client. People does not notice weather changing the color of paper is intended or not because of paper prototype. 
   * We think it's due to limitation of paper prototype. We are going to test it on Mid-fi prototype.
 * [High] Most users didn't understand why it is related to `reducing mistakes in sending emails without attachments`.
@@ -26,7 +26,7 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 * [Mid] Hard to distinguish `send` button and  `send file` button.
   * Change color of button background not text color and test it on Low-fi prototype.
 
-### Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
+### 2. Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
 * [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention.
   * Provide a simple tutorial about new feature on the first time and test it on Mid-fi prototype.
 * [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list”.
@@ -36,7 +36,7 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 * [Low] A user without hashtag concept, understands it as directory because of layout.
   * We think that a user could understand the concept even if he/she adds thier own tag at once. So we're going to test weather user understatnd the `tag` concept properly using our system on mid-fi or hi-fi prototype. 
 
-### Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
+### 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
 * [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.
   * On low-fi prototype, we're going to add some colors on buttons, and other elements.
 * [Mid] Because "Add new tag" button is at the bottom of tag list, it took long time to find it.
@@ -44,4 +44,28 @@ Our solution is for people to reduce mistakes in sending emails without attachme
 * [Low] Needs searching tag feature. He was confused because there wasn't searching feature on tag lists.
   * It will be added on mid-fi prototype. Before that, we should consider about a proper position of a search bar and it will be added on low-fi prototype. 
   
-  
+
+## Individual Reflections
+### Rohjoon Myung (20090336)
+blah blah blah 
+### Chang-je (id)
+
+### sungwon (id)
+
+### seung min  (id)
+// I don't care about the exact spelling of your name. please correct it and write down the refection . =) 
+
+
+## Studio Reflections
+1. (Students) `Tagging a file` is really good feature. But sometimes, a user might want to filter files of #CS_HW1 or all of #HW. How did you distinguish files like that? 
+ There will be a parent group and child group, which could be devided by `/`. In this case, the file should have a tag `#HW/CS_HW1" then you could filter them as you want. 
+ 
+ 2. (TA) There should be a more active feedback to user like toasting a notice popup for an error of missing an attachment by analyzing a title or a body of the email weather it should contain an attachment or not.
+  It's really good point. We're going to apply the 'active' feedback on mid-fi prototype as there might be some automated funtionality.  
+
+
+
+
+
+
+
