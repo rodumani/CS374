@@ -58,7 +58,7 @@ blah blah blah
 
 ## Studio Reflections
 1. (Students) `Tagging a file` is really good feature. But sometimes, a user might want to filter files of #CS_HW1 or all of #HW. How did you distinguish files like that? 
- There will be a parent group and child group, which could be devided by `/`. In this case, the file should have a tag `#HW/CS_HW1" then you could filter them as you want. 
+ There will be a parent group and child group, which could be devided by `/`. In this case, if the file should have a tag `#HW/CS_HW1`, then you could filter them as you want. 
  
  2. (TA) There should be a more active feedback to user like toasting a notice popup for an error of missing an attachment by analyzing a title or a body of the email weather it should contain an attachment or not.
   It's really good point. We're going to apply the 'active' feedback on mid-fi prototype as there might be some automated funtionality.  
