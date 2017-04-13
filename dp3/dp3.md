@@ -28,14 +28,18 @@ We want to give a better way to manage attachments to people who share files wit
 
 
 ## Participant
-* SoC Senior / Male / use gmail client
+Because target user group's age is similar to interviewer's, we were able to find people who have acquaintance. We interviewed them.
+* P1: SoC Senior / Male / use gmail client
   * Have intent to go to graduate school.
   * Send email with attachment frequently.
-* 16’ EE Student / Female / use KAIST mail client
-* 14’ SoC Student / Male / use gmail client
-* 11' SoC Student / Male / use gmail client
+* P2: 16’ EE Student / Female / use KAIST mail client
   * Have intent to go to graduate school.
   * Send email with attachment frequently.
+* P3: 14’ SoC Student / Male / use gmail client
+  * Have intent to go to graduate school.
+  * Send email with attachment frequently.
+* P4: 15' SoC Graduate Student / Male / use gmail client
+  * Send email with attachment frequently with interviewee's lab mates.
 
 ## Observations
 ### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
