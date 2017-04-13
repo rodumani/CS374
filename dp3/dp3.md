@@ -19,7 +19,7 @@ The popup shows when a user clicks `+` button in tags column to attach/detach ta
 
 
 ## Briefing
-We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. They have some difficulties on handling many mail's attachment at once. So we are going to give a solution that can reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
+We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. So we are going to give a solution that can reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
 
 ## Tasks
 1. Write a new mail to Prof. Juho Kim, attaching a report file. 
@@ -44,45 +44,45 @@ Because target user group's age is similar to interviewer's, we were able to fin
 ## Observations
 ### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
 * [High] They didn’t recognize changing background color of mail client. People does not notice weather changing the color of paper is intended or not because of paper prototype. [P1, P2, P3, P4]
-  * We think it's due to limitation of paper prototype. We are going to test it on Mid-fi prototype.
+  * As there is no special sending mode on a mail client in a user model, they might be hard to recognize our intent. We are going to consider this learnability issue and add some element on mid-fi prototype and re-test it.
 * [High] Most users didn't understand why it is related to `reducing mistakes in sending emails without attachments`. [P3, P4]
-  * Our paper prototype might be work only if a user learned our features, changing color of background and a send button, and familiar with them. So we're going to consider a new task to test `reducing mistake ...` problem properly on low-fi prototype.  
+  * Our paper prototype might be work only if a user learned our features, changing color of background and a send button, and familiar with them. So we are going to consider a new task to test preventing the lapse error properly on low-fi prototype.  
 * [Mid] Hard to distinguish `send` button and  `send file` button. [P1, P2, P3, P4]
-  * Change color of button background not text color and test it on Low-fi prototype.
+  * We are going to change a color of button background, not a text color, and test it on Low-fi prototype.
 
 ### 2. Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
-* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention. [P2]
-  * Provide a simple tutorial about new feature on the first time and test it on Mid-fi prototype.
-* [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list”. [P2, P3]
-  * Provide more detailed briefing and task descriptions to testers.
-* [Mid] Some people was confused becuase he/she didn't recognize '#CS101_HW' was already exist. [P1, P4]
-  * Sort tags as alphanumeric order in tag lists for user to easily find it in Low-fi prototype.
-* [Low] A user, not familiar with hashtag concept, understands it as directory because of layout. [P3]
-  * We think that a user could understand the concept even if he/she adds thier own tag at once. So we're going to test weather user understatnd the `tag` concept properly using our system on mid-fi or hi-fi prototype. 
+* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention.[P2]
+  * We're going to provide a simple tutorial about our new feature on the first time and test it on Mid-fi prototype.
+* [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list” (i.e. who has / has not a user model of `files list` feature). [P2, P3]
+  * We're going to advance briefing and task descriptions more detail.
+* [Mid] Some people was confused becuase he/she didn't recognize '#CS101_HW' was already exist. [P2, P4]
+  * We're going to sort tags as alphanumeric order in tag lists for user to easily find it in Low-fi prototype.
+* [Low] A user, not familiar with hashtag concept, understands a tag as a directory because of layout. [P3]
+  * We think that a user could understand the concept if he adds and uses his own tag at once. So we're going to test weather a user would understatnd the `tag` concept properly using our system on mid-fi or hi-fi prototype. 
 
 ### 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
-* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text. [P3, P4]
-  * On low-fi prototype, we're going to add some colors on buttons, and other elements.
+* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.[P3, P4]
+  * As this is a paper prototype, affordance of each element might be weak. So, to distinguish a button or a text on their purpose, we're going to add some colors and proper shapes on buttons, and other elements, in low-fi prototype.
 * [Mid] Because `Add new tag` button is at the bottom of tag list, it took long time to find it. [P1, P4]
   * On low-fi prototype, `Add new tag` button will be on the top of the list or proper position after doing a simple survey on target users. 
 * [Low] Needs searching tag feature. He was confused because there wasn't searching feature on tag lists. [P4]
   * It will be added on mid-fi prototype. Before that, we should consider about a proper position of a search bar and it will be added on low-fi prototype. 
-  
+
 
 ## Individual Reflections
 ### Rohjoon Myung (20090336)
 
 #### What role did you play in each round?
-Facilitator, Observer
+Facilitator
 
 #### What were some of the difficulties you faced playing the role(s)?
-Sometimes, people didn’t understand about the task or the question. I had explained about confused one, and lead the test, but I was wonder I was good or not. After reading the reading-material of user testing, I’d reviewed what I was doing, and found that it was a bit hard for me to telling interviewer saying what they’re thinking and what they are going to do.  
+Sometimes, people didn’t understand about the task or the question. I had explained about confused one, and lead the test, but I was wonder I was good or not. After reading the reading-material about user testing, I’d reviewed what I was doing, and found that it was a bit hard for me to telling interviewer saying what they’re thinking and what they are going to do.  
 
 #### In what way was paper prototyping useful in your project?
 We could consider about the real UI interface in advance. And we could check the feasibility of it by experiecing it.  
 
 #### What did your paper prototype not cover or test?
-One of problems our solution should handle is `a mail with missing attachment`.  We’re trying to reduce an error of sending email without attachment, and made some solutions. But as one of the best solution we had discussed detects error situation through a body of the email, it might be hard to test it through paper prototype. So, we’re going to test it on mid-fi prototype or hi-fi prototype.
+One of problems our solution should handle is `a mail with missing attachment`.  We were trying to reduce a lapse of sending email without attachment, and made some solutions. But as one of the best solution we had discussed detects the lapse  through a body of the email, it might be hard to test it through a paper prototype. So, we planed to test it on mid-fi prototype or hi-fi prototype.
 
 ### Changje Jeong (20110846)
 #### What role did you play in each round?
