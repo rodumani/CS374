@@ -80,7 +80,19 @@ We could consider about the real UI interface in advance. And we could check the
 #### What did your paper prototype not cover or test?
 One of problems our solution should handle is `a mail with missing attachment`.  We’re trying to reduce an error of sending email without attachment, and made some solutions. But as one of the best solution detects error situation through a body of the email, it might be hard to test it through paper prototype. So, we’re going to test it on mid-fi prototype or hi-fi prototype. 
 
-### Chang-je (id)
+### Changje Jeong (20110846)
+#### What role did you play in each round?
+Computer
+
+#### What were some of the difficulties you faced playing the role(s)?
+At the first operating was very busy and difficult. It's hard to prepare and predict other scenes or components properly. Because I've already known our prototypes' steps, I prepared next steps in my mind. However, when a user failed to follow our expectation and interact with wrong component, it was hard to keep quiet and I wanted to guide a user which is not a computer's role. At the last, computer was so busy to observe user.
+
+#### In what way was paper prototyping useful in your project?
+It was good chance to find out our low fidelity UI layout. We have found out a lot of layout problems. And also, users gave us some constructive feedback very well. Most comments were pointing out the flaws, but some were compliments of our prototype.  
+
+#### What did your paper prototype not cover or test?
+We didn't test multi-level tag which support hierarchy of tags. Altough we had test for writing a new mail with attachment, it doesn't give strict confirmation about it can help not to forget attach a file to an  e-mail. About attachment tagging feature, we didn't test automatic tagging, which tags mail attachment by predefined condition. Instead, we tested usability of tagged list of attachments.
+
 
 ### Seongwon Lee (20150556)
 
