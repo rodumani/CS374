@@ -44,7 +44,7 @@ Because target user group's age is similar to interviewer's, we were able to fin
 ## Observations
 ### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
 * [High] They didn’t recognize changing background color of mail client. People does not notice weather changing the color of paper is intended or not because of paper prototype. [P1, P2, P3, P4]
-  * As there is no special sending mode on a mail client in a user model, they might be hard to recognize our intent. We are going to consider this learnability issue and add some element on mid-fi prototype and re-test it.
+  * As there is no special sending mode on a mail client in a user model, they might be hard to recognize our intent. We are going to consider this learnability issue and add some element on mid-fi prototype and re-test it.
 * [High] Most users didn't understand why it is related to `reducing mistakes in sending emails without attachments`. [P3, P4]
   * Our paper prototype might be work only if a user learned our features, changing color of background and a send button, and familiar with them. So we are going to consider a new task to test preventing the lapse error properly on low-fi prototype.  
 * [Mid] Hard to distinguish `send` button and  `send file` button. [P1, P2, P3, P4]
