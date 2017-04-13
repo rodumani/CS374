@@ -103,21 +103,22 @@ In this prototype, we didn't implemented some features like subtag, tag in tag, 
 I participated in all 4 interviews, and I was an observer for all 4 interviews.
 
 ####	What were some of the difficulties you faced playing the role(s)?
-Observing each interviewers’ actions, such as hesitancy, was more difficult than I thought, and because observer should be quiet, I was frustrated when some interviewers were confused and hesitant. It was quite difficult to take copious notes, because each interviewers have different degree of understanding the prototype and performing the task depending on their characteristics. Some of interviewers were expert to our new features although they watch it for the first time, so there were not much to observe from their interviews.
+Observing each interviewers’ actions, such as hesitancy, was more difficult than I thought, and because observer should be quiet, I was frustrated when some interviewers were confused and hesitant. It was quite difficult to take copious notes because each interviewers have different degree of understanding the prototype and performing the task depending on their characteristics. Some of interviewers were expert to our new features although they watch it for the first time, so there were not much to observe from their interviews.
 
 #### In what way was paper prototyping useful in your project?
 We can test our prototype with low cost and effort, and can get immediate responses and feedbacks from interviewers.
 
 #### What did your paper prototype not cover or test?
-Because it’s paper prototype, there was limitations at representing UI such as giving specific color difference or making buttons look like button shapes. As like searching e-mails by keywords or names, our project should add and implement searching features on attached files and file tags. It was really hard and complex to make searching features on paper prototype, we did not cover it.
+Because it’s paper prototype, there was limitations at representing UI such as giving specific color difference or making buttons look like button shapes.  
+As like searching e-mails by keywords or names, our project should add and implement searching features on attached files and file tags. It was really hard and complex to make searching features on paper prototype, so we did not cover it on paper prototype.  
 
 
 ## Studio Reflections
-1. (Students) `Tagging a file` is really good feature. But sometimes, a user might want to filter files of #CS_HW1 or all of #HW. How did you distinguish files like that? 
- There will be a parent group and child group, which could be devided by `/`. In this case, if the file should have a tag `#HW/CS_HW1`, then you could filter them as you want. 
+1. (Students) `Tagging a file` is really good feature. But sometimes, a user might want to filter files of #CS_HW1 or all of #HW. How did you distinguish files like that?  
+There will be a parent group and child group, which could be devided by `/`. In this case, if the file should have a tag `#HW/CS_HW1`, then you could filter them as you want. 
  
- 2. (TA) There should be a more active feedback to user like toasting a notice popup for an error of missing an attachment by analyzing a title or a body of the email weather it should contain an attachment or not.
-  It's really good point. We're going to apply the 'active' feedback on mid-fi prototype as there might be some automated funtionality.  
+ 2. (TA) There should be a more active feedback to user like toasting a notice popup for an error of missing an attachment by analyzing a title or a body of the email weather it should contain an attachment or not.  
+It's really good point. We're going to apply the 'active' feedback on mid-fi prototype as there might be some automated funtionality.  
 
 
 
