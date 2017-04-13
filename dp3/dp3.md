@@ -30,12 +30,12 @@ We want to give a better way to manage attachments to people who share files wit
 ## Participant
 * SoC Senior / Male / use gmail client
   * Have intent to go to graduate school.
-  * Send Email with attachment frequently.
+  * Send email with attachment frequently.
 * 16’ EE Student / Female / use KAIST mail client
 * 14’ SoC Student / Male / use gmail client
 * 11' SoC Student / Male / use gmail client
   * Have intent to go to graduate school.
-  * Send Email with attachment frequently.
+  * Send email with attachment frequently.
 
 ## Observations
 ### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
