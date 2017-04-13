@@ -19,7 +19,7 @@ The popup shows when a user clicks `+` button in tags column to attach/detach ta
 
 
 ## Briefing
-We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. So we are going to give a solution that can reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
+We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. They have some difficulties on handling many mail's attachment at once. So we are going to give a solution that can reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
 
 ## Tasks
 1. Write a new mail to Prof. Juho Kim, attaching a report file. 
