@@ -94,11 +94,22 @@ When I play computer, there were some elements that should be active after click
 #### In what way was paper prototyping useful in your project?
 We was able to built basic layout for our solution. And, we considered carefully how we implement our task - ex) classify attached files in tag, or directory - and what problems can be occured in our implementation. Paper prototype enabled to test our implementations in really low-cost.
 
-#### What did your paper prototype not cover or test?ing 
+#### What did your paper prototype not cover or test?
 In this prototype, we didn't implemented some features like subtag, tag in tag, because we thought it don't have to be impelented in paper prototype. But we got a question related to subtag from studio. Maybe, covering more features could be better. And our solution is based on mail system and mail system has its own many features. But we didn't covered it.
 
-### seung min  (id)
-// I don't care about the exact spelling of your name. please correct it and write down the refection . =) 
+### SeungMin Lee (20150566)
+
+#### What role did you play in each round?
+I participated in all 4 interviews, and I was an observer for all 4 interviews.
+
+####	What were some of the difficulties you faced playing the role(s)?
+Observing each interviewers’ actions, such as hesitancy, was more difficult than I thought, and because observer should be quiet, I was frustrated when some interviewers were confused and hesitant. It was quite difficult to take copious notes, because each interviewers have different degree of understanding the prototype and performing the task depending on their characteristics. Some of interviewers were expert to our new features although they watch it for the first time, so there were not much to observe from their interviews.
+
+#### In what way was paper prototyping useful in your project?
+We can test our prototype with low cost and effort, and can get immediate responses and feedbacks from interviewers.
+
+#### What did your paper prototype not cover or test?
+Because it’s paper prototype, there was limitations at representing UI such as giving specific color difference or making buttons look like button shapes. As like searching e-mails by keywords or names, our project should add and implement searching features on attached files and file tags. It was really hard and complex to make searching features on paper prototype, we did not cover it.
 
 
 ## Studio Reflections
