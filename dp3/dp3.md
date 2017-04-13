@@ -103,7 +103,9 @@ In this prototype, we didn't implemented some features like subtag, tag in tag, 
 I participated in all 4 interviews, and I was an observer for all 4 interviews.
 
 ####	What were some of the difficulties you faced playing the role(s)?
-Observing each interviewers’ actions, such as hesitancy, was more difficult than I thought, and because observer should be quiet, I was frustrated when some interviewers were confused and hesitant. It was quite difficult to take copious notes because each interviewers have different degree of understanding the prototype and performing the task depending on their characteristics. Some of interviewers were expert to our new features although they watch it for the first time, so there were not much to observe from their interviews.
+Observing each interviewers’ actions, such as hesitancy, was more difficult than I thought, and because observer should be quiet, I was frustrated when some interviewers were confused and hesitant.  
+It was quite difficult to take copious notes because each interviewers have different degree of understanding the prototype and performing the task depending on their characteristics.  
+Some of interviewers were expert to our new features although they watch it for the first time, so there were not much to observe from their interviews.
 
 #### In what way was paper prototyping useful in your project?
 We can test our prototype with low cost and effort, and can get immediate responses and feedbacks from interviewers.
