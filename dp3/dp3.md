@@ -43,29 +43,29 @@ Because target user group's age is similar to interviewer's, we were able to fin
 
 ## Observations
 ### 1. Write a new mail to Prof. Juho Kim, attaching a report file.
-* [High] They didn’t recognize changing background color of mail client. People does not notice weather changing the color of paper is intended or not because of paper prototype. 
-  * We think it's due to limitation of paper prototype. We are going to test it on Mid-fi prototype.
-* [High] Most users didn't understand why it is related to `reducing mistakes in sending emails without attachments`.
+* [High] They didn’t recognize changing background color of mail client. People does not notice weather changing the color of paper is intended or not because of paper prototype. [P1, P2, P3, P4]
+  * We think it's due to limitation of paper prototype. We are going to test it on Mid-fi prototype.
+* [High] Most users didn't understand why it is related to `reducing mistakes in sending emails without attachments`. [P3, P4]
   * Our paper prototype might be work only if a user learned our features, changing color of background and a send button, and familiar with them. So we're going to consider a new task to test `reducing mistake ...` problem properly on low-fi prototype.  
-* [Mid] Hard to distinguish `send` button and  `send file` button.
+* [Mid] Hard to distinguish `send` button and  `send file` button. [P1, P2, P3, P4]
   * Change color of button background not text color and test it on Low-fi prototype.
 
 ### 2. Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
-* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention.
+* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention.[P2]
   * Provide a simple tutorial about new feature on the first time and test it on Mid-fi prototype.
-* [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list”.
+* [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list”. [P2, P3]
   * Provide more detailed briefing and task descriptions to testers.
-* [Mid] Some people was confused becuase he/she didn't recognize '#CS101_HW' was already exist. 
+* [Mid] Some people was confused becuase he/she didn't recognize '#CS101_HW' was already exist. [P1, P4]
   * Sort tags as alphanumeric order in tag lists for user to easily find it in Low-fi prototype.
-* [Low] A user without hashtag concept, understands it as directory because of layout.
+* [Low] A user, not familiar with hashtag concept, understands it as directory because of layout. [P3]
   * We think that a user could understand the concept even if he/she adds thier own tag at once. So we're going to test weather user understatnd the `tag` concept properly using our system on mid-fi or hi-fi prototype. 
 
 ### 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
-* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.
+* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.[P3, P4]
   * On low-fi prototype, we're going to add some colors on buttons, and other elements.
-* [Mid] Because `Add new tag` button is at the bottom of tag list, it took long time to find it.
+* [Mid] Because `Add new tag` button is at the bottom of tag list, it took long time to find it. [P1, P4]
   * On low-fi prototype, `Add new tag` button will be on the top of the list or proper position after doing a simple survey on target users. 
-* [Low] Needs searching tag feature. He was confused because there wasn't searching feature on tag lists.
+* [Low] Needs searching tag feature. He was confused because there wasn't searching feature on tag lists. [P4]
   * It will be added on mid-fi prototype. Before that, we should consider about a proper position of a search bar and it will be added on low-fi prototype. 
   
 
@@ -82,7 +82,7 @@ Sometimes, people didn’t understand about the task or the question. I had expl
 We could consider about the real UI interface in advance. And we could check the feasibility of it by experiecing it.  
 
 #### What did your paper prototype not cover or test?
-One of problems our solution should handle is `a mail with missing attachment`.  We’re trying to reduce an error of sending email without attachment, and made some solutions. But as one of the best solution detects error situation through a body of the email, it might be hard to test it through paper prototype. So, we’re going to test it on mid-fi prototype or hi-fi prototype. 
+One of problems our solution should handle is `a mail with missing attachment`.  We’re trying to reduce an error of sending email without attachment, and made some solutions. But as one of the best solution we had discussed detects error situation through a body of the email, it might be hard to test it through paper prototype. So, we’re going to test it on mid-fi prototype or hi-fi prototype.
 
 ### Changje Jeong (20110846)
 #### What role did you play in each round?
@@ -137,10 +137,6 @@ There will be a parent group and child group, which could be devided by `/`. In 
  
  2. (TA) There should be a more active feedback to user like toasting a notice popup for an error of missing an attachment by analyzing a title or a body of the email weather it should contain an attachment or not.  
 It's really good point. We're going to apply the 'active' feedback on mid-fi prototype as there might be some automated funtionality.  
-
-
-
-
 
 
 
