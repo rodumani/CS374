@@ -51,7 +51,7 @@ Because target user group's age is similar to interviewer's, we were able to fin
   * We are going to change a color of button background, not a text color, and test it on Low-fi prototype.
 
 ### 2. Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
-* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention.[P2]
+* [High] The user who cannot intuitively understand our new feature, doesn’t have a proper mind model. She hesitates how and what to do. After facilitator explained more, she understands our ideas and reacts as our intention. [P2]
   * We're going to provide a simple tutorial about our new feature on the first time and test it on Mid-fi prototype.
 * [Mid] The reactions was different between who can and cannot intuitively understand the new feature “files list” (i.e. who has / has not a user model of `files list` feature). [P2, P3]
   * We're going to advance briefing and task descriptions more detail.
@@ -61,7 +61,7 @@ Because target user group's age is similar to interviewer's, we were able to fin
   * We think that a user could understand the concept if he adds and uses his own tag at once. So we're going to test weather a user would understatnd the `tag` concept properly using our system on mid-fi or hi-fi prototype. 
 
 ### 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
-* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text.[P3, P4]
+* [High] Because colors didn't exist between elements, a user couldn't recognize which is a button or a text. [P3, P4]
   * As this is a paper prototype, affordance of each element might be weak. So, to distinguish a button or a text on their purpose, we're going to add some colors and proper shapes on buttons, and other elements, in low-fi prototype.
 * [Mid] Because `Add new tag` button is at the bottom of tag list, it took long time to find it. [P1, P4]
   * On low-fi prototype, `Add new tag` button will be on the top of the list or proper position after doing a simple survey on target users. 
