@@ -79,7 +79,20 @@ One of problems our solution should handle is `a mail with missing attachment`. 
 
 ### Chang-je (id)
 
-### sungwon (id)
+### Seongwon Lee (20150556)
+
+#### What role did you play in each round?
+There were 4 interview round. I played observer for first 2 round, and computer for last 2 round.
+
+#### What were some of the difficulties you faced playing the role(s)?
+When I play observer, I have to conscious of people's gaze and find out what they consider, why they concern about their action. Searching and finding informations from it was important but complicated.
+When I play computer, there were some elements that should be active after click another element. Because it can confuse user if I don't present in well order, I always concentrate on my work.
+
+#### In what way was paper prototyping useful in your project?
+We was able to built basic layout for our solution. And, we considered carefully how we implement our task - ex) classify attached files in tag, or directory - and what problems can be occured in our implementation. Paper prototype enabled to test our implementations in really low-cost.
+
+#### What did your paper prototype not cover or test?ing 
+In this prototype, we didn't implemented some features like subtag, tag in tag, because we thought it don't have to be impelented in paper prototype. But we got a question related to subtag from studio. Maybe, covering more features could be better. And our solution is based on mail system and mail system has its own many features. But we didn't covered it.
 
 ### seung min  (id)
 // I don't care about the exact spelling of your name. please correct it and write down the refection . =) 
