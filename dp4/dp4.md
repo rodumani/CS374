@@ -24,7 +24,7 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 ### Representative screenshots
 
 ![main](./main.jpg)
-This is our main page. If you open our website, this page will appear at first. Actually, it is similar with Gmail. 
+* This is our main page. If you open our website, this page will appear at first. Actually, it is similar with Gmail. 
 ![nofile](./nofile.jpg)
 * If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
 * Preventing sending mail without attachments.
