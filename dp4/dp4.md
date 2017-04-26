@@ -15,7 +15,7 @@ We also did not changed our tasks from DP3.
 
 ## Prototype
 ### Prototyping tool
-We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level.
+We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level. Also, some recommended tools showed which is clickable with blue lectangle, if you double click where is not clickable. But we thought it is bad for user testing, because user should be able to click where cannot click because we should watch how user acts.
 
 ### Design choices
 - sorting function
@@ -24,18 +24,30 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 ### Representative screenshots
 
 ![main](./main.jpg)
-
+This is our main page. If you open our website, this page will appear at first. Actually, it is similar with Gmail. 
 ![nofile](./nofile.jpg)
+* If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
+* Preventing sending mail without attachments.
 
 ![yesfile](./yesfile.jpg)
+* If you attached file, background color is changed to light green and `Send` button is changed to red color.
+* Preventing sending mail without attachments.
 
 ![files](./files.jpg)
+* If you click `Files` button, it first shows list of all attachments.
+* Function for managing attachments easily with cloud-like service.
 
 ![CS101](./CS101.jpg)
+* A view of attachment files which is filtered by tag #CS101_HW. When a user click `New Tag` button at left down corner, he/she can add a new tag.
+* Function for managing attachments easily with cloud-like service.
 
 ![newtag](./newtag.jpg)
+* Page for add new tag. In prototype, the textfield is pre-written.
+* Function for managing attachments easily with tags.
 
 ![changetag](./changetag.jpg)
+* You can change tags of files when you click `+` button in file list. In prototype, you were only able to change 0402_lab.ppt's tag, adding Lab Seminar tag. 
+* Function for managing attachments easily with tags.
 
 ### Instructions
 **accessible and executable prototype link**
