@@ -18,6 +18,10 @@ Google Slides
 
 ### Representative screenshots
 
+![main](./main.JPG)
+
+![nofile](./nofile.JPG)
+
 
 ### Instructions
 
@@ -44,10 +48,10 @@ Google Slides
 
 
 ## Paper vs Digital
-### types of usability issues they helped identify
+### 1. types of usability issues they helped identify
 
-### participants' reaction and expectation to prototypes
+### 2. participants' reaction and expectation to prototypes
 
-### summarize what changes you made in the digital prototype based on the feedback from your paper prototyping testing
+### 3. summarize what changes you made in the digital prototype based on the feedback from your paper prototyping testing
 
 
