@@ -28,7 +28,7 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 ---
 
 ![nofile](./nofile.jpg)
-* If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
+* If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it.
 * Preventing sending mail without attachments.
 ---
 
