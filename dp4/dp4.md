@@ -4,14 +4,18 @@
 ## POV
 Graduate Student needs to manage the documents received on E-mail because they are sharing many files with E-mail and it’s uncomfortable.
 
+We didn't change our POV, because our POV is still proper to us.
+
 ## Tasks
 1. Write a new mail to Prof. Juho Kim, attaching a report file.
 2. Find a list view of attached files, and check all attachments, and filter CS101_HW related file only.
 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
 
+We also did not changed our tasks from DP3.
+
 ## Prototype
 ### Prototyping tool
-Google Slides 
+We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level.
 
 ### Design choices
 
@@ -44,16 +48,20 @@ Google Slides
 - P4: Ph.D. 1st grade / Male / using gmail / Working as TA
 
 ### Usability problems (Observations)
-1.
-2.
-3.
+#### Task 1
+1. Most users failed to recognize color change on background when a file is attached. (P4)
+2. Most users failed to recognize "Send" button changed when a file is attached. (P4)
+3. 
 4.
-5.
-6.
-7.
+
+#### Task 2
+5. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list.
+6. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system.
+7. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.
 8.
-9.
-10.
+
+#### Task 3
+9. Most people clicked a label not a checkbox when adding tags.
 
 
 ## Paper vs Digital
