@@ -19,6 +19,12 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 
 ### Design choices
 - sorting function
+> need real implementation
+- Search function
+> also need real impelemntation
+- When adding a new tag, there should be a keyboard input
+> we chose the prototpying tool to 'Google Slides' so that user could not enter any text by therself. 
+- 
 
 
 ### Representative screenshots
