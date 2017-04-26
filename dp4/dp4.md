@@ -18,10 +18,19 @@ Google Slides
 
 ### Representative screenshots
 
-![main](./main.JPG)
+![main](./main.jpg)
 
-![nofile](./nofile.JPG)
+![nofile](./nofile.jpg)
 
+![yesfile](./yesfile.jpg)
+
+![files](./files.jpg)
+
+![CS101](./CS101.jpg)
+
+![newtag](./newtag.jpg)
+
+![changetag](./changetag.jpg)
 
 ### Instructions
 
