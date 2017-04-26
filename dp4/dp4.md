@@ -23,19 +23,19 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 ### Representative screenshots
 
 ![main](./main.jpg)
-
+This is our main page. If you open our website, this page will appear at first. 
 ![nofile](./nofile.jpg)
-
+If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
 ![yesfile](./yesfile.jpg)
-
+If you attached file, background color is changed to light green and `Send` button is changed to red color.
 ![files](./files.jpg)
-
+If you click `Files` button, it first shows list of all attachments. 
 ![CS101](./CS101.jpg)
-
+A view of attachment files which is filtered by tag #CS101_HW. When a user click `New Tag` button at left down corner, he/she can add a new tag.
 ![newtag](./newtag.jpg)
-
+Page for add new tag. In prototype, the textfield is pre-written.
 ![changetag](./changetag.jpg)
-
+You can change tags of files when you click `+` button in file list. In prototype, you were only able to change 0402_lab.ppt's tag, adding Lab Seminar tag. 
 ### Instructions
 
 
