@@ -81,10 +81,22 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 
 ## Paper vs Digital
 ### 1. types of usability issues they helped identify
+* In paper prototypes, people did not know that color change of buttons and background was intended, but in digital prototypes, people realized it was intended.
+* Thanks to that, we knew for sure that the color change of the button and backgound was hard for people to notice.
+* We realized that people prefer to click on the content itself rather than the checkbox, as the digital prototype can clearly distinguish between clickable and non-clickable areas.
 
 ### 2. participants' reaction and expectation to prototypes
+* People do not expect any keyboard input for the paper prototype, but expect it in the digital prototype.
+* When people used paper prototypes, they were very careful clicking on something, but when using digital prototypes, they tried to poke around.
+
 
 ### 3. summarize what changes you made in the digital prototype based on the feedback from your paper prototyping testing
+* We add a functionality of `reducing mistakes in sending emails without attachments`. If you tried to send a mail without attachment, a notification will be shown.
+* A list of tags of attachments is sorted as alphabetical order to find a tag easily.
+* A clickable button and a text is distinguished clearly on digital prototype. 
+* We added `search bar` on the top of the tag list, which is cleary visible to users.
+* We didn't changed the position of `+ add tags` button because it is much more affordable.
+
 
 
 ## Studio Reflections
