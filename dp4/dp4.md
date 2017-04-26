@@ -18,27 +18,30 @@ We also did not changed our tasks from DP3.
 We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level.
 
 ### Design choices
+- sorting function
 
 
 ### Representative screenshots
 
 ![main](./main.jpg)
-This is our main page. If you open our website, this page will appear at first. 
+
 ![nofile](./nofile.jpg)
-If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
+
 ![yesfile](./yesfile.jpg)
-If you attached file, background color is changed to light green and `Send` button is changed to red color.
+
 ![files](./files.jpg)
-If you click `Files` button, it first shows list of all attachments. 
+
 ![CS101](./CS101.jpg)
-A view of attachment files which is filtered by tag #CS101_HW. When a user click `New Tag` button at left down corner, he/she can add a new tag.
+
 ![newtag](./newtag.jpg)
-Page for add new tag. In prototype, the textfield is pre-written.
+
 ![changetag](./changetag.jpg)
-You can change tags of files when you click `+` button in file list. In prototype, you were only able to change 0402_lab.ppt's tag, adding Lab Seminar tag. 
+
 ### Instructions
-
-
+**accessible and executable prototype link**
+https://docs.google.com/presentation/d/1NoFqw6YFvfMyzXwfhDT44Cf_9tkGPQPBhUKCOg-6VCE/edit?usp=sharing
+**instruction**
+Please run “presentation” mode. And please use a mouse, not a keyboard.
 
 ## Observations
 ### Participants
@@ -49,8 +52,8 @@ You can change tags of files when you click `+` button in file list. In prototyp
 
 ### Usability problems (Observations)
 #### Task 1
-1. Most users failed to recognize color change on background when a file is attached. (P4)
-2. Most users failed to recognize "Send" button changed when a file is attached. (P4)
+1. Most users failed to recognize color change on background when a file is attached. (P1, P3, P4)
+2. Most users failed to recognize "Send" button changed when a file is attached. (P1, P3, P4)
 3. 
 4.
 
@@ -73,8 +76,7 @@ You can change tags of files when you click `+` button in file list. In prototyp
 
 
 ## Studio Reflections
-1. (TA) + Your prototype is very similar to Google email UI, which is easy to use when they experienced.
-- However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
+1. (TA) + Your prototype is very similar to Google email UI, which is easy to use when they experienced. - However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
 
 2. (Students) 
 
