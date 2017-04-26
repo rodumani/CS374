@@ -38,9 +38,9 @@ Google Slides
 
 ## Observations
 ### Participants
-- P1: 전자과 석사2학년 / Male / gmail 사용 / 조교를 맡고 있음
-- P2: 생화공 석사1학년 / Male / kaist 메일 사용 / 조교를 맡고 있음
-- P3: 생화공 석사1학년 / Male / kaist 메일 사용 / 조교X
+- P1: M.S. student in School of Electrical Engineering / Male / using gmail / Working as TA
+- P2: M.S. student in Department of Chemical and Biomolecular Engineering / Male / using kaist mail / Working as TA
+- P3: M.S. student in Department of Chemical and Biomolecular Engineering / Male / using kaist mail / Do not work as TA
 - P4: Ph.D. 1st grade / Male / using gmail / Working as TA
 
 ### Usability problems (Observations)
@@ -63,4 +63,10 @@ Google Slides
 
 ### 3. summarize what changes you made in the digital prototype based on the feedback from your paper prototyping testing
 
+
+## Studio Reflections
+1. (TA) + Your prototype is very similar to Google email UI, which is easy to use when they experienced.
+- However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
+
+2. (Students) 
 
