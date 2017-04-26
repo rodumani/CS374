@@ -4,14 +4,18 @@
 ## POV
 Graduate Student needs to manage the documents received on E-mail because they are sharing many files with E-mail and it’s uncomfortable.
 
+We didn't change our POV, because our POV is still proper to us.
+
 ## Tasks
 1. Write a new mail to Prof. Juho Kim, attaching a report file.
 2. Find a list view of attached files, and check all attachments, and filter CS101_HW related file only.
 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
 
+We also did not changed our tasks from DP3.
+
 ## Prototype
 ### Prototyping tool
-Google Slides 
+We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level.
 
 ### Design choices
 
