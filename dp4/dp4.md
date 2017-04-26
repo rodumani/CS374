@@ -1,4 +1,4 @@
-# CS374 - DP3
+# CS374 - DP4
 ### Team NanoMario
 
 ## POV
@@ -21,7 +21,13 @@ Graduate Student needs to manage the documents received on E-mail because they a
 
 
 ## Observations
+### Participants
+- P1: 
+- P2: 
+- P3: 
+- P4: 
 
+### Usability problems
 
 
 ## Paper vs Digital
