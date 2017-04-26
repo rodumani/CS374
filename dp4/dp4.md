@@ -11,10 +11,13 @@ Graduate Student needs to manage the documents received on E-mail because they a
 
 ## Prototype
 ### Prototyping tool
+Google Slides 
 
 ### Design choices
 
+
 ### Representative screenshots
+
 
 ### Instructions
 
@@ -25,9 +28,19 @@ Graduate Student needs to manage the documents received on E-mail because they a
 - P1: 전자과 석사2학년 / Male / gmail 사용 / 조교를 맡고 있음
 - P2: 생화공 석사1학년 / Male / kaist 메일 사용 / 조교를 맡고 있음
 - P3: 생화공 석사1학년 / Male / kaist 메일 사용 / 조교X
-- P4: 
+- P4: Ph.D. 1st grade / Male / using gmail / Working as TA
 
-### Usability problems
+### Usability problems (Observations)
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
 
 
 ## Paper vs Digital
