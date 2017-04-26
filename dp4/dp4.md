@@ -48,16 +48,20 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 - P4: Ph.D. 1st grade / Male / using gmail / Working as TA
 
 ### Usability problems (Observations)
-1.
-2.
-3.
+#### Task 1
+1. Most users failed to recognize color change on background when a file is attached. (P4)
+2. Most users failed to recognize "Send" button changed when a file is attached. (P4)
+3. 
 4.
-5.
-6.
-7.
+
+#### Task 2
+5. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list.
+6. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system.
+7. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.
 8.
-9.
-10.
+
+#### Task 3
+9. Most people clicked a label not a checkbox when adding tags.
 
 
 ## Paper vs Digital
