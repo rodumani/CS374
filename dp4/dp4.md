@@ -25,32 +25,25 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 
 ![main](./main.jpg)
 * This is our main page. If you open our website, this page will appear at first. Actually, it is similar with Gmail. 
----
-
 ![nofile](./nofile.jpg)
-* If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it.
+* If you write a mail (In prototype, the body of the message is pre-written.) and send file without attaching file, we gives a toast, underline the sentence which includes `attachment` in it. And prevent sending mail without attachments.
 * Preventing sending mail without attachments.
----
 
 ![yesfile](./yesfile.jpg)
 * If you attached file, background color is changed to light green and `Send` button is changed to red color.
 * Preventing sending mail without attachments.
----
 
 ![files](./files.jpg)
 * If you click `Files` button, it first shows list of all attachments.
 * Function for managing attachments easily with cloud-like service.
----
 
 ![CS101](./CS101.jpg)
 * A view of attachment files which is filtered by tag #CS101_HW. When a user click `New Tag` button at left down corner, he/she can add a new tag.
 * Function for managing attachments easily with cloud-like service.
----
 
 ![newtag](./newtag.jpg)
 * Page for add new tag. In prototype, the textfield is pre-written.
 * Function for managing attachments easily with tags.
----
 
 ![changetag](./changetag.jpg)
 * You can change tags of files when you click `+` button in file list. In prototype, you were only able to change 0402_lab.ppt's tag, adding Lab Seminar tag. 
@@ -73,17 +66,19 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 #### Task 1
 1. Most users failed to recognize color change on background when a file is attached. (P1, P3, P4)
 2. Most users failed to recognize "Send" button changed when a file is attached. (P1, P3, P4)
-3. 
-4.
+3. Some users was uncomfortable with small size of an attachment icon. 
 
 #### Task 2
-5. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list.
-6. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system.
-7. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.
-8.
+4. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list.
+5. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system.
+6. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.
+7. Most users spent time on clicking a clip symbol at the right of the mail list to find a list view of attached files. We thought that this is because the clip symbol is strongly related to attachments in users mind model. (affordance...)
+8. A word "Files" on the menu list has less affordance to a list of attachments so that it does not seem to fully represent the new features.
 
 #### Task 3
 9. Most people clicked a label not a checkbox when adding tags.
+10. Some people were annoyed by the process of registering a new tag. They wanted the ability to automatically tag or show suggestion tags.
+
 
 
 ## Paper vs Digital
