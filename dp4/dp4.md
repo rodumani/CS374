@@ -11,10 +11,10 @@ We didn't change our POV, because our POV is still proper to us.
 2. Find a list view of attached files, and check all attachments, and filter CS101_HW related file only.
 3. Add a new tag named ‘Lab-Seminar’, and apply it to the ‘0402_lab.ppt’ file.
 
-We also did not changed our tasks from DP3.
-Task 1 is basic function for mail, but uesr may notice difference from ordinary one.
-Task 2 and 3 is advanced function for users who share many files with mail, like graduate students.
-In task 2, they can experience how to watch wanted files.
+We also did not changed our tasks from DP3.  
+Task 1 is basic function for mail, but uesr may notice difference from ordinary one.  
+Task 2 and 3 is advanced function for users who share many files with mail, like graduate students.  
+In task 2, they can experience how to watch wanted files.  
 Task 3 is making new tag for file, which is essential function for managing file with tags. Because many graduate students works as TA, they have to manage many similar files from students. We thought managing files with tags are better, so we made it as a task.
 
 ## Prototype
