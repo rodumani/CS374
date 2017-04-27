@@ -85,7 +85,7 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 4. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list. (P2, P3, P4)
 5. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system. (P1, P2, P3, P4)
 6. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.(P1, P2, P3, P4)
-7. Most users spent time on clicking a clip symbol at the right of the mail list to find a list view of attached files. We thought that this is because the affordance of a clip symbol strongly relates the symbol with the concept of attachments in users' mind model. (P1, P2, P3)
+7. Most users spent time on clicking a clip symbol at the right of the mail list to find a list view of attached files. We thought that this is because the affordance of a clip symbol strongly relates with the concept of attachments in users' mind model. (P1, P2, P3)
 8. A word "Files" on the menu list has less affordance to a list of attachments so that it does not seem to fully represent the new features. (P2, P3)
 
 #### Task 3
