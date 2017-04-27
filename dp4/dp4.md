@@ -22,9 +22,9 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 It is so hard to represent those kind of functions, so that we do not implement it on low-fi prototype. 
 * When adding a new tag, there should be a keyboard input, but we didn't.
 We chose the prototpying tool to 'Google Slides' so that user could not enter any text by therself. We are actually not intended to missing that part but we dropped it to choose the right prototyping tool. 
-* Automatic detecting algorithm by analyzing the body of email weather the attachment files should be.
+* Automatic detecting algorithm by analyzing the body of email weather the attachment files should be is missing. 
 It needs a real code implementation, so we cannot implement it building low-fi prototype.
-* A simple tutorial or a bridge between an our new feature (  a system managing attachments ) and an ordinary email system.
+* A simple tutorial or a bridge between an our new feature (  a system managing attachments ) and an ordinary email system are missing.
 As we have not enough time to consider about it, we would like to consider deeply and implement some features and elements related to it on mid-fi prototype.
 
 
