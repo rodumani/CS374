@@ -126,7 +126,14 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 
 
 ## Studio Reflections
-1. (TA) + Your prototype is very similar to Google email UI, which is easy to use when they experienced. - However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
+1. (TA)
+    1. Compliments
+        - Your prototype is very similar to Google email UI, which is easy to use when they experienced.
+
+    2. Concerns
+        - However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
+
+            We thought deeply about missing attachments even though the user had to attach attachments as recovery. However, as prevention, we think it is useful to give visual focus to recall memory about attachments to user. We will consider this in the next prototype. 
 
 2. (Students) 
     1. Compliments
