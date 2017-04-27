@@ -18,13 +18,14 @@ We also did not changed our tasks from DP3.
 We used Google Slides for our lo-fi prototyping. We checked all of recommended tools in DP4 introduction like Marvel, Invision, proto.io. But these tools were too advanced and had high learnability. So, it looked hard to use in a short time. So we used Google Slides, the tool which is familiar with us and easy to implement our functions in lo-fi prototyping level. Also, some recommended tools showed which is clickable with blue lectangle, if you double click where is not clickable. But we thought it is bad for user testing, because user should be able to click where cannot click because we should watch how user acts.
 
 ### Design choices
-- sorting function
-> need real implementation
-- Search function
-> also need real impelemntation
-- When adding a new tag, there should be a keyboard input
-> we chose the prototpying tool to 'Google Slides' so that user could not enter any text by therself. 
-- 
+* Sorting and searching functionality of files is missing.
+It is so hard to represent those kind of functions, so that we do not implement it on low-fi prototype. 
+* When adding a new tag, there should be a keyboard input, but we didn't.
+We chose the prototpying tool to 'Google Slides' so that user could not enter any text by therself. We are actually not intended to missing that part but we dropped it to choose the right prototyping tool. 
+* Automatic detecting algorithm by analyzing the body of email weather the attachment files should be.
+It needs a real code implementation, so we cannot implement it building low-fi prototype.
+* A simple tutorial or a bridge between an our new feature (  a system managing attachments ) and an ordinary email system.
+As we have not enough time to consider about it, we would like to consider deeply and implement some features and elements related to it on mid-fi prototype.
 
 
 ### Representative screenshots
