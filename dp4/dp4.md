@@ -65,7 +65,7 @@ We used Google Slides for our lo-fi prototyping. We checked all of recommended t
 ### Instructions
 **accessible and executable prototype link**
 https://docs.google.com/presentation/d/1NoFqw6YFvfMyzXwfhDT44Cf_9tkGPQPBhUKCOg-6VCE/edit?usp=sharing
-**instruction**
+**instruction**  
 Please run “presentation” mode. And please use a mouse, not a keyboard.
 
 ## Observations
@@ -79,18 +79,18 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 #### Task 1
 1. Most users failed to recognize color change on background when a file is attached. (P1, P3, P4)
 2. Most users failed to recognize "Send" button changed when a file is attached. (P1, P3, P4)
-3. Some users was uncomfortable with small size of an attachment icon. 
+3. Some users was uncomfortable with small size of an attachment icon. (P2, P3)
 
 #### Task 2
-4. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list.
-5. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system.
-6. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.
-7. Most users spent time on clicking a clip symbol at the right of the mail list to find a list view of attached files. We thought that this is because the clip symbol is strongly related to attachments in users mind model. (affordance...)
-8. A word "Files" on the menu list has less affordance to a list of attachments so that it does not seem to fully represent the new features.
+4. Most users tried to find attachments by search. But as our prototype doesn't support searching files, they scanned a related mail on the inbox mail list. (P2, P3, P4)
+5. Most users felt hard to find files menu because (1) it is new functionality and (2) there is no clue or connection between an ordinary mail system and the new file-menu system. (P1, P2, P3, P4)
+6. As there was no tags when users sent a mail on Task 1, most users didn't recoginze the existing of tag functionality until they reached 'files' menu.(P1, P2, P3, P4)
+7. Most users spent time on clicking a clip symbol at the right of the mail list to find a list view of attached files. We thought that this is because the affordance of a clip symbol strongly relates the symbol with the concept of attachments in users' mind model. (P1, P2, P3)
+8. A word "Files" on the menu list has less affordance to a list of attachments so that it does not seem to fully represent the new features. (P2, P3)
 
 #### Task 3
-9. Most people clicked a label not a checkbox when adding tags.
-10. Some people were annoyed by the process of registering a new tag. They wanted the ability to automatically tag or show suggestion tags.
+9. Most people clicked a label not a checkbox when adding tags.(P1, P2, P4)
+10. Some people were annoyed by the process of registering a new tag. They wanted the ability to automatically tag or show suggestion tags. (P1, P2, P3, P4)
 
 
 
