@@ -129,4 +129,32 @@ Please run “presentation” mode. And please use a mouse, not a keyboard.
 1. (TA) + Your prototype is very similar to Google email UI, which is easy to use when they experienced. - However, since your project is focused on attaching file problems in an email system, I wish that the attaching symbol is too small when we sending the email. Also, I think your team should consider that how to show multiple files in a single email. Also, the list form for showing attached files may not useful in case of many attached files. 
 
 2. (Students) 
+    1. Compliments
+        - I really like this kind of design.
+
+    2. Observations
+        - Besides the prototype, I think it would be important to appeal difference of your service from Gmail.
+            Until now, we kept thinking about attachments and it brings lack of connection between mail and attachments. We are going to fill this gap by provide auto tagging or tag suggestions on mail editor.
+        - Are all the files I got from mail automatically added to the list? What if there're some files that I don't want to save?
+            Basically, yes. We didn't think about remove it from list yet, but we think it's important. We'll consider it on Mid-Fi prototyping.
+        - I think it would be arduous if the receiver has to tag all of the emails :(
+            Of course not. We are going to provide auto-tagging based on the rules on Mid-Fi prototyping.
+
+    3. Prototype usability problems 
+        - Nice but hard to notice which button is activated or not. 
+        - Once you go, you can't go back.
+        - Clicking new mail will create a new mail, but then how to close it..
+        - It's hard to know what is clickable, I have to click everywhere.
+        - Sometimes your prototype stuck somewhere.. 
+        - Many buttons are clickable in some page, but not available when something is changed on that page.I know that it is a constrained when prototyping with ppt, but u shouldn't have used it.
+
+        As we mentioned at Prototyping tool section, most other prototyping tools show a blue bounding box on the screen when a user clicks non-supported component. However, we thought it can make testers to try to find out blue box only, without thinking about the task. 
+        We also removed some clickable buttons or features after entering some steps to prevent going in to wrong states, but a student gave us a feedback about it. We might had to keep it.
+
+    4. Trivia
+        - That idea of prototype using ppt is so mind blowing.
+        - I like the frog.
+        - frog is sad
+        - Sad frog ㅠㅠㅠㅠ
+
 
