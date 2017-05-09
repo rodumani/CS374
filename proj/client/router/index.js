@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../views/Home'
+import Inbox from '../components/Inbox'
 
 Vue.use(Router)
 
@@ -9,7 +9,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Home
-    }
-  ]
+      component: Inbox,
+    },
+  ],
 })
