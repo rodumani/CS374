@@ -1,6 +1,7 @@
 {
   "mails": [
     {
+      "mailid": 12,
       "from": {
         "name": "Juho Kim",
         "address": "juho.kim@kaist.ac.kr"
@@ -29,6 +30,7 @@
       ]
     },
     {
+      "mailid": 12700,
       "from": {
         "name": "SeungMin Lee",
         "address": "seungmin@kaist.ac.kr"
@@ -43,6 +45,7 @@
       ]
     },
     {
+      "mailid": 13500,
       "from": {
         "name": "SeungMin Lee",
         "address": "seungmin@kaist.ac.kr"

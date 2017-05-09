@@ -5,7 +5,7 @@
         <i class="fa fa-circle-o-notch fa-spin fa-3x" v-show="mails.length === 0"></i>
       </div>
       <table class="table">
-        <tr v-for="mail in mails">
+        <tr v-for="mail in mails" @click="movelink(mail)">
           <td class="author">{{mail.from.name}}</td>
           <td class="title">{{mail.title}}</td>
           <td class="attachment">
@@ -30,6 +30,11 @@
         mails: 'mails',
       }),
     },
+    methods: {
+      movelink: function(mail) {
+        this.$router.push(`/inbox/${mail.mailid}`)
+      }
+    }
   }
 </script>
 

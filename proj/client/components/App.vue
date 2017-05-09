@@ -21,3 +21,10 @@
     },
   }
 </script>
+
+<style>
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+</style>
