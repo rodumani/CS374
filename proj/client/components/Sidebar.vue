@@ -8,15 +8,15 @@
     </div>
     <nav role="navigation">
       <ul>
-        <li class="active">
-          <a>Inbox</a>
-        </li>
-        <li>
-          <a>Sent</a>
-        </li>
-        <li>
-          <a>Files</a>
-        </li>
+        <router-link tag="li" active-class="active" to="/inbox">
+          Inbox
+        </router-link>
+        <router-link tag="li" active-class="active" to="/sent">
+          Sent
+        </router-link>
+        <router-link tag="li" active-class="active" to="/files">
+          Files
+        </router-link>
       </ul>
     </nav>
   </div>
