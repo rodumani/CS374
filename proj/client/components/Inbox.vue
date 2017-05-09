@@ -1,14 +1,19 @@
 <template>
   <Layout>
-    <table class="table">
-      <tr v-for="mail in mails">
-        <td class="author">{{mail.from.name}}</td>
-        <td class="title">{{mail.title}}</td>
-        <td class="attachment">
-          <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
-        </td>
-      </tr>
-    </table>
+    <div class="inbox">
+      <div class="center">
+        <i class="fa fa-circle-o-notch fa-spin fa-3x" v-show="mails.length === 0"></i>
+      </div>
+      <table class="table">
+        <tr v-for="mail in mails">
+          <td class="author">{{mail.from.name}}</td>
+          <td class="title">{{mail.title}}</td>
+          <td class="attachment">
+            <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
+          </td>
+        </tr>
+      </table>
+    </div>
   </Layout>
 </template>
 
@@ -53,5 +58,15 @@
   }
   .attachment {
     width: 20px;
+  }
+  .inbox {
+    position: relative;
+    height: calc(100vh - 74px);
+  }
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 </style>
