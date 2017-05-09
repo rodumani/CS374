@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <table class="table">
-      <tr v-for="mail in mails">
+      <tr v-for="mail in mails" @click="movelink">
         <td class="author">{{mail.from.name}}</td>
         <td class="title">{{mail.title}}</td>
         <td class="attachment">
@@ -25,6 +25,13 @@
         mails: 'mails',
       }),
     },
+    methods: {
+      movelink: function(){
+        
+        location.replace("/showmail/");
+      }
+
+    }
   }
 </script>
 

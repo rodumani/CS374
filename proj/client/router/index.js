@@ -12,5 +12,6 @@ export default new Router({
     { path: '/inbox', component: Inbox },
     { path: '/sent', redirect: '/inbox' },
     { path: '/files', component: Files },
+    { path: '/showmail/', component: ShowMail }
   ],
 })
