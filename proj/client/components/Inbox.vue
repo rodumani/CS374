@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <table class="table">
-      <tr v-for="mail in mails" @click="movelink">
+      <tr v-for="mail in mails" @click="movelink(mail)">
         <td class="author">{{mail.from.name}}</td>
         <td class="title">{{mail.title}}</td>
         <td class="attachment">
@@ -26,11 +26,9 @@
       }),
     },
     methods: {
-      movelink: function(){
-        
-        location.replace("/showmail/");
+      movelink: function(mail) {
+        this.$router.push(`/inbox/${mail.mailid}`)
       }
-
     }
   }
 </script>
