@@ -6,6 +6,7 @@ Vue.use(Vuex)
 const store = {
   state: {
     showNewMail: false,
+    mails: [],
   },
   mutations: {
     showNewMail (state) {
@@ -14,6 +15,9 @@ const store = {
     closeNewMail (state) {
       state.showNewMail = false
     },
+    setMails (state, mails) {
+      state.mails = mails
+    },
   },
   actions: {
     showNewMail ({ commit }) {
@@ -21,6 +25,9 @@ const store = {
     },
     closeNewMail ({ commit }) {
       commit('closeNewMail')
+    },
+    setMails ({ commit }, mails) {
+      commit('setMails', mails)
     },
   },
 }

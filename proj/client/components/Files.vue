@@ -22,9 +22,9 @@
         <tbody>
         <tr v-for="file in files">
           <td>{{file.name}}</td>
-          <td>{{file.sender}}</td>
-          <td>{{file.title}}</td>
-          <td>{{file.date}}</td>
+          <td>{{file.mail.from.name}}</td>
+          <td>{{file.mail.title}}</td>
+          <td>{{file.mail.sent}}</td>
         </tr>
         </tbody>
       </table>
@@ -34,35 +34,44 @@
 
 <script>
   import Layout from '../views/Layout'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
       Layout,
     },
-    data () {
-      return {
-        tags: ['a', 'b', 'c'],
-        files: [
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-          { name: '20170543_HW1.py', sender: 'Changje Jeong', title: '[CS101] HW1', date: '2017-05-04 12:00:00' },
-        ],
-      }
+    computed: {
+      ...mapState({
+        files: state => {
+          const files = []
+          console.log (state.mails)
+          state.mails.forEach((mail) => {
+            if (!mail.attachments) return
+            for (const attachment of mail.attachments) {
+              files.push({
+                name: attachment.filename,
+                link: attachment.link,
+                tags: attachment.tags,
+                mail: mail,
+              })
+            }
+          })
+          return files
+        },
+        tags: state => {
+          const tags = new Set();
+          state.mails.forEach((mail) => {
+            if (!mail.attachments) return
+            for (const attachment of mail.attachments) {
+              if (!attachment.tags) continue
+              for (const tag of attachment.tags) {
+                tags.add(tag)
+              }
+            }
+          })
+          return Array.from(tags)
+        }
+      }),
     },
   }
 </script>

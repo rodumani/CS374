@@ -14,21 +14,16 @@
 
 <script>
   import Layout from '../views/Layout'
-  import firebase from '../firebase'
+  import { mapState } from 'vuex'
 
   export default {
     components: {
       Layout,
     },
-    data () {
-      return {
-        mails: [],
-      };
-    },
-    mounted () {
-      firebase.database().ref('/mails/').once('value').then((snapshot) => {
-        this.mails = snapshot.val();
-      })
+    computed: {
+      ...mapState({
+        mails: 'mails',
+      }),
     },
   }
 </script>

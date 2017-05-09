@@ -10,6 +10,7 @@ export default new Router({
   routes: [
     { path: '/', redirect: '/inbox' },
     { path: '/inbox', component: Inbox },
+    { path: '/sent', redirect: '/inbox' },
     { path: '/files', component: Files },
   ],
 })
