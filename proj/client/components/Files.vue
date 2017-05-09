@@ -2,9 +2,9 @@
   <Layout>
     <div class="col-md-2 no-padding tags">
       <ul>
-        <li class="active">All</li>
-        <li>Unclassified</li>
-        <li v-for="tag in tags">
+        <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
+        <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
+        <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
           {{tag}}
         </li>
       </ul>
@@ -73,6 +73,16 @@
         }
       }),
     },
+    data () {
+      return {
+        currentTag: 'all',
+      }
+    },
+    methods: {
+      updateCurrentTag (tag) {
+        this.currentTag = tag
+      },
+    }
   }
 </script>
 
