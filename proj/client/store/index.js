@@ -3,31 +3,26 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const state = {
-  count: 0
-}
-
-const mutations = {
-  INCREMENT (state) {
-    state.count++
+const store = {
+  state: {
+    showNewMail: false,
   },
-  DECREMENT (state) {
-    state.count--
-  }
+  mutations: {
+    showNewMail (state) {
+      state.showNewMail = true
+    },
+    closeNewMail (state) {
+      state.showNewMail = false
+    },
+  },
+  actions: {
+    showNewMail ({ commit }) {
+      commit('showNewMail')
+    },
+    closeNewMail ({ commit }) {
+      commit('closeNewMail')
+    },
+  },
 }
 
-const actions = {
-  incrementAsync ({ commit }) {
-    setTimeout(() => {
-      commit('INCREMENT')
-    }, 200)
-  }
-}
-
-const store = new Vuex.Store({
-  state,
-  mutations,
-  actions
-})
-
-export default store
+export default new Vuex.Store(store)

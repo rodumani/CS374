@@ -18,15 +18,24 @@
         <slot></slot>
       </div>
     </div>
+    <NewMail v-if="showNewMail"></NewMail>
   </div>
 </template>
 
 <script>
 import Sidebar from 'components/Sidebar'
+import NewMail from 'components/NewMail'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     Sidebar,
+    NewMail,
+  },
+  computed: {
+    ...mapState({
+      showNewMail: state => state.showNewMail,
+    }),
   }
 }
 </script>

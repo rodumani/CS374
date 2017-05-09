@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="heading">
-      <h1>Mail</h1>
+      <h1><i class="fa fa-envelope"></i> Mail</h1>
     </div>
     <div>
-      <button class="btn btn-primary btn-new-mail">New Mail</button>
+      <button class="btn btn-primary btn-new-mail" @click="onClickNewMail">New Mail</button>
     </div>
     <nav role="navigation">
       <ul>
@@ -23,14 +23,26 @@
 </template>
 
 <script>
-  export default {
+  import { mapActions } from 'vuex'
 
+  export default {
+    methods: {
+      onClickNewMail () {
+        this.showNewMail ();
+      },
+      ...mapActions([
+        'showNewMail',
+      ]),
+    }
   }
 </script>
 
 <style scoped>
   .btn-new-mail {
     width: 100%;
+  }
+  .heading h1 {
+    margin: 17px 0;
   }
   li {
     list-style-type: none;
