@@ -4,8 +4,8 @@
       <tr v-for="mail in mails">
         <td class="author">{{mail.from.name}}</td>
         <td class="title">{{mail.title}}</td>
-        <td class="attachment" v-if="mail.attachments.length > 0">
-          <i class="fa fa-paperclip"></i>
+        <td class="attachment">
+          <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
         </td>
       </tr>
     </table>
@@ -14,6 +14,7 @@
 
 <script>
   import Layout from '../views/Layout'
+  import firebase from '../firebase'
 
   export default {
     components: {
@@ -21,39 +22,13 @@
     },
     data () {
       return {
-        mails: [
-          {
-            from: {
-              name: 'Juho Kim',
-              address: 'juho.kim@kaist.ac.kr',
-            },
-            to: {
-              address: 'changjej@kaist.ac.kr',
-            },
-            title: "[DP2] Notice on DP2 presentation",
-            content: "Blah",
-            sent: '2017-05-09 19:20:51',
-            attachments: [
-              {filename: 'notice.pdf', link: 'some address',},
-            ],
-          },
-          {
-            from: {
-              name: 'Juho Kim',
-              address: 'juho.kim@kaist.ac.kr',
-            },
-            to: {
-              address: 'changjej@kaist.ac.kr',
-            },
-            title: "[DP2] Notice on DP2 presentation",
-            content: "Blah",
-            sent: '2017-05-09 19:20:51',
-            attachments: [
-              {filename: 'notice.pdf', link: 'some address',},
-            ],
-          },
-        ]
+        mails: [],
       };
+    },
+    mounted () {
+      firebase.database().ref('/mails/').once('value').then((snapshot) => {
+        this.mails = snapshot.val();
+      })
     },
   }
 </script>

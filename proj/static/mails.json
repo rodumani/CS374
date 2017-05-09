@@ -1,0 +1,47 @@
+{
+  "mails": [
+    {
+      "from": {
+        "name": "Juho Kim",
+        "address": "juho.kim@kaist.ac.kr"
+      },
+      "to": {
+        "address": "changjej@kaist.ac.kr"
+      },
+      "title": "[DP2] Notice on DP2 presentation",
+      "content": "Blah",
+      "sent": "2017-05-09 19:20:51",
+      "attachments": [
+        { "filename": "notice.pdf", "link": "https://firebasestorage.googleapis.com/v0/b/cs374-32b99.appspot.com/o/pintos.pdf?alt=media&token=c9a185e4-d1bd-4f62-ae4b-75bdb52c01d7" }
+      ]
+    },
+    {
+      "from": {
+        "name": "SeungMin Lee",
+        "address": "seungmin@kaist.ac.kr"
+      },
+      "to": {
+        "address": "changjej@kaist.ac.kr"
+      },
+      "title": "Re: [DP2] Notice on DP2 presentation",
+      "content": "Blah",
+      "sent": "2017-05-09 21:20:51",
+      "attachments": [
+      ]
+    },
+    {
+      "from": {
+        "name": "SeungMin Lee",
+        "address": "seungmin@kaist.ac.kr"
+      },
+      "to": {
+        "address": "changjej@kaist.ac.kr"
+      },
+      "title": "Re: [DP2] Notice on DP2 presentation",
+      "content": "Blah",
+      "sent": "2017-05-09 19:20:51",
+      "attachments": [
+      ]
+    }
+  ]
+}
