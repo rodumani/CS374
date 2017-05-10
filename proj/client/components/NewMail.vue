@@ -53,18 +53,41 @@
         alert: false,
         alertMessage: '',
         attached: false,
-        from: '',
         to: '',
         title: '',
+        fileName: '',
         // attachment
       }
     },
     methods: {
+      async pushMails () {
+        let mailsRef = firebase.database().ref('/mails/')
+        let newMailRef = mailsRef.push();
+        var newMailData = {
+          content: this.body,
+          from: {
+          address: "changjej@kaist.ac.kr",
+          name: "Changje Jung",
+        },
+          to: this.to,
+          title: this.title,
+          sent: (new Date()).toISOString(),
+          attachment: "",
+        };
+        newMailData['attachment'] = {filename: this.fileName}
+        console.log(newMailData);
+        newMailRef.set(newMailData)
+        var mailId = newMailRef.key;
+        console.log("Firebase saved")
+      },
       onClickClose () {
         this.closeNewMail ();
       },
       onFileChange (e) {
         this.attached = true;
+        this.fileName = e.srcElement.value.split("\\")[e.srcElement.value.split("\\").length - 1];
+        console.log(typeof(e.srcElement.value))
+        console.log(e.srcElement.value)
       },
       checkAttached (e) {
         const bannedWords = ["첨부", "attachment", "attach"]
@@ -74,54 +97,19 @@
               this.alert=true;
               this.alertMessage="The word \""+bannedWords[i]+"\" included on your text, but you didn't attached any file."
               console.log("WOrdked")
-              break
+              return
             }        
           }
         }
+        this.pushMails()
+
       },
       ...mapActions ([
         'closeNewMail',
         'setMails',
       ]),
     },
-//     async pushMails () {
-//       const mails = await getMails()
-//       var newKey = mails.length
-//       var newMail = {}
-//       newMail["mailId"] = "random"
-//       newMail["from"] = 
-// /*
-//     {
-//       "mailid": 12,
-//       "from": {
-//         "name": "Juho Kim",
-//         "address": "juho.kim@kaist.ac.kr"
-//       },
-//       "to": {
-//         "address": "changjej@kaist.ac.kr"
-//       },
-//       "title": "[DP2] Notice on DP2 presentation",
-//       "content": "Blah",
-//       "sent": "2017-05-09 19:20:51",
-//       "attachments": {
-//         0:{
-//           "filename": "notice.pdf",
-//           "link": "https://firebasestorage.googleapis.com/v0/b/cs374-32b99.appspot.com/o/pintos.pdf?alt=media&token=c9a185e4-d1bd-4f62-ae4b-75bdb52c01d7",
-          
-//         },
-//        1: {
-//           "filename": "report.pdf",
-//           "link": "https://firebasestorage.googleapis.com/v0/b/cs374-32b99.appspot.com/o/pintos.pdf?alt=media&token=c9a185e4-d1bd-4f62-ae4b-75bdb52c01d7",
-          
-//         }
-//         }
-//     },
-//     */
-
-//       let mailsRef = firebase.database().ref('/mails/')
-//       mailsRef.update({newKey:newMail});
-
-//     },
+    
   }
 </script>
 
