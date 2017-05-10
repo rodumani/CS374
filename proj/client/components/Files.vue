@@ -8,8 +8,8 @@
           <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
             {{tag}}
           </li>
-          <li>
-          <button class="btn btn-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
+          <li class="add-new-tag">
+          <button class="btn btn-outline-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
           </li>
         </ul>
       </div>
@@ -58,10 +58,11 @@
               return true
 
           if (this.currentTag === "unclassified")
-              return file.tags.length === 0
+              return !file.tags || file.tags.length === 0
 
-          for (const tag of file.tags) {
-              if (tag === this.currentTag)
+          for (const tag of Object.values(file.tags)) {
+              if (tag
+                  .name === this.currentTag)
                   return true
           }
 
@@ -105,13 +106,9 @@
       ]),
     },
     async mounted () {
-      const rawTags = await getTags()
-      const tags = []
-      for (const tag of Object.values(rawTags)) {
-        tags.push(tag)
-      }
-      tags.sort()
-      this.tags = tags
+      var tags = await getTags();
+      tags.sort();
+      this.setTags(tags)
     }
   }
 </script>
@@ -143,6 +140,13 @@
   }
   li:hover {
     background-color: #eee;
+  }
+  li.add-new-tag:hover {
+    background-color: inherit;
+  }
+  li.add-new-tag {
+    cursor: default;
+    margin-top: 10px;
   }
   li.active {
     border-right: 5px solid #337ab7;
