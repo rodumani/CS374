@@ -24,14 +24,14 @@
           </tr>
           </thead>
           <tbody>
-          <template v-for="(file, index) in filteredFiles">
+          <template v-for="file in filteredFiles">
             <tr class="row-file">
               <td><a :href=file.link target="_blank">{{file.name}}</a></td>
               <td>{{file.mail.from.name}}</td>
               <td>{{file.mail.title}}</td>
               <td>{{file.mail.sent}}</td>
             </tr>
-            <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="index"></files-tag-row>
+            <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
           </template>
           </tbody>
         </table>
@@ -53,21 +53,23 @@
     },
     computed: {
       filteredFiles () {
-        return this.files.filter((file)=>{
+        return this.files.filter((file) => {
           if (this.currentTag === "all")
               return true
 
           if (this.currentTag === "unclassified")
               return !file.tags || file.tags.length === 0
 
+          if (!file.tags) {
+            return false
+          }
           for (const tag of Object.values(file.tags)) {
-              if (tag
-                  .name === this.currentTag)
+              if (tag.name === this.currentTag)
                   return true
           }
 
-          return false;
-        });
+          return false
+        })
       },
       ...mapState({
         files: state => {
