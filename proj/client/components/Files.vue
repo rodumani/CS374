@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="row">
-      <div class="col-md-2 no-padding tags">
+      <div class="col-md-3 no-padding tags">
         <ul>
           <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
           <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
@@ -13,7 +13,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-10 no-padding files">
+      <div class="col-md-9 no-padding files">
         <table class="table">
           <thead>
           <tr>
@@ -24,18 +24,14 @@
           </tr>
           </thead>
           <tbody>
-          <template v-for="file in filteredFiles">
+          <template v-for="(file, index) in filteredFiles">
             <tr class="row-file">
-              <td><a :href=file.link>{{file.name}}</a></td>
+              <td><a :href=file.link target="_blank">{{file.name}}</a></td>
               <td>{{file.mail.from.name}}</td>
               <td>{{file.mail.title}}</td>
               <td>{{file.mail.sent}}</td>
             </tr>
-            <tr class="row-tags">
-              <td colspan="4">
-                <span class="badge badge-default" v-for="tag in file.tags">{{tag}}</span>
-              </td>
-            </tr>
+            <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="index"></files-tag-row>
           </template>
           </tbody>
         </table>
@@ -47,15 +43,16 @@
 <script>
   import Layout from '../views/Layout'
   import { getTags } from '../firebase'
-  import { mapState } from 'vuex'
-  import { mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
+  import FilesTagRow from './FilesTagRow'
 
   export default {
     components: {
       Layout,
+      FilesTagRow,
     },
     computed: {
-      filteredFiles() {
+      filteredFiles () {
         return this.files.filter((file)=>{
           if (this.currentTag === "all")
               return true
@@ -108,9 +105,13 @@
       ]),
     },
     async mounted () {
-      var tags = await getTags();
-      tags.sort();
-      this.setTags(tags)
+      const rawTags = await getTags()
+      const tags = []
+      for (const tag of Object.values(rawTags)) {
+        tags.push(tag)
+      }
+      tags.sort()
+      this.tags = tags
     }
   }
 </script>
@@ -150,18 +151,5 @@
   ul {
     width: 100%;
     padding: 0;
-  }
-  .row-file td {
-    border-top: none;
-  }
-  .row-file {
-    border-top: 1px solid #eee;
-  }
-  .row-tags,
-  .row-tags td {
-    border-top: none;
-  }
-  .badge+.badge {
-    margin-left: 10px;
   }
 </style>

@@ -33,4 +33,10 @@ export async function addTags (newTag) {
   return
 }
 
+export async function putTag (mailKey, attachmentIdx, tag) {
+  await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags`).push({
+    name: tag,
+  })
+}
+
 export default app
