@@ -16,7 +16,13 @@ export async function getMails () {
 
 export async function getTags () {
   const tags = await firebase.database().ref('/tags/').once('value')
-  return tags.val()
+  var ret = []
+  for (const key of Object.keys(tags.val()))
+  {
+    const value = tags.val()[key]
+    ret.push(value)
+  }
+  return ret
 }
 
 export async function addTags (newTag) {
