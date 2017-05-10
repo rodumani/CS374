@@ -26,11 +26,11 @@ export async function getTags () {
 }
 
 export async function addTags (newTag) {
-  const tags = await getTags();
-  var updates = {}
-  updates[tags.length] = newTag
-  const newTags = await firebase.database().ref('/tags/').update(updates);
-  return newTags;
+  // const tags = await getTags();
+  // var updates = {}
+  // updates[tags.length] = newTag
+  await firebase.database().ref('/tags/').push(newTag);
+  return
 }
 
 export default app
