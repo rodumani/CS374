@@ -23,8 +23,16 @@
                   <input type="text" id="title" class="form-control" placeholder="Title" v-model="title"/>
                 </div>
               </div>
-              <textarea type="text" id="body" class="form-control" placeholder="Type Here" v-model="body"></textarea>
-              <input type="file" class="form-control" @change="onFileChange"/>
+              <div class="form-group">
+                <div class="col-md-10">
+                  <textarea type="text" id="body" class="form-control" placeholder="다음과 같이 적어보세요) 첨부된 파일을 확인해 주세요" v-model="body"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-10">
+                  <input type="file" class="form-control" @change="onFileChange"/>
+                </div>
+              </div>
             </form>
           </div>
           <div class="alert alert-danger alert-dismissable fade show" v-if="alert">
@@ -74,11 +82,10 @@
           sent: (new Date()).toISOString(),
           attachments: [],
         };
-        newMailData.attachments.push({ filename: this.fileName })
-        console.log(newMailData);
+        if (this.fileName) {
+          newMailData.attachments.push({ filename: this.fileName })
+        }
         newMailRef.set(newMailData)
-        var mailId = newMailRef.key;
-        console.log("Firebase saved")
       },
       onClickClose () {
         this.closeNewMail ();
@@ -86,8 +93,6 @@
       onFileChange (e) {
         this.attached = true;
         this.fileName = e.srcElement.value.split("\\")[e.srcElement.value.split("\\").length - 1];
-        console.log(typeof(e.srcElement.value))
-        console.log(e.srcElement.value)
       },
       async checkAttached (e) {
         const bannedWords = ["첨부", "attachment", "attach"]
@@ -96,7 +101,6 @@
             if (this.body.includes(bannedWords[i])) {          
               this.alert=true;
               this.alertMessage="The word \""+bannedWords[i]+"\" included on your text, but you didn't attached any file."
-              console.log("WOrdked")
               return
             }        
           }
@@ -122,5 +126,9 @@
     width: 100%;
     height: 100%;
     z-index: 50;
+  }
+  textarea {
+    height: 200px;
+    overflow-y: scroll;
   }
 </style>

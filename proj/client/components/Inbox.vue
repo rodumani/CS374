@@ -5,6 +5,14 @@
         <i class="fa fa-circle-o-notch fa-spin fa-3x" v-show="mails.length === 0"></i>
       </div>
       <table class="table">
+        <thead>
+        <tr>
+          <th>From</th>
+          <th>Title</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
         <tr v-for="mail in mails" @click="movelink(mail)">
           <td class="author">{{mail.from.name}}</td>
           <td class="title">{{mail.title}}</td>
@@ -12,6 +20,7 @@
             <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
           </td>
         </tr>
+        </tbody>
       </table>
     </div>
   </Layout>
