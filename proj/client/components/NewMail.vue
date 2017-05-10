@@ -72,9 +72,9 @@
           to: this.to,
           title: this.title,
           sent: (new Date()).toISOString(),
-          attachment: "",
+          attachments: [],
         };
-        newMailData['attachment'] = {filename: this.fileName}
+        newMailData.attachments.push({ filename: this.fileName })
         console.log(newMailData);
         newMailRef.set(newMailData)
         var mailId = newMailRef.key;
@@ -89,7 +89,7 @@
         console.log(typeof(e.srcElement.value))
         console.log(e.srcElement.value)
       },
-      checkAttached (e) {
+      async checkAttached (e) {
         const bannedWords = ["첨부", "attachment", "attach"]
         if (!this.attached){
           for (let i=0;i<bannedWords.length;i++){
@@ -101,8 +101,8 @@
             }        
           }
         }
-        this.pushMails()
-
+        await this.pushMails()
+        this.closeNewMail()
       },
       ...mapActions ([
         'closeNewMail',
