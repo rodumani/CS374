@@ -1,13 +1,13 @@
 <template>
   <div class="new-mail">
-    <div class="modal fade in" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" style="display: block;">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
+            <h5 class="modal-title">New Mail</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click.prevent.stop="onClickClose">
               <span aria-hidden="true">×</span>
             </button>
-            <h4 class="modal-title" id="myModalLabel">New Mail</h4>
           </div>
           <div class="modal-body">
             <form class="form-horizontal">

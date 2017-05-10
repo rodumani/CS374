@@ -37,6 +37,7 @@
 <style scoped>
   .btn-new-mail {
     width: 100%;
+    cursor: pointer;
   }
   .heading h1 {
     margin: 17px 0;
