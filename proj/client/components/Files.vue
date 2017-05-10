@@ -25,7 +25,7 @@
         <tbody>
         <template v-for="file in files">
           <tr class="row-file">
-            <td>{{file.name}}</td>
+            <td><a href="{{file.link}}">{{file.name}}</a></td>
             <td>{{file.mail.from.name}}</td>
             <td>{{file.mail.title}}</td>
             <td>{{file.mail.sent}}</td>
