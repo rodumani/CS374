@@ -7,7 +7,9 @@
     "test": "",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js",
-    "lint": "xo **/client/**/*.{vue,js} !node_modules/**"
+    "lint": "xo **/client/**/*.{vue,js} !node_modules/**",
+    "deploy": "firebase deploy",
+    "predeploy": "npm run build"
   },
   "author": "Changje Jeong <changje@devsisters.com>",
   "license": "MIT",
