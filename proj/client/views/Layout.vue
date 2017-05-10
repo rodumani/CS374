@@ -1,9 +1,9 @@
 <template>
   <div class="page">
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-12">
       <Sidebar></Sidebar>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10 col-sm-10 col-xs-12">
       <div class="row">
         <div class="col-md-8 search">
           <div class="input-group">
