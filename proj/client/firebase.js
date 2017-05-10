@@ -11,7 +11,12 @@ const app = firebase.initializeApp({
 
 export async function getMails () {
   const mails = await firebase.database().ref('/mails/').once('value')
-  return mails.val()
+  var ret = []
+  for (const key of Object.keys(mails.val())) {
+    const value = mails.val()[key]
+    ret.push(value)
+  }
+  return ret
 }
 
 export async function getTags () {
