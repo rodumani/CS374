@@ -58,7 +58,17 @@
           console.log (state.mails)
           state.mails.forEach((mail) => {
             if (!mail.attachments) return
+
             for (const attachment of mail.attachments) {
+              if (currentTag != "all") {
+                  if (currentTag == "unclassified") {
+                      if (attachment.tags.length > 0) return
+                  }
+                  else {
+                      if (attachment.tags.contains(currentTag) == false) return
+                  }
+              }
+
               files.push({
                 name: attachment.filename,
                 link: attachment.link,
