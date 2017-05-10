@@ -9,7 +9,7 @@
             {{tag}}
           </li>
           <li>
-            <i class="fa fa-plus"></i> Add new tag
+          <button class="btn btn-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
           </li>
         </ul>
       </div>
@@ -48,7 +48,7 @@
   import Layout from '../views/Layout'
   import { getTags } from '../firebase'
   import { mapState } from 'vuex'
-  import { vm } from 'index.js'
+  import { mapActions } from 'vuex'
 
   export default {
     components: {
@@ -99,6 +99,12 @@
       updateCurrentTag (tag) {
         this.currentTag = tag
       },
+      onClickNewTag() {
+          this.showNewTag()
+      },
+      ...mapActions([
+        'showNewTag',
+      ]),
     },
     async mounted () {
       this.tags = await getTags();

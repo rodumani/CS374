@@ -20,6 +20,7 @@
         </div>
       </div>
       <NewMail v-if="showNewMail"></NewMail>
+      <NewTag  v-if="showNewTag"></NewTag>
     </div>
   </div>
 </template>
@@ -27,16 +28,19 @@
 <script>
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
+import NewTag from 'components/NewTag'
 import { mapState } from 'vuex'
 
 export default {
   components: {
     Sidebar,
     NewMail,
+    NewTag,
   },
   computed: {
     ...mapState({
       showNewMail: state => state.showNewMail,
+      showNewTag: state => state.showNewTag
     }),
   }
 }

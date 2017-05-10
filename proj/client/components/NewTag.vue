@@ -1,0 +1,56 @@
+<template>
+  <div class="new-tag">
+    <div class="modal fade in" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click.prevent.stop="onClickClose">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">New Tag</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-md-10">
+                  <input type="text" id="newTag" class="form-control" placeholder="new tag" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import { mapActions } from 'vuex'
+
+  export default {
+    components: {
+    },
+    methods: {
+      onClickClose () {
+        this.closeNewTag ();
+      },
+      ...mapActions ([
+        'closeNewTag',
+      ]),
+    },
+  }
+</script>
+
+<style scoped>
+  .modal {
+    background-color: rgba(20, 20, 20, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+</style>
