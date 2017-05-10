@@ -44,6 +44,9 @@
     },
     methods: {
       async onChangeNewTag () {
+        if (this.newTag === '') {
+          return
+        }
         await putTag (this.mailKey, this.idx, this.newTag)
 
         this.newTag = ''

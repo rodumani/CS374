@@ -1,6 +1,6 @@
 <template>
   <div class="new-tag">
-    <div class="modal fade in" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose">
+    <div class="modal fade show" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
