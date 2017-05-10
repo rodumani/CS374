@@ -9,4 +9,14 @@ const app = firebase.initializeApp({
   messagingSenderId: '771327049053',
 })
 
+export async function getMails () {
+  const mails = await firebase.database().ref('/mails/').once('value')
+  return mails.val()
+}
+
+export async function getTags () {
+  const tags = await firebase.database().ref('/tags/').once('value')
+  return tags.val()
+}
+
 export default app

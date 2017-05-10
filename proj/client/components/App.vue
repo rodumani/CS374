@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import firebase from '../firebase'
+  import firebase, { getMails } from '../firebase'
   import { mapActions } from 'vuex'
 
   export default {
@@ -14,10 +14,9 @@
         'setMails',
       ]),
     },
-    mounted () {
-      firebase.database().ref('/mails/').once('value').then((snapshot) => {
-        this.setMails(snapshot.val())
-      })
+    async mounted () {
+      const mails = await getMails()
+      this.setMails(mails)
     },
   }
 </script>

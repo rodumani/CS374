@@ -7,6 +7,9 @@
         <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
           {{tag}}
         </li>
+        <li>
+          <i class="fa fa-plus"></i> Add new tag
+        </li>
       </ul>
     </div>
     <div class="col-md-10 no-padding files">
@@ -20,12 +23,19 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="file in files">
-          <td>{{file.name}}</td>
-          <td>{{file.mail.from.name}}</td>
-          <td>{{file.mail.title}}</td>
-          <td>{{file.mail.sent}}</td>
-        </tr>
+        <template v-for="file in files">
+          <tr class="row-file">
+            <td>{{file.name}}</td>
+            <td>{{file.mail.from.name}}</td>
+            <td>{{file.mail.title}}</td>
+            <td>{{file.mail.sent}}</td>
+          </tr>
+          <tr class="row-tags">
+            <td colspan="4">
+              <span class="label label-primary" v-for="tag in file.tags">{{tag}}</span>
+            </td>
+          </tr>
+        </template>
         </tbody>
       </table>
     </div>
@@ -34,6 +44,7 @@
 
 <script>
   import Layout from '../views/Layout'
+  import { getTags } from '../firebase'
   import { mapState } from 'vuex'
 
   export default {
@@ -58,30 +69,22 @@
           })
           return files
         },
-        tags: state => {
-          const tags = new Set();
-          state.mails.forEach((mail) => {
-            if (!mail.attachments) return
-            for (const attachment of mail.attachments) {
-              if (!attachment.tags) continue
-              for (const tag of attachment.tags) {
-                tags.add(tag)
-              }
-            }
-          })
-          return Array.from(tags)
-        }
       }),
     },
     data () {
       return {
         currentTag: 'all',
+        tags: [],
       }
     },
     methods: {
       updateCurrentTag (tag) {
         this.currentTag = tag
       },
+    },
+    async mounted () {
+      this.tags = await getTags();
+      this.tags.sort();
     }
   }
 </script>
@@ -121,5 +124,16 @@
   ul {
     width: 100%;
     padding: 0;
+  }
+  .row-file,
+  .row-file td {
+    border-bottom: none transparent;
+    border-top: 1px solid #808080;
+  }
+  .row-tags, .row-tags td {
+    border: none;
+  }
+  .label+.label {
+    margin-left: 10px;
   }
 </style>
