@@ -68,4 +68,10 @@
   nav {
     margin-top: 20px;
   }
+
+  h1 {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
 </style>
