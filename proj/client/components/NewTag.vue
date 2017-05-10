@@ -13,13 +13,13 @@
             <form class="form-horizontal">
               <div class="form-group">
                 <div class="col-md-10">
-                  <input type="text" id="newTag" class="form-control" placeholder="new tag" />
+                  <input type="text" id="newTag" class="form-control" placeholder="new tag" v-model="newTagName"/>
                 </div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" @click="onClickAdd">Add</button>
           </div>
         </div>
       </div>
@@ -28,16 +28,35 @@
 </template>
 <script>
   import { mapActions } from 'vuex'
+  import { addTags } from '../firebase'
+  import { getTags } from '../firebase'
 
   export default {
     components: {
     },
+    data() {
+      return {
+          newTagName: ""
+      }
+    },
     methods: {
+      async updateNewTags() {
+        var tags = await getTags();
+        tags.sort()
+        console.log(tags);
+        this.setTags(tags)
+      },
+      async onClickAdd() {
+        await addTags(this.newTagName)
+        this.closeNewTag()
+        await this.updateNewTags()
+      },
       onClickClose () {
-        this.closeNewTag ();
+        this.closeNewTag ()
       },
       ...mapActions ([
         'closeNewTag',
+        'setTags',
       ]),
     },
   }

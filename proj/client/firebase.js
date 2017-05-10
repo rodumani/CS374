@@ -19,4 +19,12 @@ export async function getTags () {
   return tags.val()
 }
 
+export async function addTags (newTag) {
+  const tags = await getTags();
+  var updates = {}
+  updates[tags.length] = newTag
+  const newTags = await firebase.database().ref('/tags/').update(updates);
+  return newTags;
+}
+
 export default app

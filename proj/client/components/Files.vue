@@ -87,12 +87,12 @@
           })
           return files
         },
+        tags: state => state.tags
       }),
     },
     data () {
       return {
         currentTag: 'all',
-        tags: [],
       }
     },
     methods: {
@@ -104,11 +104,13 @@
       },
       ...mapActions([
         'showNewTag',
+        'setTags',
       ]),
     },
     async mounted () {
-      this.tags = await getTags();
-      this.tags.sort();
+      var tags = await getTags();
+      tags.sort();
+      this.setTags(tags)
     }
   }
 </script>
