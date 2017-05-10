@@ -1,43 +1,45 @@
 <template>
   <Layout>
-    <div class="col-md-2 no-padding tags">
-      <ul>
-        <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
-        <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
-        <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
-          {{tag}}
-        </li>
-        <li>
-          <i class="fa fa-plus"></i> Add new tag
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-10 no-padding files">
-      <table class="table">
-        <thead>
-        <tr>
-          <th>File</th>
-          <th>Sender</th>
-          <th>Title</th>
-          <th>Date</th>
-        </tr>
-        </thead>
-        <tbody>
-        <template v-for="file in filteredFiles">
-          <tr class="row-file">
-            <td><a :href=file.link>{{file.name}}</a></td>
-            <td>{{file.mail.from.name}}</td>
-            <td>{{file.mail.title}}</td>
-            <td>{{file.mail.sent}}</td>
+    <div class="row">
+      <div class="col-md-2 no-padding tags">
+        <ul>
+          <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
+          <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
+          <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
+            {{tag}}
+          </li>
+          <li>
+            <i class="fa fa-plus"></i> Add new tag
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 no-padding files">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>File</th>
+            <th>Sender</th>
+            <th>Title</th>
+            <th>Date</th>
           </tr>
-          <tr class="row-tags">
-            <td colspan="4">
-              <span class="label label-primary" v-for="tag in file.tags">{{tag}}</span>
-            </td>
-          </tr>
-        </template>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+          <template v-for="file in filteredFiles">
+            <tr class="row-file">
+              <td><a :href=file.link>{{file.name}}</a></td>
+              <td>{{file.mail.from.name}}</td>
+              <td>{{file.mail.title}}</td>
+              <td>{{file.mail.sent}}</td>
+            </tr>
+            <tr class="row-tags">
+              <td colspan="4">
+                <span class="badge badge-default" v-for="tag in file.tags">{{tag}}</span>
+              </td>
+            </tr>
+          </template>
+          </tbody>
+        </table>
+      </div>
     </div>
   </Layout>
 </template>
@@ -141,15 +143,17 @@
     width: 100%;
     padding: 0;
   }
-  .row-file,
   .row-file td {
-    border-bottom: none transparent;
-    border-top: 1px solid #808080;
+    border-top: none;
   }
-  .row-tags, .row-tags td {
-    border: none;
+  .row-file {
+    border-top: 1px solid #eee;
   }
-  .label+.label {
+  .row-tags,
+  .row-tags td {
+    border-top: none;
+  }
+  .badge+.badge {
     margin-left: 10px;
   }
 </style>

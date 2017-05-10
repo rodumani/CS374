@@ -1,24 +1,26 @@
 <template>
-  <div class="page">
-    <div class="col-md-2 col-sm-2 col-xs-12">
-      <Sidebar></Sidebar>
-    </div>
-    <div class="col-md-10 col-sm-10 col-xs-12">
-      <div class="row">
-        <div class="col-md-8 search">
-          <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search" />
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+  <div class="page container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-12">
+        <Sidebar></Sidebar>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xs-12">
+        <div class="row">
+          <div class="col-md-8 search">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search" />
+              <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
             </span>
+            </div>
           </div>
         </div>
+        <div>
+          <slot></slot>
+        </div>
       </div>
-      <div>
-        <slot></slot>
-      </div>
+      <NewMail v-if="showNewMail"></NewMail>
     </div>
-    <NewMail v-if="showNewMail"></NewMail>
   </div>
 </template>
 
