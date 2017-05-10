@@ -38,9 +38,9 @@
         mails: 'mails',
       }),
       mailitem () {
-      	const answerid = this.$route.params.mailid
+      	const key = this.$route.params.mailid
         for (const m of this.mails) {
-          if (m.mailid == answerid) {
+          if (m.key === key) {
           	return m
           }
         }

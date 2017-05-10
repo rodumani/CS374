@@ -32,7 +32,7 @@
     },
     methods: {
       movelink: function(mail) {
-        this.$router.push(`/inbox/${mail.mailid}`)
+        this.$router.push(`/inbox/${mail.key}`)
       }
     }
   }

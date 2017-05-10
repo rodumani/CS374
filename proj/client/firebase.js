@@ -14,6 +14,7 @@ export async function getMails () {
   var ret = []
   for (const key of Object.keys(mails.val())) {
     const value = mails.val()[key]
+    value.key = key
     ret.push(value)
   }
   return ret
