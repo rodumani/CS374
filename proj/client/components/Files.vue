@@ -23,7 +23,7 @@
         </tr>
         </thead>
         <tbody>
-        <template v-for="file in files">
+        <template v-for="file in filteredFiles">
           <tr class="row-file">
             <td><a :href=file.link>{{file.name}}</a></td>
             <td>{{file.mail.from.name}}</td>
@@ -46,29 +46,35 @@
   import Layout from '../views/Layout'
   import { getTags } from '../firebase'
   import { mapState } from 'vuex'
+  import { vm } from 'index.js'
 
   export default {
     components: {
       Layout,
     },
     computed: {
+      filteredFiles() {
+        return this.files.filter((file)=>{
+          if (this.currentTag === "all")
+              return true
+
+          if (this.currentTag === "unclassified")
+              return file.tags.length === 0
+
+          for (const tag of file.tags) {
+              if (tag === this.currentTag)
+                  return true
+          }
+
+          return false;
+        });
+      },
       ...mapState({
         files: state => {
           const files = []
-          console.log (state.mails)
           state.mails.forEach((mail) => {
             if (!mail.attachments) return
-
             for (const attachment of mail.attachments) {
-              if (currentTag != "all") {
-                  if (currentTag == "unclassified") {
-                      if (attachment.tags.length > 0) return
-                  }
-                  else {
-                      if (attachment.tags.contains(currentTag) == false) return
-                  }
-              }
-
               files.push({
                 name: attachment.filename,
                 link: attachment.link,
