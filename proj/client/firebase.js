@@ -11,7 +11,7 @@ const app = firebase.initializeApp({
 
 export async function getMails () {
   const mails = await firebase.database().ref('/mails/').once('value')
-  var ret = []
+  const ret = []
   for (const key of Object.keys(mails.val())) {
     const value = mails.val()[key]
     value.key = key
@@ -22,9 +22,8 @@ export async function getMails () {
 
 export async function getTags () {
   const tags = await firebase.database().ref('/tags/').once('value')
-  var ret = []
-  for (const key of Object.keys(tags.val()))
-  {
+  const ret = []
+  for (const key of Object.keys(tags.val())) {
     const value = tags.val()[key]
     ret.push(value)
   }
@@ -32,11 +31,7 @@ export async function getTags () {
 }
 
 export async function addTags (newTag) {
-  // const tags = await getTags();
-  // var updates = {}
-  // updates[tags.length] = newTag
-  await firebase.database().ref('/tags/').push(newTag);
-  return
+  await firebase.database().ref('/tags/').push(newTag)
 }
 
 export async function putTag (mailKey, attachmentIdx, tag) {
