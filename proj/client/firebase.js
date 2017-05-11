@@ -20,6 +20,26 @@ export async function getMails () {
   return ret
 }
 
+export function pushMail (body, to, title, file) {
+  const mailsRef = firebase.database().ref('/mails/')
+  const newMailRef = mailsRef.push()
+  const newMailData = {
+    content: body,
+    from: {
+      address: 'changjej@kaist.ac.kr',
+      name: 'Changje Jung',
+    },
+    to: to,
+    title: title,
+    sent: (new Date()).toISOString(),
+    attachments: [],
+  }
+  if (file) {
+    newMailData.attachments.push({ filename: file.name })
+  }
+  newMailRef.set(newMailData)
+}
+
 export async function getTags () {
   const tags = await firebase.database().ref('/tags/').once('value')
   const ret = []

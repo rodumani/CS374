@@ -51,7 +51,7 @@
 </template>
 <script>
   import { mapActions } from 'vuex'
-  import firebase, { getMails } from '../firebase'
+  import firebase, { getMails, pushMail } from '../firebase'
   export default {
     components: {
     },
@@ -60,43 +60,27 @@
         body: '',
         alert: false,
         alertMessage: '',
-        attached: false,
         to: '',
         title: '',
-        fileName: '',
-        // attachment
+        file: null,
       }
     },
     methods: {
       async pushMails () {
-        let mailsRef = firebase.database().ref('/mails/')
-        let newMailRef = mailsRef.push();
-        var newMailData = {
-          content: this.body,
-          from: {
-          address: "changjej@kaist.ac.kr",
-          name: "Changje Jung",
-        },
-          to: this.to,
-          title: this.title,
-          sent: (new Date()).toISOString(),
-          attachments: [],
-        };
-        if (this.fileName) {
-          newMailData.attachments.push({ filename: this.fileName })
-        }
-        newMailRef.set(newMailData)
+        pushMail (this.body, this.to, this.title, this.file)
       },
       onClickClose () {
         this.closeNewMail ();
       },
       onFileChange (e) {
         this.attached = true;
-        this.fileName = e.srcElement.value.split("\\")[e.srcElement.value.split("\\").length - 1];
+//        this.file = e.srcElement.value.split("\\")[e.srcElement.value.split("\\").length - 1];
+        this.file = e.target.files[0]
+        console.log(this.file)
       },
       async checkAttached (e) {
         const bannedWords = ["첨부", "attachment", "attach"]
-        if (!this.attached){
+        if (!this.file){
           for (let i=0;i<bannedWords.length;i++){
             if (this.body.includes(bannedWords[i])) {          
               this.alert=true;
