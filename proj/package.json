@@ -26,6 +26,7 @@
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^4.1.1",
     "firebase": "^3.9.0",
+    "moment": "^2.18.1",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.2.0",
     "vue-router": "^2.0.0",

@@ -10,7 +10,7 @@
         <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to.address}}</span>
       </div>
       <div class="row showmail" id="sent">
-        <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{mailitem.sent}}</span>
+        <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
       </div>
       <hr align="left">
 			<div class="showmail" id="content"> {{mailitem.content}} </div>
@@ -28,23 +28,27 @@
 <script>
 	import Layout from '../views/Layout'
 	import { mapState } from 'vuex'
+  import moment from 'moment'
 
   export default {
     components: {
       Layout,
     },
     computed: {
-      ...mapState({
-        mails: 'mails',
-      }),
+      time () {
+        return moment (this.mailitem.sent).format ("YYYY-MM-DD A h:mm:ss")
+      },
       mailitem () {
-      	const key = this.$route.params.mailid
+        const key = this.$route.params.mailid
         for (const m of this.mails) {
           if (m.key === key) {
-          	return m
+            return m
           }
         }
       },
+      ...mapState({
+        mails: 'mails',
+      }),
     },
     methods: {
       downfile: function(file){
