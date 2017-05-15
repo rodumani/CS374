@@ -12,26 +12,18 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
-                <label class="col-md-2" for="to">To</label>
-                <div class="col-md-10">
-                  <input type="text" id="to" class="form-control" placeholder="To" v-model="to"/>
-                </div>
+                <label for="to">To</label> <span v-show="errors.has('to')" class="pull-right is-danger">This is required</span>
+                <input type="email" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" />
               </div>
               <div class="form-group">
-                <label class="col-md-2" for="title">Title</label>
-                <div class="col-md-10">
-                  <input type="text" id="title" class="form-control" placeholder="Title" v-model="title"/>
-                </div>
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" placeholder="Title" v-model="title" />
               </div>
               <div class="form-group">
-                <div class="col-md-10">
-                  <textarea type="text" id="body" class="form-control" placeholder="다음과 같이 적어보세요) 첨부된 파일을 확인해 주세요" v-model="body"></textarea>
-                </div>
+                <textarea type="text" id="body" class="form-control" placeholder="다음과 같이 적어보세요) 첨부된 파일을 확인해 주세요" v-model="body"></textarea>
               </div>
               <div class="form-group">
-                <div class="col-md-10">
-                  <input type="file" class="form-control" @change="onFileChange"/>
-                </div>
+                <input type="file" class="form-control" @change="onFileChange"/>
               </div>
             </form>
           </div>
@@ -111,5 +103,15 @@
   textarea {
     height: 200px;
     overflow-y: scroll;
+  }
+
+  input.has-error {
+    border-color: red;
+  }
+  .is-danger {
+    color: red;
+  }
+  .pull-right {
+    float: right;
   }
 </style>
