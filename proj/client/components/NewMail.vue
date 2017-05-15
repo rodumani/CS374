@@ -67,26 +67,23 @@
     },
     methods: {
       async pushMails () {
-        pushMail (this.body, this.to, this.title, this.file)
+        await pushMail (this.body, this.to, this.title, this.file)
       },
       onClickClose () {
         this.closeNewMail ();
       },
       onFileChange (e) {
-        this.attached = true;
-//        this.file = e.srcElement.value.split("\\")[e.srcElement.value.split("\\").length - 1];
         this.file = e.target.files[0]
-        console.log(this.file)
       },
-      async checkAttached (e) {
+      async checkAttached () {
         const bannedWords = ["첨부", "attachment", "attach"]
         if (!this.file){
           for (let i=0;i<bannedWords.length;i++){
-            if (this.body.includes(bannedWords[i])) {          
+            if (this.body.includes(bannedWords[i])) {
               this.alert=true;
               this.alertMessage="The word \""+bannedWords[i]+"\" included on your text, but you didn't attached any file."
               return
-            }        
+            }
           }
         }
         await this.pushMails()
@@ -97,7 +94,7 @@
         'setMails',
       ]),
     },
-    
+
   }
 </script>
 

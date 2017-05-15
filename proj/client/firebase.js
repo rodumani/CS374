@@ -20,7 +20,7 @@ export async function getMails () {
   return ret
 }
 
-export function pushMail (body, to, title, file) {
+export async function pushMail (body, to, title, file) {
   const mailsRef = firebase.database().ref('/mails/')
   const newMailRef = mailsRef.push()
   const newMailData = {
@@ -35,7 +35,11 @@ export function pushMail (body, to, title, file) {
     attachments: [],
   }
   if (file) {
-    newMailData.attachments.push({ filename: file.name })
+    // Upload to firebase storage
+    const fileKey = (new Date()).valueOf()
+    console.log(fileKey)
+    const resp = await firebase.storage().ref(`/${fileKey}`).put(file)
+    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL })
   }
   newMailRef.set(newMailData)
 }
