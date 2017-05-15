@@ -1,20 +1,24 @@
 <template>
   <tr class="row-tags">
     <td colspan="4">
-      <span class="badge badge-default" v-for="tag in file.tags">{{tag.name}}</span>
-      <el-select class="new-tag"
-                 v-model="newTag"
-                 filterable
-                 placeholder="New tag"
-                 @change="onChangeNewTag"
-                 v-show="options.length > 0">
-        <el-option
+      <div class="badge-wrapper" v-for="tag in file.tags">
+        <span class="badge badge-default">{{tag.name}}</span>
+      </div>
+      <div class="badge-wrapper">
+        <el-select class="new-tag"
+                   v-model="newTag"
+                   filterable
+                   placeholder="New tag"
+                   @change="onChangeNewTag"
+                   v-show="options.length > 0">
+          <el-option
             v-for="item in options"
             :key="item"
             :label="item"
             :value="item">
-        </el-option>
-      </el-select>
+          </el-option>
+        </el-select>
+      </div>
     </td>
   </tr>
 </template>
@@ -62,24 +66,18 @@
 </script>
 
 <style scoped>
-  .row-file td {
-    border-top: none;
-  }
-  .row-file {
-    border-top: 1px solid #eee;
-  }
   .row-tags,
   .row-tags td {
     border-top: none;
+    padding: 0 10px 10px;
+  }
+  .badge-wrapper {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0 5px 0 5px;
   }
   .badge {
     padding: 10px 11px;
     font-size: 15px;
-  }
-  .badge+.badge {
-    margin-left: 10px;
-  }
-  .new-tag {
-    margin-left: 10px;
   }
 </style>
