@@ -4,16 +4,16 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">New Tag</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click.prevent.stop="onClickClose">
               <span aria-hidden="true">×</span>
             </button>
-            <h4 class="modal-title" id="myModalLabel">New Tag</h4>
           </div>
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
                 <div class="col-md-10">
-                  <input type="text" id="newTag" class="form-control" placeholder="new tag" v-model="newTagName"/>
+                  <input type="text" id="new-tag" class="form-control" placeholder="New tag" maxlength="20" v-model="newTagName"/>
                 </div>
               </div>
             </form>

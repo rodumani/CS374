@@ -131,10 +131,10 @@
   li {
     list-style-type: none;
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    min-height: 35px;
+    line-height: 25px;
     cursor: pointer;
-    padding-left: 10px;
+    padding: 7px 0 7px 10px;
   }
   li a {
     text-decoration: none;
