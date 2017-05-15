@@ -15,7 +15,14 @@
         <tbody>
         <tr v-for="mail in mails" @click="movelink(mail)">
           <td class="author">{{mail.from.name}}</td>
-          <td class="title">{{mail.title}}</td>
+          <td class="title">
+            <template v-if="mail.title.length > 40">
+              {{mail.title.substring(0, 40)}}...
+            </template>
+            <template v-else>
+              {{mail.title}}
+            </template>
+          </td>
           <td class="attachment">
             <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
           </td>
@@ -68,7 +75,7 @@
     min-width: 150px;
   }
   .title {
-
+    word-break: break-all;
   }
   .attachment {
     width: 20px;
