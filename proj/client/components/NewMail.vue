@@ -99,6 +99,7 @@
     width: 100%;
     height: 100%;
     z-index: 50;
+    overflow-y: scroll;
   }
   textarea {
     height: 200px;
