@@ -60,7 +60,7 @@
     border-bottom: 1px solid lightgray;
     cursor: pointer;
   }
-  tr:hover {
+  tbody tr:hover {
     background-color: #eeeeee;
   }
   td {
