@@ -21,14 +21,14 @@ export function getMails (callback) {
   })
 }
 
-export async function pushMail (body, to, title, file) {
+export async function pushMail (body, { address, name }, to, title, file) {
   const mailsRef = firebase.database().ref('/mails/')
   const newMailRef = mailsRef.push()
   const newMailData = {
     content: body,
     from: {
-      address: 'changjej@kaist.ac.kr',
-      name: 'Changje Jung',
+      address,
+      name,
     },
     to: to,
     title: title,

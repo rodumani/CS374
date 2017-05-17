@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="row">
-          <div class="col-md-8 search">
+          <div class="col-md-8 col-sm-6 search">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search" />
               <span class="input-group-btn">
@@ -14,8 +14,9 @@
             </span>
             </div>
           </div>
-          <div class="col-md-4 account">
-            <span @click="onClickAccount">{{account}}</span>
+          <div class="col-md-4 col-sm-6 account" @click="onClickAccount">
+            <div>{{account.name}}</div>
+            <div>{{account.address}}</div>
           </div>
         </div>
         <div>
@@ -49,9 +50,17 @@ export default {
   },
   methods: {
     onClickAccount () {
-      const addr = prompt ('New account address')
-      if (addr) {
-        this.changeAccount(addr)
+      const address = prompt ('New account address')
+      if (address) {
+        const name = prompt('New account name')
+        if (name) {
+          this.changeAccount({
+            address,
+            name,
+          }).then(() => {
+            this.$router.push('/')
+          })
+        }
       }
     },
     ...mapActions([
@@ -68,10 +77,8 @@ export default {
   }
 
   .account {
-    margin-top: 24px;
+    margin-top: 15px;
     text-align: right;
-  }
-  .account span {
     cursor: pointer;
   }
 </style>

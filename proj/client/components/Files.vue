@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="row">
-      <div class="col-md-3 no-padding tags">
+      <div class="col-md-3 col-sm-2 no-padding tags">
         <ul>
           <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
           <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
@@ -13,7 +13,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-9 no-padding files">
+      <div class="col-md-9 col-sm-10 no-padding files">
         <table class="table">
           <thead>
           <tr>
@@ -75,7 +75,7 @@
         files: state => {
           const files = []
           state.mails
-            .filter((mail) => mail.to === state.account)
+            .filter((mail) => mail.to === state.account.address)
             .forEach((mail) => {
             if (!mail.attachments) return
             for (const attachment of mail.attachments) {
@@ -90,7 +90,7 @@
           return files
         },
         tags: state => state.tags
-          .filter((t) => t.account === state.account)
+          .filter((t) => t.account === state.account.address)
           .map(t => t.tag)
           .sort((a, b) => a.localeCompare(b)),
       }),
@@ -139,7 +139,8 @@
     min-height: 35px;
     line-height: 25px;
     cursor: pointer;
-    padding: 7px 0 7px 10px;
+    padding: 7px 5px 7px 10px;
+    word-break: break-all;
   }
   li a {
     text-decoration: none;

@@ -50,7 +50,7 @@
     methods: {
       async onClickAdd() {
         this.loading = true
-        await addTags(this.account, this.newTagName)
+        await addTags(this.account.address, this.newTagName)
         this.closeNewTag()
       },
       onClickClose () {

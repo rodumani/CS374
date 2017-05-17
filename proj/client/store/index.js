@@ -9,7 +9,10 @@ const store = {
     showNewTag: false,
     mails: [],
     tags: [],
-    account: 'changjej@kaist.ac.kr',
+    account: {
+      address: 'changjej@kaist.ac.kr',
+      name: 'Changje Jeong',
+    },
   },
   mutations: {
     showNewMail (state) {

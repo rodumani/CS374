@@ -45,7 +45,7 @@
       ...mapState({
         mails: (state) => {
           return state.mails.filter((mail) => {
-            return mail.to === state.account
+            return mail.to === state.account.address
           })
         }
       }),

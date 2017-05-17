@@ -42,7 +42,7 @@
   </div>
 </template>
 <script>
-  import { mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
   import firebase, { pushMail } from '../firebase'
   export default {
     components: {
@@ -56,6 +56,11 @@
         title: '',
         file: null,
       }
+    },
+    computed: {
+      ...mapState({
+        account: 'account',
+      })
     },
     methods: {
       onClickClose () {
@@ -77,7 +82,7 @@
           }
         }
 
-        await pushMail (this.body, this.to, this.title, this.file)
+        await pushMail (this.body, this.account, this.to, this.title, this.file)
 
         this.$message({
           message: 'Your mail has been sent',
