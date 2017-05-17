@@ -27,11 +27,16 @@
   </div>
 </template>
 <script>
-  import { mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
   import { addTags } from '../firebase'
 
   export default {
     components: {
+    },
+    computed: {
+      ...mapState({
+        account: 'account',
+      }),
     },
     data() {
       return {
@@ -40,7 +45,7 @@
     },
     methods: {
       async onClickAdd() {
-        await addTags(this.newTagName)
+        await addTags(this.account, this.newTagName)
         this.closeNewTag()
       },
       onClickClose () {

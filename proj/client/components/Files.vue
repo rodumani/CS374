@@ -74,7 +74,9 @@
       ...mapState({
         files: state => {
           const files = []
-          state.mails.forEach((mail) => {
+          state.mails
+            .filter((mail) => mail.to === state.account)
+            .forEach((mail) => {
             if (!mail.attachments) return
             for (const attachment of mail.attachments) {
               files.push({
@@ -88,6 +90,8 @@
           return files
         },
         tags: state => state.tags
+          .filter((t) => t.account === state.account)
+          .map(t => t.tag),
       }),
     },
     data () {

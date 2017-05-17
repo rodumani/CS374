@@ -47,6 +47,10 @@ export async function pushMail (body, to, title, file) {
 
 export function getTags (callback) {
   firebase.database().ref('/tags/').on('value', (tags) => {
+    if (!tags.val()) {
+      callback([])
+      return
+    }
     const ret = []
     for (const key of Object.keys(tags.val())) {
       const value = tags.val()[key]
@@ -56,8 +60,11 @@ export function getTags (callback) {
   })
 }
 
-export async function addTags (newTag) {
-  await firebase.database().ref('/tags/').push(newTag)
+export async function addTags (account, newTag) {
+  await firebase.database().ref('/tags/').push({
+    account,
+    tag: newTag,
+  })
 }
 
 export async function putTag (mailKey, attachmentIdx, tag) {

@@ -14,6 +14,9 @@
             </span>
             </div>
           </div>
+          <div class="col-md-4 account">
+            <span @click="onClickAccount">{{account}}</span>
+          </div>
         </div>
         <div>
           <slot></slot>
@@ -29,7 +32,7 @@
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
 import NewTag from 'components/NewTag'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -39,9 +42,21 @@ export default {
   },
   computed: {
     ...mapState({
+      account: 'account',
       showNewMail: state => state.showNewMail,
       showNewTag: state => state.showNewTag
     }),
+  },
+  methods: {
+    onClickAccount () {
+      const addr = prompt ('New account address')
+      if (addr) {
+        this.changeAccount(addr)
+      }
+    },
+    ...mapActions([
+      'changeAccount',
+    ])
   }
 }
 </script>
@@ -50,5 +65,13 @@ export default {
   .search {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .account {
+    margin-top: 24px;
+    text-align: right;
+  }
+  .account span {
+    cursor: pointer;
   }
 </style>

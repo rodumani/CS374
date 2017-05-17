@@ -7,7 +7,7 @@
         <span class="col-md-1"><b>From</b></span><span class="col-md-7">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
       </div>
 			<div class="row showmail" id="to">
-        <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to.address}}</span>
+        <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to}}</span>
       </div>
       <div class="row showmail" id="sent">
         <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>

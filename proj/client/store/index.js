@@ -9,6 +9,7 @@ const store = {
     showNewTag: false,
     mails: [],
     tags: [],
+    account: 'changjej@kaist.ac.kr',
   },
   mutations: {
     showNewMail (state) {
@@ -28,7 +29,10 @@ const store = {
     },
     setTags (state, tags) {
       state.tags = tags
-    }
+    },
+    changeAccount (state, account) {
+      state.account = account
+    },
   },
   actions: {
     showNewMail ({ commit }) {
@@ -48,7 +52,10 @@ const store = {
     },
     setTags ({ commit }, tags) {
       commit('setTags', tags)
-    }
+    },
+    changeAccount ({ commit }, account) {
+      commit('changeAccount', account)
+    },
   },
 }
 
