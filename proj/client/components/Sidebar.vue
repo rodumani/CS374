@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heading">
-      <h1><i class="fa fa-envelope"></i> Mail</h1>
+      <router-link to="/"><h1><i class="fa fa-envelope"></i> Mail</h1></router-link>
     </div>
     <div>
       <button class="btn btn-primary btn-new-mail" @click="onClickNewMail">New Mail</button>
@@ -41,6 +41,10 @@
   }
   .heading h1 {
     margin: 17px 0;
+  }
+  .heading a {
+    text-decoration: none;
+    color: inherit;
   }
   li {
     list-style-type: none;
