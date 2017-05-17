@@ -32,7 +32,7 @@
             <strong>Danger! </strong> {{ alertMessage }}
           </div>
           <div class="modal-footer">
-            <button type="button" id="sendButton" class="btn btn-primary" aria-label="Close" data-dismiss="alert" @click.prevent.stop="checkAttached">Send</button>
+            <button type="button" id="sendButton" class="btn btn-primary" aria-label="Close" data-dismiss="alert" @click.prevent.stop="onClickSend">Send</button>
           </div>
 
 
@@ -58,16 +58,14 @@
       }
     },
     methods: {
-      async pushMails () {
-        await pushMail (this.body, this.to, this.title, this.file)
-      },
       onClickClose () {
         this.closeNewMail ();
       },
       onFileChange (e) {
         this.file = e.target.files[0]
       },
-      async checkAttached () {
+      async onClickSend () {
+        // Check Attachment
         const bannedWords = ["첨부", "attachment", "attach"]
         if (!this.file){
           for (let i=0;i<bannedWords.length;i++){
@@ -78,7 +76,14 @@
             }
           }
         }
-        await this.pushMails()
+
+        await pushMail (this.body, this.to, this.title, this.file)
+
+        this.$message({
+          message: 'Your mail has been sent',
+          type: 'success',
+          duration: 5 * 1000,
+        });
         this.closeNewMail()
       },
       ...mapActions ([
