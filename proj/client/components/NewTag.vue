@@ -19,7 +19,10 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" @click="onClickAdd">Add</button>
+            <button type="button" class="btn btn-primary" @click="onClickAdd" :disabled="loading">
+              <template v-if="loading"><i class="fa fa-spin fa-spinner"></i></template>
+              <template v-else>Add</template>
+            </button>
           </div>
         </div>
       </div>
@@ -40,16 +43,18 @@
     },
     data() {
       return {
-          newTagName: ""
+        newTagName: "",
+        loading: false,
       }
     },
     methods: {
       async onClickAdd() {
+        this.loading = true
         await addTags(this.account, this.newTagName)
         this.closeNewTag()
       },
       onClickClose () {
-        this.closeNewTag ()
+        this.closeNewTag()
       },
       ...mapActions ([
         'closeNewTag',

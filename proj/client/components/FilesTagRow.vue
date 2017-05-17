@@ -1,12 +1,13 @@
 <template>
   <tr class="row-tags">
     <td colspan="4">
-      <div class="badge-wrapper" v-for="tag in file.tags">
-        <span class="badge badge-default">{{tag.name}}</span>
+      <div class="badge-wrapper" v-for="tag in sortedTags">
+        <el-tag :closable="true" @close="removeTag(tag)" color="#0275d8">{{tag.name}}</el-tag>
       </div>
       <div class="badge-wrapper">
         <el-select class="new-tag"
                    v-model="newTag"
+                   size="small"
                    filterable
                    placeholder="New tag"
                    @change="onChangeNewTag"
@@ -24,7 +25,7 @@
 </template>
 
 <script>
-  import { putTag } from '../firebase'
+  import { putTag, removeTag } from '../firebase'
   import { mapActions } from 'vuex'
 
   export default {
@@ -35,6 +36,17 @@
       }
     },
     computed: {
+      sortedTags () {
+        return this.file.tags ?
+          Object.keys(this.file.tags).map((key) => {
+            return {
+              key,
+              ...this.file.tags[key],
+            }
+          })
+          .sort((a, b) => a.name.localeCompare(b.name))
+          : []
+      },
       options() {
         return this.tags ? this.tags.filter((tag) => {
           if (!this.file.tags) {
@@ -54,6 +66,9 @@
         await putTag (this.mailKey, this.idx, this.newTag)
 
         this.newTag = ''
+      },
+      async removeTag (tag) {
+        await removeTag (this.mailKey, this.idx, tag)
       },
       ...mapActions([
         'setMails',

@@ -73,4 +73,8 @@ export async function putTag (mailKey, attachmentIdx, tag) {
   })
 }
 
+export async function removeTag (mailKey, attachmentIdx, tag) {
+  await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag.key}`).remove()
+}
+
 export default app

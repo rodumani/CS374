@@ -91,7 +91,8 @@
         },
         tags: state => state.tags
           .filter((t) => t.account === state.account)
-          .map(t => t.tag),
+          .map(t => t.tag)
+          .sort((a, b) => a.localeCompare(b)),
       }),
     },
     data () {
