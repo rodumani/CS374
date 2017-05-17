@@ -43,7 +43,7 @@
 </template>
 <script>
   import { mapActions } from 'vuex'
-  import firebase, { getMails, pushMail } from '../firebase'
+  import firebase, { pushMail } from '../firebase'
   export default {
     components: {
     },

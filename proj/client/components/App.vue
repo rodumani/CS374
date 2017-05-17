@@ -14,11 +14,10 @@
         'setMails',
       ]),
     },
-    async mounted () {
-      setInterval (async () => {
-        const mails = await getMails()
+    mounted () {
+      getMails((mails) => {
         this.setMails(mails.reverse())
-      }, 1000)
+      })
     },
   }
 </script>

@@ -107,10 +107,10 @@
         'setTags',
       ]),
     },
-    async mounted () {
-      var tags = await getTags();
-      tags.sort();
-      this.setTags(tags)
+    mounted () {
+      getTags((tags) => {
+        this.setTags(tags.sort())
+      });
     }
   }
 </script>

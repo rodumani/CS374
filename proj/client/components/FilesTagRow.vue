@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import { putTag, getMails } from '../firebase'
+  import { putTag } from '../firebase'
   import { mapActions } from 'vuex'
 
   export default {
@@ -54,9 +54,6 @@
         await putTag (this.mailKey, this.idx, this.newTag)
 
         this.newTag = ''
-
-        const mails = await getMails()
-        this.setMails(mails)
       },
       ...mapActions([
         'setMails',

@@ -29,7 +29,6 @@
 <script>
   import { mapActions } from 'vuex'
   import { addTags } from '../firebase'
-  import { getTags } from '../firebase'
 
   export default {
     components: {
@@ -40,16 +39,9 @@
       }
     },
     methods: {
-      async updateNewTags() {
-        var tags = await getTags();
-        tags.sort()
-        console.log(tags);
-        this.setTags(tags)
-      },
       async onClickAdd() {
         await addTags(this.newTagName)
         this.closeNewTag()
-        await this.updateNewTags()
       },
       onClickClose () {
         this.closeNewTag ()

@@ -9,15 +9,16 @@ const app = firebase.initializeApp({
   messagingSenderId: '771327049053',
 })
 
-export async function getMails () {
-  const mails = await firebase.database().ref('/mails/').once('value')
-  const ret = []
-  for (const key of Object.keys(mails.val())) {
-    const value = mails.val()[key]
-    value.key = key
-    ret.push(value)
-  }
-  return ret
+export function getMails (callback) {
+  firebase.database().ref('/mails/').on('value', (mails) => {
+    const ret = []
+    for (const key of Object.keys(mails.val())) {
+      const value = mails.val()[key]
+      value.key = key
+      ret.push(value)
+    }
+    callback(ret)
+  })
 }
 
 export async function pushMail (body, to, title, file) {
@@ -44,14 +45,15 @@ export async function pushMail (body, to, title, file) {
   newMailRef.set(newMailData)
 }
 
-export async function getTags () {
-  const tags = await firebase.database().ref('/tags/').once('value')
-  const ret = []
-  for (const key of Object.keys(tags.val())) {
-    const value = tags.val()[key]
-    ret.push(value)
-  }
-  return ret
+export function getTags (callback) {
+  firebase.database().ref('/tags/').on('value', (tags) => {
+    const ret = []
+    for (const key of Object.keys(tags.val())) {
+      const value = tags.val()[key]
+      ret.push(value)
+    }
+    callback(ret)
+  })
 }
 
 export async function addTags (newTag) {
