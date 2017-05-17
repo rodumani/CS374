@@ -18,7 +18,7 @@
 			<div class="showmail" id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
-          <button type="button" class="btn btn-outline-primary files" @click="downfile(file)">{{file.filename}}</button>
+          <button class="btn btn-outline-primary files" @click="downfile(file)">{{file.filename}}</button>
 				</div>
 			</div>
 		</div>
@@ -87,5 +87,8 @@
   .files {
     margin-top: 10px;
     margin-right: 10px;
+  }
+  .btn {
+    cursor: pointer;
   }
 </style>
