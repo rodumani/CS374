@@ -1,19 +1,19 @@
 <template>
   <div class="new-mail">
-    <div class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" style="display: block;">
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">New Mail</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click.prevent.stop="onClickClose">
-              <span aria-hidden="true">×</span>
+            <button type="button" class="close" @click.prevent.stop="onClickClose">
+              <span>×</span>
             </button>
           </div>
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
                 <label for="to">To</label> <span v-show="errors.has('to')" class="pull-right is-danger">This is required</span>
-                <input type="email" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" />
+                <input type="email" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" autofocus/>
               </div>
               <div class="form-group">
                 <label for="title">Title</label>
@@ -27,12 +27,15 @@
               </div>
             </form>
           </div>
-          <div class="alert alert-danger alert-dismissable fade show" v-if="alert">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Danger! </strong> {{ alertMessage }}
+          <div class="alert alert-warning" v-if="alert">
+            <h5 class="alert-heading">Warning! No file is attached</h5>
+            {{ alertMessage }}
           </div>
           <div class="modal-footer">
-            <button type="button" id="sendButton" class="btn btn-primary" aria-label="Close" data-dismiss="alert" @click.prevent.stop="onClickSend">Send</button>
+            <button type="button" id="sendButton"
+                    :class="[ 'btn', { 'btn-primary': !errors.any(), 'btn-danger': errors.any() }]"
+                    :disabled="errors.any()"
+                    @click.prevent.stop="onClickSend">Send</button>
           </div>
 
 
