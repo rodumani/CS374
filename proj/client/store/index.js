@@ -3,10 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const account = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : {
-  address: 'changjej@kaist.ac.kr',
-  name: 'Changje Jeong',
-};
+const account = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : null
 
 const store = {
   state: {

@@ -14,6 +14,7 @@
           <th v-else-if="type === 'Sent'">To</th>
           <th>Title</th>
           <th></th>
+          <th>Date</th>
         </tr>
         </thead>
         <tbody>
@@ -37,6 +38,9 @@
           <td class="attachment">
             <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
           </td>
+          <td>
+            {{formatDate(mail.sent)}}
+          </td>
         </tr>
         </tbody>
       </table>
@@ -46,6 +50,7 @@
 
 <script>
   import Layout from '../views/Layout'
+  import moment from 'moment'
   import { mapState } from 'vuex'
 
   export default {
@@ -69,6 +74,9 @@
       }),
     },
     methods: {
+      formatDate (date) {
+        return moment(date).calendar()
+      },
       movelink: function (mail) {
         this.$router.push(`/${this.type.toLowerCase()}/${mail.key}`)
       },

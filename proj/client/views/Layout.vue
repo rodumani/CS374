@@ -14,9 +14,12 @@
             </span>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 account" @click="onClickAccount">
+          <div class="col-md-3 col-sm-6 account" @click="onClickAccount">
             <div>{{account.name}}</div>
             <div>{{account.address}}</div>
+          </div>
+          <div class="col-md-1 logout">
+            <button class="btn btn-outline-primary" @click="onClickLogout">Logout</button>
           </div>
         </div>
         <div>
@@ -45,28 +48,29 @@ export default {
     ...mapState({
       account: 'account',
       showNewMail: state => state.showNewMail,
-      showNewTag: state => state.showNewTag
+      showNewTag: state => state.showNewTag,
     }),
   },
   methods: {
     onClickAccount () {
-      const address = prompt ('New account address')
+      const address = prompt('New account address')
       if (address) {
         const name = prompt('New account name')
         if (name) {
           this.changeAccount({
             address,
             name,
-          }).then(() => {
-            this.$router.push('/')
           })
         }
       }
     },
+    onClickLogout () {
+      this.$router.push('/login')
+    },
     ...mapActions([
       'changeAccount',
-    ])
-  }
+    ]),
+  },
 }
 </script>
 
@@ -79,6 +83,13 @@ export default {
   .account {
     margin-top: 15px;
     text-align: right;
+  }
+
+  .logout {
+    margin-top: 21px;
+    margin-left: -10px;
+  }
+  .logout button {
     cursor: pointer;
   }
 </style>
