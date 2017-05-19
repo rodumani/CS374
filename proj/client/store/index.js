@@ -3,16 +3,18 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const account = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : {
+  address: 'changjej@kaist.ac.kr',
+  name: 'Changje Jeong',
+};
+
 const store = {
   state: {
     showNewMail: false,
     showNewTag: false,
     mails: [],
     tags: [],
-    account: {
-      address: 'changjej@kaist.ac.kr',
-      name: 'Changje Jeong',
-    },
+    account,
   },
   mutations: {
     showNewMail (state) {
@@ -35,6 +37,8 @@ const store = {
     },
     changeAccount (state, account) {
       state.account = account
+
+      localStorage.setItem('account', JSON.stringify(account))
     },
   },
   actions: {
