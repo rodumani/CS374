@@ -12,9 +12,7 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
-                <div class="col-md-10">
-                  <input type="text" id="new-tag" class="form-control" placeholder="New tag" maxlength="20" v-model="newTagName"/>
-                </div>
+                <input type="text" id="new-tag" class="form-control" placeholder="New tag (Max 20 characters)" maxlength="20" v-model="newTagName"/>
               </div>
             </form>
           </div>
