@@ -11,6 +11,9 @@
         <router-link tag="li" active-class="active" to="/inbox">
           Inbox
         </router-link>
+        <router-link tag="li" active-class="active" to="/sent">
+          Sent
+        </router-link>
         <router-link tag="li" active-class="active" to="/files">
           Files
         </router-link>
