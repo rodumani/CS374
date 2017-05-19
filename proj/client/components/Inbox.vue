@@ -1,20 +1,31 @@
 <template>
   <Layout>
     <div class="inbox">
-      <div class="center">
-        <i class="fa fa-circle-o-notch fa-spin fa-3x" v-show="mails.length === 0"></i>
+      <div class="center" v-if="loading && mails.length === 0">
+        <i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
       </div>
-      <table class="table">
+      <div class="center" v-else-if="mails.length === 0">
+        <h1>No mails in {{type}}</h1>
+      </div>
+      <table class="table" v-else>
         <thead>
         <tr>
-          <th>From</th>
+          <th v-if="type === 'Inbox'">From</th>
+          <th v-else-if="type === 'Sent'">To</th>
           <th>Title</th>
           <th></th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="mail in mails" @click="movelink(mail)">
-          <td class="author">{{mail.from.name}}</td>
+          <td class="author">
+            <template v-if="type === 'Inbox'">
+              {{mail.from.name}}
+            </template>
+            <template v-if="type === 'Sent'">
+              {{mail.to}}
+            </template>
+          </td>
           <td class="title">
             <template v-if="mail.title.length > 40">
               {{mail.title.substring(0, 40)}}...
@@ -41,20 +52,27 @@
     components: {
       Layout,
     },
+    props: ['type'],
     computed: {
       ...mapState({
-        mails: (state) => {
-          return state.mails.filter((mail) => {
-            return mail.to === state.account.address
-          })
-        }
+        loading: 'loading',
+        mails (state) {
+          return state.mails.filter(function (mail) {
+            if (this.type === 'Inbox') {
+              return mail.to === state.account.address
+            } else if (this.type === 'Sent') {
+              return mail.from.address === state.account.address
+            }
+            return false
+          }.bind(this))
+        },
       }),
     },
     methods: {
-      movelink: function(mail) {
-        this.$router.push(`/inbox/${mail.key}`)
-      }
-    }
+      movelink: function (mail) {
+        this.$router.push(`/${this.type.toLowerCase()}/${mail.key}`)
+      },
+    },
   }
 </script>
 

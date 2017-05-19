@@ -12,11 +12,13 @@
     methods: {
       ...mapActions([
         'setMails',
+        'setLoading',
       ]),
     },
     mounted () {
       getMails((mails) => {
         this.setMails(mails.reverse())
+        this.setLoading(false)
       })
     },
   }
@@ -24,7 +26,7 @@
 
 <style>
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
   background-color: transparent;
 }
 </style>

@@ -12,6 +12,7 @@ const store = {
   state: {
     showNewMail: false,
     showNewTag: false,
+    loading: true,
     mails: [],
     tags: [],
     account,
@@ -40,6 +41,9 @@ const store = {
 
       localStorage.setItem('account', JSON.stringify(account))
     },
+    setLoading (state, loading) {
+      state.loading = loading
+    },
   },
   actions: {
     showNewMail ({ commit }) {
@@ -62,6 +66,9 @@ const store = {
     },
     changeAccount ({ commit }, account) {
       commit('changeAccount', account)
+    },
+    setLoading ({ commit }, loading) {
+      commit('setLoading', loading)
     },
   },
 }

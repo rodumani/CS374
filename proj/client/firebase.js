@@ -12,6 +12,11 @@ const app = firebase.initializeApp({
 export function getMails (callback) {
   firebase.database().ref('/mails/').on('value', (mails) => {
     const ret = []
+    if (!mails.val()) {
+      callback(ret)
+      return
+    }
+
     for (const key of Object.keys(mails.val())) {
       const value = mails.val()[key]
       value.key = key
