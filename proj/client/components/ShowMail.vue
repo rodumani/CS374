@@ -52,6 +52,7 @@
     },
     methods: {
       downfile: function(file){
+        console.log(file.link)
         window.open(file.link, '_blank');
       }
     }

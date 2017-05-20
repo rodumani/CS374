@@ -75,7 +75,7 @@
         files: state => {
           const files = []
           state.mails
-            .filter((mail) => mail.to === state.account.address)
+            .filter((mail) => mail.to === state.account.address || mail.from.address === state.account.address)
             .forEach((mail) => {
             if (!mail.attachments) return
             for (const attachment of mail.attachments) {

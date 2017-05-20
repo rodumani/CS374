@@ -27,7 +27,7 @@
         </div>
       </div>
       <NewMail v-if="showNewMail"></NewMail>
-      <NewTag  v-if="showNewTag"></NewTag>
+      <NewTag  v-if="showNewTag" :tags="tags"></NewTag>
     </div>
   </div>
 </template>
@@ -49,6 +49,10 @@ export default {
       account: 'account',
       showNewMail: state => state.showNewMail,
       showNewTag: state => state.showNewTag,
+      tags: state => state.tags
+        .filter((t) => t.account === state.account.address)
+        .map(t => t.tag)
+        .sort((a, b) => a.localeCompare(b)),
     }),
   },
   methods: {
@@ -70,6 +74,11 @@ export default {
     ...mapActions([
       'changeAccount',
     ]),
+    mounted () {
+      getTags((tags) => {
+        this.setTags(tags.sort())
+      });
+    }
   },
 }
 </script>

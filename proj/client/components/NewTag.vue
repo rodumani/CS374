@@ -16,6 +16,10 @@
               </div>
             </form>
           </div>
+          <div class="alert alert-warning" v-if="alert">
+            <h5 class="alert-heading">Oops, Try it AGAIN!</h5>
+            {{ alertMessage }}
+          </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" @click="onClickAdd" :disabled="loading">
               <template v-if="loading"><i class="fa fa-spin fa-spinner"></i></template>
@@ -32,6 +36,7 @@
   import { addTags } from '../firebase'
 
   export default {
+    props: ['tags'],
     components: {
     },
     computed: {
@@ -41,15 +46,23 @@
     },
     data() {
       return {
+        alert: false,
+        alertMessage: "",
         newTagName: "",
         loading: false,
       }
     },
     methods: {
       async onClickAdd() {
-        this.loading = true
-        await addTags(this.account.address, this.newTagName)
-        this.closeNewTag()
+        if (this.tags.includes(this.newTagName)) {
+          this.alert = true
+          this.alertMessage = "The tag \"" + this.newTagName +"\" already exists!"
+        }
+        else {
+          this.loading = true
+          await addTags(this.account.address, this.newTagName)
+          this.closeNewTag()
+        }
       },
       onClickClose () {
         this.closeNewTag()
