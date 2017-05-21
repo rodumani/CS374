@@ -36,6 +36,7 @@
           </tbody>
         </table>
       </div>
+      <NewTag  v-if="showingNewTag" :tags="tags"></NewTag>
     </div>
   </Layout>
 </template>
@@ -45,11 +46,13 @@
   import { getTags } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
+  import NewTag from 'components/NewTag'
 
   export default {
     components: {
       Layout,
       FilesTagRow,
+      NewTag,
     },
     computed: {
       filteredFiles () {
@@ -104,6 +107,7 @@
           })
           return files
         },
+        showingNewTag: state => state.showingNewTag,
         tags: state => state.tags
           .filter((t) => t.account === state.account.address)
           .map(t => t.tag)

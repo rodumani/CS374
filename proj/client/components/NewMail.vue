@@ -1,6 +1,6 @@
 <template>
   <div class="new-mail">
-    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;" @click.self="onClickClose" @keydown.esc="onClickClose">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -13,7 +13,7 @@
             <form class="form-horizontal">
               <div class="form-group">
                 <label for="to">To</label> <span v-show="errors.has('to')" class="pull-right is-danger">This is required</span>
-                <input type="email" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" autofocus/>
+                <input type="email" ref="inputTo" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" autofocus/>
               </div>
               <div class="form-group">
                 <label for="title">Title</label>
@@ -37,8 +37,6 @@
                     :disabled="errors.any()"
                     @click.prevent.stop="onClickSend">Send</button>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -59,6 +57,9 @@
         title: '',
         file: null,
       }
+    },
+    mounted() {
+      this.$refs.inputTo.select()
     },
     computed: {
       ...mapState({

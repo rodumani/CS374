@@ -27,7 +27,6 @@
         </div>
       </div>
       <NewMail v-if="showNewMail"></NewMail>
-      <NewTag  v-if="showNewTag" :tags="tags"></NewTag>
     </div>
   </div>
 </template>
@@ -35,20 +34,18 @@
 <script>
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
-import NewTag from 'components/NewTag'
+
 import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
     Sidebar,
     NewMail,
-    NewTag,
   },
   computed: {
     ...mapState({
       account: 'account',
       showNewMail: state => state.showNewMail,
-      showNewTag: state => state.showNewTag,
       tags: state => state.tags
         .filter((t) => t.account === state.account.address)
         .map(t => t.tag)
