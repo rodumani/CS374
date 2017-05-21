@@ -40,7 +40,7 @@
           </tbody>
         </table>
       </div>
-      <NewTag  v-if="showingNewTag" :tags="tags"></NewTag>
+     <NewTag  v-if="showingNewTag" :tags="tags"></NewTag>
     </div>
   </Layout>
 </template>

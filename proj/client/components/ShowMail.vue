@@ -19,7 +19,12 @@
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
           <button class="btn btn-outline-primary files" @click="downfile(file)">{{file.filename}}</button>
-				</div>
+				  <div v-show="mailitem.attachments[0].tags">
+            <div class="attachmentTags" v-for="tag in mailitem.attachments[0].tags">
+              <el-tag :closable="true" @close="removeTag(tag)" color="#999999"> {{tag.name}}</el-tag>
+            </div>
+          </div>
+        </div>
 			</div>
 		</div>
 	</Layout>
@@ -29,7 +34,9 @@
 	import Layout from '../views/Layout'
 	import { mapState } from 'vuex'
   import moment from 'moment'
+  import { removeTag } from '../firebase'
 
+  let mailitem;
   export default {
     components: {
       Layout,
@@ -52,10 +59,14 @@
     },
     methods: {
       downfile: function(file){
-        console.log(file.link)
         window.open(file.link, '_blank');
+      },
+      async removeTag (tag) {
+        const key = this.$route.params.mailid
+        await removeTag (key, '0', tag) //cannot remove yet. tag don't have its keys
       }
     }
+
   }
 </script>
 
@@ -91,5 +102,11 @@
   }
   .btn {
     cursor: pointer;
+  }
+  .attachmentTags {
+    margin: 3px;
+
+    display: inline-block;
+    padding: 0 5px 0 0;
   }
 </style>
