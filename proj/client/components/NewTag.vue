@@ -1,20 +1,18 @@
 <template>
   <div class="new-tag">
-    <div class="modal fade show" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose">
+    <div class="modal fade show" role="dialog" id="myModal" tabindex="-1" style="display: block; padding-left: 0px;" @click.self="onClickClose" @keydown.esc="onClickClose">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">New Tag</h4>
+            <h4 class="modal-title">New Tag</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click.prevent.stop="onClickClose">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            <form class="form-horizontal">
               <div class="form-group">
-                <input type="text" id="new-tag" class="form-control" placeholder="New tag (Max 20 characters)" maxlength="20" v-model="newTagName"/>
+                <input type="text" ref="inputNewTag" class="form-control" placeholder="New tag (Max 20 characters)" maxlength="20" v-model="newTagName" @keydown.enter="onClickAdd" autofocus/>
               </div>
-            </form>
           </div>
           <div class="alert alert-warning" v-if="alert">
             <h5 class="alert-heading">Oops, Try it AGAIN!</h5>
@@ -51,6 +49,9 @@
         newTagName: "",
         loading: false,
       }
+    },
+    mounted() {
+      this.$refs.inputNewTag.select()
     },
     methods: {
       async onClickAdd() {
