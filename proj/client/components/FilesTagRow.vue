@@ -20,9 +20,6 @@
           </el-option>
         </el-select>
       </div>
-      <div class="badge-wrapper" id="hideDiv">
-        <button id="hide" @click="hideFile">Hide</button>
-      </div>
     </td>
   </tr>
 </template>
@@ -76,10 +73,6 @@
       ...mapActions([
         'setMails',
       ]),
-      async hideFile () {
-        console.log(this.file.fileType)
-        await hideFile (this.mailKey, this.idx, this.file.fileType)
-      }
     }
   }
 </script>

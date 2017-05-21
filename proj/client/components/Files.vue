@@ -21,6 +21,7 @@
             <th>Sender</th>
             <th>Title</th>
             <th>Date</th>
+            <th></th>
           </tr>
           </thead>
           <tbody>
@@ -30,6 +31,9 @@
               <td>{{file.mail.from.name}}</td>
               <td>{{file.mail.title}}</td>
               <td>{{file.mail.sent}}</td>
+              <td>
+                  <button :fileType="file.fileType" :tags="tags" :mailKey="file.mail.key" :idx="0" class="btn btn-danger btn-sm" @click="hideFile">Hide</button>
+              </td>
             </tr>
             <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
           </template>
@@ -43,7 +47,7 @@
 
 <script>
   import Layout from '../views/Layout'
-  import { getTags } from '../firebase'
+  import { getTags, hideFile} from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
@@ -138,6 +142,10 @@
           return !file.toHide
         }
       },
+      async hideFile (event) {
+        var elem = event.target
+        await hideFile (elem.getAttribute("mailKey"), elem.getAttribute("idx"), elem.getAttribute("fileType"))
+      }
     },
     mounted () {
       getTags((tags) => {
