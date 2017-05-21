@@ -45,7 +45,7 @@ export async function pushMail (body, { address, name }, to, title, file) {
     const fileKey = (new Date()).valueOf()
     console.log(fileKey)
     const resp = await firebase.storage().ref(`/${fileKey}`).put(file)
-    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL })
+    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, toHide: false, fromHide: false })
   }
   newMailRef.set(newMailData)
 }
@@ -80,6 +80,15 @@ export async function putTag (mailKey, attachmentIdx, tag) {
 
 export async function removeTag (mailKey, attachmentIdx, tag) {
   await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag.key}`).remove()
+}
+
+export async function hideFile (mailKey, attachmentIdx, fileType){
+  if (fileType === "fromFile") {
+    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({fromHide: true})
+  }
+  else {
+    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({toHide: true})
+  }
 }
 
 export default app

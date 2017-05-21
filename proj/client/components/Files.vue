@@ -24,7 +24,7 @@
           </tr>
           </thead>
           <tbody>
-          <template v-for="file in filteredFiles">
+          <template v-for="file in filteredFiles" v-if="typeCheck(file)">
             <tr class="row-file">
               <td><a :href=file.link target="_blank">{{file.name}}</a></td>
               <td>{{file.mail.from.name}}</td>
@@ -79,12 +79,27 @@
             .forEach((mail) => {
             if (!mail.attachments) return
             for (const attachment of mail.attachments) {
-              files.push({
-                name: attachment.filename,
-                link: attachment.link,
-                tags: attachment.tags,
-                mail: mail,
-              })
+              if (mail.to === state.account.address) {
+                files.push({
+                  name: attachment.filename,
+                  link: attachment.link,
+                  toHide: attachment.toHide,
+                  fromHide: attachment.fromHide,
+                  tags: attachment.tags,
+                  mail: mail,
+                  fileType: "toFile"
+                })
+              } else {
+                files.push({
+                  name: attachment.filename,
+                  link: attachment.link,
+                  toHide: attachment.toHide,
+                  fromHide: attachment.fromHide,
+                  tags: attachment.tags,
+                  mail: mail,
+                  fileType: "fromFile"
+                })
+              }
             }
           })
           return files
@@ -111,6 +126,14 @@
         'showNewTag',
         'setTags',
       ]),
+      typeCheck: function (file) {
+        if (file.fileType === "fromFile") {
+          return !file.fromHide
+        }
+        else {
+          return !file.toHide
+        }
+      },
     },
     mounted () {
       getTags((tags) => {

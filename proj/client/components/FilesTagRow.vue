@@ -20,16 +20,19 @@
           </el-option>
         </el-select>
       </div>
+      <div class="badge-wrapper" id="hideDiv">
+        <button id="hide" @click="hideFile">Hide</button>
+      </div>
     </td>
   </tr>
 </template>
 
 <script>
-  import { putTag, removeTag } from '../firebase'
+  import { putTag, removeTag, hideFile } from '../firebase'
   import { mapActions } from 'vuex'
 
   export default {
-    props: ['mailKey', 'idx', 'file', 'tags'],
+    props: ['mailKey', 'idx', 'file', 'tags', ],
     data () {
       return {
         newTag: '',
@@ -72,7 +75,11 @@
       },
       ...mapActions([
         'setMails',
-      ])
+      ]),
+      async hideFile () {
+        console.log(this.file.fileType)
+        await hideFile (this.mailKey, this.idx, this.file.fileType)
+      }
     }
   }
 </script>
@@ -91,5 +98,12 @@
   .badge {
     padding: 10px 11px;
     font-size: 15px;
+  }
+  #hideDiv {
+    float: right;
+    margin-right: 10px
+  }
+  #hide {
+    /*background-color: ???*/
   }
 </style>
