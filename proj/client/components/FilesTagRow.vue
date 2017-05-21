@@ -2,7 +2,7 @@
   <tr class="row-tags">
     <td colspan="4">
       <div class="badge-wrapper" v-for="tag in sortedTags">
-        <el-tag :closable="true" @close="removeTag(tag)" color="#0275d8">{{tag.name}}</el-tag>
+        <el-tag :closable="true" @close="removeTag(tag)" color="#999999">{{tag.name}}</el-tag>
       </div>
       <div class="badge-wrapper">
         <el-select class="new-tag"
