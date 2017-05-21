@@ -1,6 +1,6 @@
 <template>
   <div class="new-mail">
-    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;" @click.self="onClickClose">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -37,8 +37,6 @@
                     :disabled="errors.any()"
                     @click.prevent.stop="onClickSend">Send</button>
           </div>
-
-
         </div>
       </div>
     </div>
