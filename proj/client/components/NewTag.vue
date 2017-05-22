@@ -42,24 +42,23 @@
         account: 'account',
       }),
     },
-    data() {
+    data () {
       return {
         alert: false,
-        alertMessage: "",
-        newTagName: "",
+        alertMessage: '',
+        newTagName: '',
         loading: false,
       }
     },
-    mounted() {
+    mounted () {
       this.$refs.inputNewTag.select()
     },
     methods: {
-      async onClickAdd() {
+      async onClickAdd () {
         if (this.tags.includes(this.newTagName)) {
           this.alert = true
-          this.alertMessage = "The tag \"" + this.newTagName +"\" already exists!"
-        }
-        else {
+          this.alertMessage = 'The tag "' + this.newTagName + '" already exists!'
+        } else {
           this.loading = true
           await addTags(this.account.address, this.newTagName)
           this.closeNewTag()
@@ -68,7 +67,7 @@
       onClickClose () {
         this.closeNewTag()
       },
-      ...mapActions ([
+      ...mapActions([
         'closeNewTag',
         'setTags',
       ]),

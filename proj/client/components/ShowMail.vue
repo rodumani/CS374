@@ -33,41 +33,40 @@
 <script>
 	import Layout from '../views/Layout'
 	import { mapState } from 'vuex'
-  import moment from 'moment'
-  import { removeTag } from '../firebase'
+import moment from 'moment'
+import { removeTag } from '../firebase'
 
-  let mailitem;
-  export default {
-    components: {
-      Layout,
+export default {
+  components: {
+    Layout,
+  },
+  computed: {
+    time () {
+      return moment(this.mailitem.sent).format('YYYY-MM-DD A h:mm:ss')
     },
-    computed: {
-      time () {
-        return moment (this.mailitem.sent).format ("YYYY-MM-DD A h:mm:ss")
-      },
-      mailitem () {
-        const key = this.$route.params.mailid
-        for (const m of this.mails) {
-          if (m.key === key) {
-            return m
-          }
+    mailitem () {
+      const key = this.$route.params.mailid
+      for (const m of this.mails) {
+        if (m.key === key) {
+          return m
         }
-      },
-      ...mapState({
-        mails: 'mails',
-      }),
-    },
-    methods: {
-      downfile: function(file){
-        window.open(file.link, '_blank');
-      },
-      async removeTag (tag) {
-        const key = this.$route.params.mailid
-        await removeTag (key, '0', tag) //cannot remove yet. tag don't have its keys
       }
-    }
+    },
+    ...mapState({
+      mails: 'mails',
+    }),
+  },
+  methods: {
+    downfile: function (file) {
+      window.open(file.link, '_blank')
+    },
+    async removeTag (tag) {
+      const key = this.$route.params.mailid
+      await removeTag(key, '0', tag) // cannot remove yet. tag don't have its keys
+    },
+  },
 
-  }
+}
 </script>
 
 <style scoped>

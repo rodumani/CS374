@@ -29,7 +29,7 @@
   import { mapActions } from 'vuex'
 
   export default {
-    props: ['mailKey', 'idx', 'file', 'tags', ],
+    props: ['mailKey', 'idx', 'file', 'tags'],
     data () {
       return {
         newTag: '',
@@ -37,43 +37,43 @@
     },
     computed: {
       sortedTags () {
-        return this.file.tags ?
-          Object.keys(this.file.tags).map((key) => {
-            return {
-              key,
-              ...this.file.tags[key],
-            }
-          })
+        return this.file.tags
+        ? Object.keys(this.file.tags).map((key) => {
+          return {
+            key,
+            ...this.file.tags[key],
+          }
+        })
           .sort((a, b) => a.name.localeCompare(b.name))
           : []
       },
-      options() {
+      options () {
         return this.tags ? this.tags.filter((tag) => {
           if (!this.file.tags) {
             return true
-          } else if (Object.values(this.file.tags).map(t=>t.name).includes(tag)) {
+          } else if (Object.values(this.file.tags).map(t => t.name).includes(tag)) {
             return false
           }
           return true
         }) : []
-      }
+      },
     },
     methods: {
       async onChangeNewTag () {
         if (this.newTag === '') {
           return
         }
-        await putTag (this.mailKey, this.idx, this.newTag)
+        await putTag(this.mailKey, this.idx, this.newTag)
 
         this.newTag = ''
       },
       async removeTag (tag) {
-        await removeTag (this.mailKey, this.idx, tag)
+        await removeTag(this.mailKey, this.idx, tag)
       },
       ...mapActions([
         'setMails',
       ]),
-    }
+    },
   }
 </script>
 

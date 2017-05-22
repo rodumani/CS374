@@ -28,12 +28,12 @@
   export default {
     methods: {
       onClickNewMail () {
-        this.showNewMail ();
+        this.showNewMail()
       },
       ...mapActions([
         'showNewMail',
       ]),
-    }
+    },
   }
 </script>
 

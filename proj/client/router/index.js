@@ -24,10 +24,10 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') {
     next()
-  } else if (!store.state.account) {
-    next('/login')
-  } else {
+  } else if (store.state.account) {
     next()
+  } else {
+    next('/login')
   }
 })
 

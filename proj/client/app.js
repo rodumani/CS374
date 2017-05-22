@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { sync } from 'vuex-router-sync'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-default/index.css' // eslint-disable-line import/no-unassigned-import
 import VeeValidate from 'vee-validate'
 
 import App from './components/App'

@@ -58,44 +58,44 @@
         file: null,
       }
     },
-    mounted() {
+    mounted () {
       this.$refs.inputTo.select()
     },
     computed: {
       ...mapState({
         account: 'account',
-      })
+      }),
     },
     methods: {
       onClickClose () {
-        this.closeNewMail ();
+        this.closeNewMail()
       },
       onFileChange (e) {
         this.file = e.target.files[0]
       },
       async onClickSend () {
         // Check Attachment
-        const bannedWords = ["첨부", "attachment", "attach"]
-        if (!this.file){
-          for (let i=0;i<bannedWords.length;i++){
+        const bannedWords = ['첨부', 'attachment', 'attach']
+        if (!this.file) {
+          for (let i = 0; i < bannedWords.length; i++) {
             if (this.body.includes(bannedWords[i])) {
-              this.alert=true;
-              this.alertMessage="The word \""+bannedWords[i]+"\" included on your text, but you didn't attached any file."
+              this.alert = true
+              this.alertMessage = 'The word "' + bannedWords[i] + "\" included on your text, but you didn't attached any file."
               return
             }
           }
         }
 
-        await pushMail (this.body, this.account, this.to, this.title, this.file)
+        await pushMail(this.body, this.account, this.to, this.title, this.file)
 
         this.$message({
           message: 'Your mail has been sent',
           type: 'success',
           duration: 5 * 1000,
-        });
+        })
         this.closeNewMail()
       },
-      ...mapActions ([
+      ...mapActions([
         'closeNewMail',
         'setMails',
       ]),

@@ -47,7 +47,7 @@
 
 <script>
   import Layout from '../views/Layout'
-  import { getTags, hideFile} from '../firebase'
+  import { getTags, hideFile } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
@@ -61,18 +61,15 @@
     computed: {
       filteredFiles () {
         return this.files.filter((file) => {
-          if (this.currentTag === "all")
-              return true
+          if (this.currentTag === 'all') { return true }
 
-          if (this.currentTag === "unclassified")
-              return !file.tags || file.tags.length === 0
+          if (this.currentTag === 'unclassified') { return !file.tags || file.tags.length === 0 }
 
           if (!file.tags) {
             return false
           }
           for (const tag of Object.values(file.tags)) {
-              if (tag.name === this.currentTag)
-                  return true
+            if (tag.name === this.currentTag) { return true }
           }
 
           return false
@@ -84,31 +81,31 @@
           state.mails
             .filter((mail) => mail.to === state.account.address || mail.from.address === state.account.address)
             .forEach((mail) => {
-            if (!mail.attachments) return
-            for (const attachment of mail.attachments) {
-              if (mail.to === state.account.address) {
-                files.push({
-                  name: attachment.filename,
-                  link: attachment.link,
-                  toHide: attachment.toHide,
-                  fromHide: attachment.fromHide,
-                  tags: attachment.tags,
-                  mail: mail,
-                  fileType: "toFile"
-                })
-              } else {
-                files.push({
-                  name: attachment.filename,
-                  link: attachment.link,
-                  toHide: attachment.toHide,
-                  fromHide: attachment.fromHide,
-                  tags: attachment.tags,
-                  mail: mail,
-                  fileType: "fromFile"
-                })
+              if (!mail.attachments) return
+              for (const attachment of mail.attachments) {
+                if (mail.to === state.account.address) {
+                  files.push({
+                    name: attachment.filename,
+                    link: attachment.link,
+                    toHide: attachment.toHide,
+                    fromHide: attachment.fromHide,
+                    tags: attachment.tags,
+                    mail: mail,
+                    fileType: 'toFile',
+                  })
+                } else {
+                  files.push({
+                    name: attachment.filename,
+                    link: attachment.link,
+                    toHide: attachment.toHide,
+                    fromHide: attachment.fromHide,
+                    tags: attachment.tags,
+                    mail: mail,
+                    fileType: 'fromFile',
+                  })
+                }
               }
-            }
-          })
+            })
           return files
         },
         showingNewTag: state => state.showingNewTag,
@@ -127,31 +124,30 @@
       updateCurrentTag (tag) {
         this.currentTag = tag
       },
-      onClickNewTag() {
-          this.showNewTag()
+      onClickNewTag () {
+        this.showNewTag()
       },
       ...mapActions([
         'showNewTag',
         'setTags',
       ]),
       typeCheck: function (file) {
-        if (file.fileType === "fromFile") {
+        if (file.fileType === 'fromFile') {
           return !file.fromHide
-        }
-        else {
+        } else {
           return !file.toHide
         }
       },
       async hideFile (event) {
-        var elem = event.target
-        await hideFile (elem.getAttribute("mailKey"), elem.getAttribute("idx"), elem.getAttribute("fileType"))
-      }
+        const elem = event.target
+        await hideFile(elem.getAttribute('mailKey'), elem.getAttribute('idx'), elem.getAttribute('fileType'))
+      },
     },
     mounted () {
       getTags((tags) => {
         this.setTags(tags.sort())
-      });
-    }
+      })
+    },
   }
 </script>
 
