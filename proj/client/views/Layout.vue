@@ -14,12 +14,13 @@
             </span>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 account" @click="onClickAccount">
-            <div>{{account.name}}</div>
-            <div>{{account.address}}</div>
-          </div>
-          <div class="col-md-1 logout">
-            <button class="btn btn-outline-primary" @click="onClickLogout">Logout</button>
+          <div class="col-md-4 col-sm-6 account" @click="onClickAccount">
+            <div class="account-info">
+              {{account.name}}<br/>{{account.address}}
+            </div>
+            <div class="logout">
+              <button class="btn btn-outline-primary" @click="onClickLogout">Logout</button>
+            </div>
           </div>
         </div>
         <div>
@@ -78,15 +79,19 @@ export default {
   }
 
   .account {
-    margin-top: 15px;
+    padding-top: 15px;
     text-align: right;
+  }
+  .account-info {
+    display: inline-block;
   }
 
   .logout {
-    margin-top: 21px;
-    margin-left: -10px;
+    display: inline-block;
+    margin-left: 10px;
   }
   .logout button {
+    margin-top: -25px;
     cursor: pointer;
   }
 </style>
