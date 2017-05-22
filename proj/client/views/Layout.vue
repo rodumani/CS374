@@ -14,7 +14,7 @@
             </span>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 account" @click="onClickAccount">
+          <div class="col-md-4 col-sm-6 account">
             <div class="account-info">
               {{account.name}}<br/>{{account.address}}
             </div>
@@ -36,7 +36,7 @@
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
 
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -50,24 +50,9 @@ export default {
     }),
   },
   methods: {
-    onClickAccount () {
-      const address = prompt('New account address')
-      if (address) {
-        const name = prompt('New account name')
-        if (name) {
-          this.changeAccount({
-            address,
-            name,
-          })
-        }
-      }
-    },
     onClickLogout () {
       this.$router.push('/login')
     },
-    ...mapActions([
-      'changeAccount',
-    ]),
   },
 }
 </script>
