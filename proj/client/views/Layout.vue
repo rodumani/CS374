@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="row">
-          <div class="col-md-8 col-sm-6 search">
+          <div class="col-md-6 col-sm-6 search">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search" />
               <span class="input-group-btn">
@@ -14,12 +14,13 @@
             </span>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 account">
-            <div class="account-info">
-              {{account.name}}<br/>{{account.address}}
-            </div>
+          <div class="col-md-6 col-sm-6 account">
             <div class="logout">
               <button class="btn btn-outline-primary" @click="onClickLogout">Logout</button>
+            </div>
+            <div class="account-info">
+              <div>{{account.name}}</div>
+              <div class="address">{{account.address}}</div>
             </div>
           </div>
         </div>
@@ -69,14 +70,16 @@ export default {
   }
   .account-info {
     display: inline-block;
+    float: right;
   }
 
   .logout {
     display: inline-block;
+    float: right;
     margin-left: 10px;
   }
   .logout button {
-    margin-top: -25px;
+    margin-top: 5px;
     cursor: pointer;
   }
 </style>
