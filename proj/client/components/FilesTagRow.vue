@@ -8,6 +8,7 @@
                  v-model="newTag"
                  size="small"
                  filterable
+                 allow-create
                  placeholder="New tag"
                  @change="onChangeNewTag"
                  v-show="options.length > 0">
@@ -23,8 +24,8 @@
 </template>
 
 <script>
-  import { putTag, removeTag, hideFile } from '../firebase'
-  import { mapActions } from 'vuex'
+  import { putTag, removeTag, hideFile, addTags } from '../firebase'
+  import { mapState, mapActions } from 'vuex'
 
   export default {
     props: ['mailKey', 'idx', 'file', 'tags'],
@@ -55,6 +56,9 @@
           return true
         }) : []
       },
+      ...mapState({
+        account: 'account',
+      }),
     },
     methods: {
       async onChangeNewTag () {
@@ -62,6 +66,9 @@
           return
         }
         await putTag(this.mailKey, this.idx, this.newTag)
+        if (!this.tags.includes(this.newTag)) {
+          await addTags(this.account.address, this.newTag.substring(0, 20))
+        }
 
         this.newTag = ''
       },

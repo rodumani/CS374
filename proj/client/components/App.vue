@@ -13,6 +13,7 @@
       ...mapActions([
         'setMails',
         'setLoading',
+        'setTags',
       ]),
     },
     mounted () {
