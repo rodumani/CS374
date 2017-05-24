@@ -17,7 +17,7 @@
         <table class="table">
           <thead>
           <tr>
-            <th>File</th>
+            <th class="col-file">File</th>
             <th>Sender</th>
             <th>Title</th>
             <th>Date</th>
@@ -27,10 +27,10 @@
           <tbody>
           <template v-for="file in filteredFiles" v-if="typeCheck(file)">
             <tr class="row-file">
-              <td><a :href=file.link target="_blank">{{file.name}}</a></td>
+              <td class="col-file"><a :href=file.link target="_blank">{{file.name}}</a></td>
               <td>{{file.mail.from.name}}</td>
               <td>{{file.mail.title}}</td>
-              <td>{{file.mail.sent}}</td>
+              <td>{{fDate(file.mail.sent)}}</td>
               <td>
                   <button :fileType="file.fileType" :tags="tags" :mailKey="file.mail.key" :idx="0" class="btn btn-danger btn-sm" @click="hideFile">Hide</button>
               </td>
@@ -51,6 +51,7 @@
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
+  import moment from 'moment'
 
   export default {
     components: {
@@ -131,6 +132,9 @@
         'showNewTag',
         'setTags',
       ]),
+      fDate (date) {
+        return moment(date).calendar()
+      },
       typeCheck: function (file) {
         if (file.fileType === 'fromFile') {
           return !file.fromHide
@@ -194,5 +198,10 @@
   ul {
     width: 100%;
     padding: 0;
+  }
+
+  .col-file {
+    width: 40%;
+    word-break: break-all;
   }
 </style>
