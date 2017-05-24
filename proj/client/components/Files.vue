@@ -27,8 +27,8 @@
                       hide
                     </button>
                   </div>
-                  <p class="card-text">{{file.mail.title}}</p>
                   <p class="card-text">
+                    <i class="fa fa-envelope-o"></i> {{file.mail.title}}<br/>
                     <small>
                       {{file.mail.from.name}}<br/>
                       {{fDate(file.mail.sent)}}
@@ -210,6 +210,7 @@
   .card {
     margin-top: 20px;
     transition: border-color 0.3s, color 0.3s;
+    min-height: 290px;
   }
   .card:hover {
     --card-color: #337ab7;
