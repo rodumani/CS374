@@ -6,17 +6,19 @@
         <div class="form-group row">
           <label class="col-3 col-form-label" for="email">email</label>
           <div class="col-9">
-            <input class="form-control" type="email" id="email" v-model="address" placeholder="example@example.org"/>
+            <input type="email" id="email" name="email" :class="['form-control', {'has-error': errors.has('email')}]" placeholder="example@example.org" v-model="address" v-validate="'required|email'" autofocus/>
+            <span v-show="errors.has('email')" class="pull-right is-danger">The email address is invaild.</span>
           </div>
         </div>
         <div class="form-group row">
           <label class="col-3 col-form-label" for="name">name</label>
           <div class="col-9">
-            <input class="form-control" type="text" id="name" v-model="name" placeholder="Gildong Hong"/>
+            <input :class="['form-control', {'has-error': errors.has('name')}]" type="text" id="name" name="name" v-model="name" placeholder="Gildong Hong" v-validate="'required'" />
+            <span v-show="errors.has('name')" class="pull-right is-danger">Name is required</span>
           </div>
         </div>
         <div class="form-group pull-right">
-          <button class="btn btn-primary">Login</button>
+          <button class="btn btn-primary" :disabled="errors.any()">Login</button>
         </div>
       </form>
     </div>
@@ -76,6 +78,13 @@
   }
   .pull-right {
     float: right;
+  }
+
+  input.has-error {
+    border-color: red;
+  }
+  .is-danger {
+    color: red;
   }
 </style>
 
