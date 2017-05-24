@@ -1,27 +1,25 @@
 <template>
-  <tr class="row-tags">
-    <td colspan="4">
-      <div class="badge-wrapper" v-for="tag in sortedTags">
-        <el-tag :closable="true" @close="removeTag(tag)" color="#999999">{{tag.name}}</el-tag>
-      </div>
-      <div class="badge-wrapper">
-        <el-select class="new-tag"
-                   v-model="newTag"
-                   size="small"
-                   filterable
-                   placeholder="New tag"
-                   @change="onChangeNewTag"
-                   v-show="options.length > 0">
-          <el-option
-            v-for="item in options"
-            :key="item"
-            :label="item"
-            :value="item">
-          </el-option>
-        </el-select>
-      </div>
-    </td>
-  </tr>
+  <div>
+    <div class="badge-wrapper" v-for="tag in sortedTags">
+      <el-tag :closable="true" @close="removeTag(tag)" color="#999999">{{tag.name}}</el-tag>
+    </div>
+    <div class="badge-wrapper">
+      <el-select class="new-tag"
+                 v-model="newTag"
+                 size="small"
+                 filterable
+                 placeholder="New tag"
+                 @change="onChangeNewTag"
+                 v-show="options.length > 0">
+        <el-option
+                v-for="item in options"
+                :key="item"
+                :label="item"
+                :value="item">
+        </el-option>
+      </el-select>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -38,13 +36,13 @@
     computed: {
       sortedTags () {
         return this.file.tags
-        ? Object.keys(this.file.tags).map((key) => {
-          return {
-            key,
-            ...this.file.tags[key],
-          }
-        })
-          .sort((a, b) => a.name.localeCompare(b.name))
+          ? Object.keys(this.file.tags).map((key) => {
+            return {
+              key,
+              ...this.file.tags[key],
+            }
+          })
+            .sort((a, b) => a.name.localeCompare(b.name))
           : []
       },
       options () {

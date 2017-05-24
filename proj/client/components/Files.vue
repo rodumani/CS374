@@ -35,7 +35,11 @@
                   <button :fileType="file.fileType" :tags="tags" :mailKey="file.mail.key" :idx="0" class="btn btn-danger btn-sm" @click="hideFile">Hide</button>
               </td>
             </tr>
-            <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
+            <tr class="row-tags">
+              <td colspan="5">
+                <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
+              </td>
+            </tr>
           </template>
           </tbody>
         </table>
@@ -47,7 +51,7 @@
 
 <script>
   import Layout from '../views/Layout'
-  import { getTags, hideFile } from '../firebase'
+  import { hideFile } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
@@ -147,11 +151,6 @@
         await hideFile(elem.getAttribute('mailKey'), elem.getAttribute('idx'), elem.getAttribute('fileType'))
       },
     },
-    mounted () {
-      getTags((tags) => {
-        this.setTags(tags.sort())
-      })
-    },
   }
 </script>
 
@@ -203,5 +202,9 @@
   .col-file {
     width: 40%;
     word-break: break-all;
+  }
+  .row-tags td {
+    border-top: none;
+    padding: 0 10px 10px;
   }
 </style>

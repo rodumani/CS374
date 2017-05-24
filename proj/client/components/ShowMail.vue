@@ -21,11 +21,12 @@
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
           <button class="btn btn-outline-primary files" @click="downfile(file)">{{file.filename}}</button>
-				  <div v-show="mailitem.attachments[0].tags">
-            <div class="attachmentTags" v-for="tag in mailitem.attachments[0].tags">
-              <el-tag :closable="true" @close="removeTag(tag)" color="#999999"> {{tag.name}}</el-tag>
-            </div>
-          </div>
+				  <!--<div v-show="mailitem.attachments[0].tags">-->
+            <!--<div class="attachmentTags" v-for="tag in mailitem.attachments[0].tags">-->
+              <!--<el-tag :closable="true" @close="removeTag(tag)" color="#999999"> {{tag.name}}</el-tag>-->
+            <!--</div>-->
+          <!--</div>-->
+          <files-tag-row :file="file" :tags="tags" :mailKey="mailitem.key" :idx="0"></files-tag-row>
         </div>
 			</div>
 		</div>
@@ -37,10 +38,12 @@
 	import { mapState } from 'vuex'
 import moment from 'moment'
 import { removeTag } from '../firebase'
+  import FilesTagRow from './FilesTagRow'
 
 export default {
   components: {
     Layout,
+    FilesTagRow,
   },
   computed: {
     time () {
@@ -56,6 +59,10 @@ export default {
     },
     ...mapState({
       mails: 'mails',
+      tags: state => state.tags
+        .filter((t) => t.account === state.account.address)
+        .map(t => t.tag)
+        .sort((a, b) => a.localeCompare(b)),
     }),
   },
   methods: {
@@ -67,7 +74,6 @@ export default {
       await removeTag(key, '0', tag) // cannot remove yet. tag don't have its keys
     },
   },
-
 }
 </script>
 
@@ -109,5 +115,8 @@ export default {
 
     display: inline-block;
     padding: 0 5px 0 0;
+  }
+  .row-tags {
+    padding: 0;
   }
 </style>
