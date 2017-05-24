@@ -40,9 +40,10 @@ Before deploy, you should login firebase with `firebase login`
     - vue-router
     - vee-validate
     - element-ui
-    - bootstrap v4
+    - font-awesome
     - moment
     - firebase
+    - bootstrap v4
 
 * build dependencies
     - babel
