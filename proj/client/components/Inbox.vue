@@ -36,7 +36,7 @@
             </template>
           </td>
           <td class="attachment">
-            <i class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
+            <i style="font-size: 25px" class="fa fa-paperclip" v-show="mail.attachments && mail.attachments.length > 0"></i>
           </td>
           <td>
             {{formatDate(mail.sent)}}

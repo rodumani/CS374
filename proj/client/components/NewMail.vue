@@ -12,7 +12,7 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
-                <label for="to">To</label> <span v-show="errors.has('to')" class="pull-right is-danger">This is required</span>
+                <label for="to">To</label> <span v-show="errors.has('to')" class="pull-right is-danger">The email address is invaild. Please enter a valid address.</span>
                 <input type="email" ref="inputTo" id="to" name="to" :class="['form-control', {'has-error': errors.has('to')}]" placeholder="To" v-model="to" v-validate="'required|email'" autofocus/>
               </div>
               <div class="form-group">

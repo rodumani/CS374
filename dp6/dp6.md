@@ -60,6 +60,7 @@ Other minor heuristic evaluations are not listed.
 
 
 ## Individual Reflections
+
 ### Rohjoon Myung (20090336)
 
 #### Which part the UI did you directly contribute to?
@@ -93,4 +94,10 @@ Other minor heuristic evaluations are not listed.
 #### List one useful implementation skill you learned while working on DP5 and DP6.
 
 ## Studio Reflections
+1. (Students)
 
+2. (TA) I wish that your prototype could use extension of files to classify the attached files.
+Extension is a good cue about what this file is. And we are going to add 'Adding tag automatically' function later in process. So, we can add tag about extension automatically before user test started. For example, 'hwp' tag will be added automatically on '*.hwp' file, or 'doc' tag on '*.doc' file.
+
+3. (TA) In the sent page, if there are many sent emails, the user cannot distinguish which emails have attached files or not. It would be better to emphasis the attached file mark or use tags.
+There were clip mark for representing this mail has attachments, but it was too small so hard to recognize when there are many emails. So we largen the clip mark to emphasize it.
