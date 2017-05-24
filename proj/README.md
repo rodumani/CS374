@@ -3,6 +3,8 @@
 ## Introduction
 This project is KAIST 2017 Spring CS374 Intro to HCI Design Project of team Nanomario.
 
+### [Demo](https://cs374-32b99.firebaseapp.com)
+
 ## Preparation
 Install dependencies:
 ```bash
