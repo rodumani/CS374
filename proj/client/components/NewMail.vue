@@ -85,6 +85,7 @@
             }
           }
         }
+        this.closeNewMail()
 
         await pushMail(this.body, this.account, this.to, this.title, this.file)
 
@@ -93,7 +94,6 @@
           type: 'success',
           duration: 5 * 1000,
         })
-        this.closeNewMail()
       },
       ...mapActions([
         'closeNewMail',
