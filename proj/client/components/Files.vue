@@ -9,40 +9,39 @@
             {{tag}}
           </li>
           <li class="add-new-tag">
-          <button class="btn btn-outline-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
+            <button class="btn btn-outline-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
           </li>
         </ul>
       </div>
-      <div class="col-md-9 col-sm-10 no-padding files">
-        <table class="table">
-          <thead>
-          <tr>
-            <th class="col-file">File</th>
-            <th>Sender</th>
-            <th>Title</th>
-            <th>Date</th>
-            <th></th>
-          </tr>
-          </thead>
-          <tbody>
-          <template v-for="file in filteredFiles" v-if="typeCheck(file)">
-            <tr class="row-file">
-              <td class="col-file"><a :href=file.link target="_blank">{{file.name}}</a></td>
-              <td>{{file.mail.from.name}}</td>
-              <td>{{file.mail.title}}</td>
-              <td>{{fDate(file.mail.sent)}}</td>
-              <td>
-                  <button :fileType="file.fileType" :tags="tags" :mailKey="file.mail.key" :idx="0" class="btn btn-danger btn-sm" @click="hideFile">Hide</button>
-              </td>
-            </tr>
-            <tr class="row-tags">
-              <td colspan="5">
-                <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
-              </td>
-            </tr>
-          </template>
-          </tbody>
-        </table>
+      <div class="col-md-9 col-sm-10 files">
+        <div class="row">
+          <div class="col-6 col-xl-6" v-for="file in filteredFiles" v-if="typeCheck(file)">
+            <a :href="file.link" target="_blank">
+              <div class="card">
+                <div class="card-block">
+                  <h5 class="card-title">
+                    {{file.name}}
+                  </h5>
+                  <div class="card-actions">
+                    <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
+                      hide
+                    </button>
+                  </div>
+                  <p class="card-text">
+                    <i class="fa fa-envelope-o"></i> {{file.mail.title}}<br/>
+                    <small>
+                      {{file.mail.from.name}}<br/>
+                      {{fDate(file.mail.sent)}}
+                    </small>
+                  </p>
+                  <div class="tags-row" @click.prevent="ignoreClick">
+                    <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
      <NewTag  v-if="showingNewTag" :tags="tags"></NewTag>
     </div>
@@ -132,6 +131,12 @@
       onClickNewTag () {
         this.showNewTag()
       },
+      fDate (date) {
+        return moment(date).calendar()
+      },
+      ignoreClick () {
+        return
+      },
       ...mapActions([
         'showNewTag',
         'setTags',
@@ -146,9 +151,8 @@
           return !file.toHide
         }
       },
-      async hideFile (event) {
-        const elem = event.target
-        await hideFile(elem.getAttribute('mailKey'), elem.getAttribute('idx'), elem.getAttribute('fileType'))
+      async hideFile (mailKey, idx, fileType) {
+        await hideFile(mailKey, idx, fileType)
       },
     },
   }
@@ -166,6 +170,7 @@
   .files {
     overflow-y: scroll;
     height: calc(100vh - 74px);
+    padding-bottom: 40px;
   }
   li {
     list-style-type: none;
@@ -199,12 +204,46 @@
     padding: 0;
   }
 
-  .col-file {
-    width: 40%;
-    word-break: break-all;
+  .files .row {
+    margin-top: -20px;
   }
-  .row-tags td {
-    border-top: none;
-    padding: 0 10px 10px;
+  .card {
+    margin-top: 20px;
+    transition: border-color 0.3s, color 0.3s;
+    min-height: 290px;
+  }
+  .card:hover {
+    --card-color: #337ab7;
+    border-color: var(--card-color);
+    color: var(--card-color);
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: #292b2c;
+  }
+  .card-title {
+    word-break: break-all;
+    max-width: calc(100% - 45px);
+    min-height: 70px;
+  }
+
+  .card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+  .btn-hide {
+    display: none;
+    text-decoration: none;
+    margin-top: 7px;
+    color: gray;
+  }
+  .card:hover .btn-hide {
+    display: block;
   }
 </style>

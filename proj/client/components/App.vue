@@ -33,4 +33,7 @@
   width: 0;
   background-color: transparent;
 }
+  .btn {
+    cursor: pointer;
+  }
 </style>
