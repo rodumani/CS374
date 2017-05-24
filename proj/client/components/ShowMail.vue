@@ -21,11 +21,6 @@
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
           <button class="btn btn-outline-primary files" @click="downfile(file)">{{file.filename}}</button>
-				  <!--<div v-show="mailitem.attachments[0].tags">-->
-            <!--<div class="attachmentTags" v-for="tag in mailitem.attachments[0].tags">-->
-              <!--<el-tag :closable="true" @close="removeTag(tag)" color="#999999"> {{tag.name}}</el-tag>-->
-            <!--</div>-->
-          <!--</div>-->
           <files-tag-row :file="file" :tags="tags" :mailKey="mailitem.key" :idx="0"></files-tag-row>
         </div>
 			</div>

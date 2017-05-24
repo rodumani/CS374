@@ -13,9 +13,9 @@
                  @change="onChangeNewTag">
         <el-option
                 v-for="item in options"
-                :key="item"
-                :label="item"
-                :value="item">
+                :key="item.tag"
+                :label="item.tag"
+                :value="item.tag">
         </el-option>
       </el-select>
     </div>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { putTag, removeMailTag, hideFile, addTags } from '../firebase'
+  import { putTag, removeMailTag, addTags } from '../firebase'
   import { mapState, mapActions } from 'vuex'
 
   export default {

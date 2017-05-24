@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-3 col-sm-2 no-padding tags">
         <ul>
-          <li :class="{active: currentTag == 'all'}" @click="tagStateRemove&&updateCurrentTag('all')">All</li>
-          <li :class="{active: currentTag == 'unclassified'}" @click="tagStateRemove&&updateCurrentTag('unclassified')">Unclassified</li>
-          <template v-for="tag in tags ">
+          <li :class="{active: currentTag == 'all'}" @click="!tagStateRemove&&updateCurrentTag('all')">All</li>
+          <li :class="{active: currentTag == 'unclassified'}" @click="!tagStateRemove&&updateCurrentTag('unclassified')">Unclassified</li>
+          <template v-for="tag in tags">
             <li v-if="tagStateRemove === false" :class="{active: currentTag == tag}" @click="updateCurrentTag(tag)">
               {{tag.tag}}
             </li>
@@ -124,7 +124,6 @@
         showingNewTag: state => state.showingNewTag,
         tags: state => state.tags
           .filter((t) => t.account === state.account.address)
-//          .map(t => t.tag)
           .sort((a, b) => a.tag.localeCompare(b.tag)),
       }),
     },

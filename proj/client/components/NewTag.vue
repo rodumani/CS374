@@ -54,8 +54,9 @@
       this.$refs.inputNewTag.select()
     },
     methods: {
-      async onClickAdd () {        
-        if (this.tags.includes(this.newTagName)) {
+      async onClickAdd () {
+        var tagAlready = this.tags.filter((item)=> item.tag == this.newTagName)
+        if (tagAlready.length > 0) {
           this.alert = true
           this.alertMessage = 'The tag "' + this.newTagName + '" already exists!'
         } else {
