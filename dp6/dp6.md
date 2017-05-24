@@ -16,6 +16,7 @@ Graduate students who suffer problems about attaching files on mail system & hop
 
 ### URL of your prototype
 
+
 ### URL of your Git repository
 https://github.com/rodumani/CS374/tree/master/proj
 
@@ -53,10 +54,43 @@ https://github.com/rodumani/CS374/tree/master/proj
 - mentioned once.
 - We add date column on the Inbox.
 
+Other minor heuristic evaluations are not listed.
+
 ### Representative screenshots
 
 
 ## Individual Reflections
+### Rohjoon Myung (20090336)
+
+#### Which part the UI did you directly contribute to?
+
+#### What were some of the difficulties you faced?
+
+#### List one useful implementation skill you learned while working on DP5 and DP6.
+
+### Changje Jeong (20110846)
+
+#### Which part the UI did you directly contribute to?
+
+#### What were some of the difficulties you faced?
+
+#### List one useful implementation skill you learned while working on DP5 and DP6.
+
+### Seongwon Lee (20150556)
+
+#### Which part the UI did you directly contribute to?
+
+#### What were some of the difficulties you faced?
+
+#### List one useful implementation skill you learned while working on DP5 and DP6.
+
+### Seungmin Lee (20150566)
+
+#### Which part the UI did you directly contribute to?
+
+#### What were some of the difficulties you faced?
+
+#### List one useful implementation skill you learned while working on DP5 and DP6.
 
 ## Studio Reflections
 
