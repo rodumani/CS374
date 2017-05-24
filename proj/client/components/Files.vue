@@ -210,7 +210,6 @@
   .card {
     margin-top: 20px;
     transition: border-color 0.3s, color 0.3s;
-    min-height: 290px;
   }
   .card:hover {
     --card-color: #337ab7;
