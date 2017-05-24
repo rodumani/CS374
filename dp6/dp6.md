@@ -17,13 +17,18 @@ Graduate students who suffer problems about attaching files on mail system & hop
 ### URL of your prototype
 
 ### URL of your Git repository
-https://github.com/rodumani/CS374
+https://github.com/rodumani/CS374/tree/master/proj
 
 ### Libraries and frameworks
-We used Vue.js for web framework. Vuex for state management for Vue.js, vee-validate for validating inputs, moment.js for display dates and times, and save data in Firebase.
+- Vue.js : Web Framework for javascript view.
+- Vuex : State management library for Vue.js
+- vee-validate : validating inputs for Vue.js
+- moment.js : displaying dates and times beautifully.
+- Firebase : Save data about mail and tags.
+- Bootstrap : Web Framework for making elements beautiful.
 
 ### Lessons from heuristic evaluation
-1.  No way to remove tags.
+1. No way to remove tags.
 - Similar feedback mentioned more than 5 times.
 - We added 'Hide' function to remove tag. also, we can hide files on Files.
 2. Cannot handle very long tag.
