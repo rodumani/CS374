@@ -19,7 +19,7 @@
             {{ alertMessage }}
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" @click="onClickAdd" :disabled="loading">
+            <button type="button" id="newTag" class="btn btn-primary" @click="onClickAdd" :disabled="(newTagName.length === 0) || loading">
               <template v-if="loading"><i class="fa fa-spin fa-spinner"></i></template>
               <template v-else>Add</template>
             </button>
@@ -54,7 +54,7 @@
       this.$refs.inputNewTag.select()
     },
     methods: {
-      async onClickAdd () {
+      async onClickAdd () {        
         if (this.tags.includes(this.newTagName)) {
           this.alert = true
           this.alertMessage = 'The tag "' + this.newTagName + '" already exists!'
