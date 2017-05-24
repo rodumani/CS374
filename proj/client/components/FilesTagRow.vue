@@ -65,7 +65,7 @@
           return
         }
         await putTag(this.mailKey, this.idx, this.newTag)
-        if (!this.tags.includes(this.newTag)) {
+        if (!this.tags.map(t => t.tag).includes(this.newTag)) {
           await addTags(this.account.address, this.newTag.substring(0, 20))
         }
 
