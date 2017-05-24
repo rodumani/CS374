@@ -63,7 +63,7 @@
 </template>
 
 <script>
-  import Layout from '../views/Layout'
+  import Layout from './Layout'
   import { unhideFile, hideFile, removeTag, removeMailTag } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'

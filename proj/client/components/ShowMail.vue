@@ -29,7 +29,7 @@
 </template>
 
 <script>
-	import Layout from '../views/Layout'
+	import Layout from './Layout'
 	import { mapState } from 'vuex'
 import moment from 'moment'
 import FilesTagRow from './FilesTagRow'
