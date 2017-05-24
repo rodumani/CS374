@@ -5,12 +5,13 @@
         <ul>
           <li :class="{active: currentTag == 'all'}" @click="!tagStateRemove&&updateCurrentTag('all')">All</li>
           <li :class="{active: currentTag == 'unclassified'}" @click="!tagStateRemove&&updateCurrentTag('unclassified')">Unclassified</li>
+          <li :class="{active: currentTag == 'hidden'}" @click="updateCurrentTag('hidden')">Hidden</li>
           <template v-for="tag in tags">
-            <li v-if="tagStateRemove === false" :class="{active: currentTag == tag}" @click="updateCurrentTag(tag)">
+            <li v-if="!tagStateRemove" :class="{active: currentTag == tag.tag}" @click="updateCurrentTag(tag.tag)">
               {{tag.tag}}
             </li>
             <li v-else :class="{active: false}" class="text-danger" @click="_removeTag(tag)">
-              {{tag.tag}} <i class="fa fa-minus text-danger" />
+              {{tag.tag}} <i class="fa fa-minus text-danger"></i>
             </li>
           </template>
           <li class="add-new-tag">
@@ -18,13 +19,13 @@
           </li>
           <li class="add-new-tag">
             <button v-if="tagStateRemove" class="btn btn-outline-danger btn-new-mail" @click="onClickRemoveTag"><i class="fa fa-minus"></i> Done </button>
-            <button v-else class="btn btn-outline-danger btn-new-mail" @click="onClickRemoveTag"><i class="fa fa-minus"></i> Remove tags</button>
+            <button class="btn btn-outline-danger btn-new-mail" @click="onClickRemoveTag" v-else><i class="fa fa-minus"></i> Remove tags</button>
           </li>
         </ul>
       </div>
       <div class="col-md-9 col-sm-10 files">
         <div class="row">
-          <div class="col-6 col-xl-6" v-for="file in filteredFiles" v-if="typeCheck(file)">
+          <div class="col-6 col-xl-6" v-for="file in filteredFiles">
             <a :href="file.link" target="_blank">
               <div class="card">
                 <div class="card-block">
@@ -32,8 +33,11 @@
                     {{file.name}}
                   </h5>
                   <div class="card-actions">
-                    <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
+                    <button v-if="!isHidden(file)" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
                       hide
+                    </button>
+                    <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="unhideFile(file.mail.key, 0, file.fileType)" v-else >
+                      unhide
                     </button>
                   </div>
                   <p class="card-text">
@@ -59,7 +63,7 @@
 
 <script>
   import Layout from '../views/Layout'
-  import { getTags, hideFile, removeTag } from '../firebase'
+  import { getTags, unhideFile, hideFile, removeTag } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
@@ -74,17 +78,21 @@
     computed: {
       filteredFiles () {
         return this.files.filter((file) => {
-          if (this.currentTag === 'all') { return true }
-
-          if (this.currentTag === 'unclassified') { return !file.tags || file.tags.length === 0 }
-
-          if (!file.tags) {
+          const isHidden = this.isHidden(file)
+          if (this.currentTag === 'all') {
+            return !isHidden
+          } else if (this.currentTag === 'unclassified') {
+            return !isHidden && (!file.tags || file.tags.length === 0)
+          } else if (this.currentTag === 'hidden') {
+            return isHidden
+          } else if (!file.tags) {
             return false
           }
           for (const tag of Object.values(file.tags)) {
-            if (tag.name === this.currentTag) { return true }
+            console.log(this.currentTag)
+            console.log('isHidden: ', isHidden)
+            return !isHidden && (tag.name === this.currentTag)
           }
-
           return false
         })
       },
@@ -162,15 +170,18 @@
       fDate (date) {
         return moment(date).calendar()
       },
-      typeCheck: function (file) {
+      isHidden: function (file) {
         if (file.fileType === 'fromFile') {
-          return !file.fromHide
+          return file.fromHide
         } else {
-          return !file.toHide
+          return file.toHide
         }
       },
       async hideFile (mailKey, idx, fileType) {
         await hideFile(mailKey, idx, fileType)
+      },
+      async unhideFile (mailKey, idx, fileType) {
+        await unhideFile(mailKey, idx, fileType)
       },
     },
   }
@@ -182,12 +193,12 @@
   }
   .tags {
     overflow-y: scroll;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 80px);
     border-right: 1px solid lightgray;
   }
   .files {
     overflow-y: scroll;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 80px);
     padding-bottom: 40px;
   }
   li {

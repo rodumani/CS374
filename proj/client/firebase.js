@@ -98,4 +98,12 @@ export async function hideFile (mailKey, attachmentIdx, fileType) {
   }
 }
 
+export async function unhideFile (mailKey, attachmentIdx, fileType) {
+  if (fileType === 'fromFile') {
+    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ fromHide: false })
+  } else {
+    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ toHide: false })
+  }
+}
+
 export default app
