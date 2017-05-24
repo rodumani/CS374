@@ -21,12 +21,17 @@ Graduate students who suffer problems about attaching files on mail system & hop
 https://github.com/rodumani/CS374/tree/master/proj
 
 ### Libraries and frameworks
-- Vue.js : Web Framework for javascript view.
-- Vuex : State management library for Vue.js
-- vee-validate : validating inputs for Vue.js
-- moment.js : displaying dates and times beautifully.
-- Firebase : Save data about mail and tags.
-- Bootstrap : Web Framework for making elements beautiful.
+- vue.js: JavaScript view framework
+- vuex: State management library for vue.js
+- vue-router: JavaScript router for vue.js
+- vee-validate: Validating inputs for vue.js
+- element-ui: UI framework for vue.js
+- font-awesome: Icon libarary
+- moment: JavaScript datetime library
+- firebase: Firebase JavaScript client
+- bootstrap: The most popular front-end framework for developing web
+- babel: JavaScript Transiler from ES6+ to ES5
+- webpack: assets bundler
 
 ### Lessons from heuristic evaluation
 1. No way to remove tags.
