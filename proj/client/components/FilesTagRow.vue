@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="badge-wrapper" v-for="tag in sortedTags">
-      <el-tag :closable="true" @close="removeTag(tag)" color="#999999">{{tag.name}}</el-tag>
+      <el-tag :closable="true" @close="removeMailTag(tag)" color="#999999">{{tag.name}}</el-tag>
     </div>
     <div class="badge-wrapper" v-show="options.length > 0">
       <el-select class="new-tag"
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import { putTag, removeTag, hideFile, addTags } from '../firebase'
+  import { putTag, removeMailTag, hideFile, addTags } from '../firebase'
   import { mapState, mapActions } from 'vuex'
 
   export default {
@@ -49,7 +49,7 @@
         return this.tags ? this.tags.filter((tag) => {
           if (!this.file.tags) {
             return true
-          } else if (Object.values(this.file.tags).map(t => t.name).includes(tag)) {
+          } else if (Object.values(this.file.tags).map(t => t.name).includes(tag.tag)) {
             return false
           }
           return true
@@ -71,8 +71,8 @@
 
         this.newTag = ''
       },
-      async removeTag (tag) {
-        await removeTag(this.mailKey, this.idx, tag)
+      async removeMailTag (tag) {
+        await removeMailTag(this.mailKey, this.idx, tag)
       },
       ...mapActions([
         'setMails',

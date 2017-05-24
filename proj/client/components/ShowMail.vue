@@ -37,8 +37,8 @@
 	import Layout from '../views/Layout'
 	import { mapState } from 'vuex'
 import moment from 'moment'
-import { removeTag } from '../firebase'
-  import FilesTagRow from './FilesTagRow'
+import FilesTagRow from './FilesTagRow'
+import { removeMailTag } from '../firebase'
 
 export default {
   components: {
@@ -69,9 +69,9 @@ export default {
     downfile: function (file) {
       window.open(file.link, '_blank')
     },
-    async removeTag (tag) {
+    async removeMailTag (tag) {
       const key = this.$route.params.mailid
-      await removeTag(key, '0', tag) // cannot remove yet. tag don't have its keys
+      await removeMailTag(key, '0', tag) // cannot remove yet. tag don't have its keys
     },
   },
 }

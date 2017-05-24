@@ -60,6 +60,7 @@ export function getTags (callback) {
     const ret = []
     for (const key of Object.keys(tags.val())) {
       const value = tags.val()[key]
+      value.key = key
       ret.push(value)
     }
     callback(ret)
@@ -72,6 +73,10 @@ export async function addTags (account, newTag) {
     tag: newTag,
   })
 }
+export async function removeTag (tagToRemove) {
+  console.log(tagToRemove.key)
+  await firebase.database().ref(`/tags/${tagToRemove.key}`).remove()
+}
 
 export async function putTag (mailKey, attachmentIdx, tag) {
   await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags`).push({
@@ -79,7 +84,8 @@ export async function putTag (mailKey, attachmentIdx, tag) {
   })
 }
 
-export async function removeTag (mailKey, attachmentIdx, tag) {
+export async function removeMailTag (mailKey, attachmentIdx, tag) {
+  console.log(tag)
   await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag.key}`).remove()
   console.log('/mails/' + mailKey + '/attachments/' + attachmentIdx + '/tags/' + tag.key)
 }

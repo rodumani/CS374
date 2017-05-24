@@ -3,13 +3,22 @@
     <div class="row">
       <div class="col-md-3 col-sm-2 no-padding tags">
         <ul>
-          <li :class="{active: currentTag == 'all'}" @click="updateCurrentTag('all')">All</li>
-          <li :class="{active: currentTag == 'unclassified'}" @click="updateCurrentTag('unclassified')">Unclassified</li>
-          <li :class="{active: currentTag == tag}" v-for="tag in tags" @click="updateCurrentTag(tag)">
-            {{tag}}
-          </li>
+          <li :class="{active: currentTag == 'all'}" @click="tagStateRemove&&updateCurrentTag('all')">All</li>
+          <li :class="{active: currentTag == 'unclassified'}" @click="tagStateRemove&&updateCurrentTag('unclassified')">Unclassified</li>
+          <template v-for="tag in tags ">
+            <li v-if="tagStateRemove === false" :class="{active: currentTag == tag}" @click="updateCurrentTag(tag)">
+              {{tag.tag}}
+            </li>
+            <li v-else :class="{active: false}" class="text-danger" @click="_removeTag(tag)">
+              {{tag.tag}} <i class="fa fa-minus text-danger" />
+            </li>
+          </template>
           <li class="add-new-tag">
             <button class="btn btn-outline-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
+          </li>
+          <li class="add-new-tag">
+            <button v-if="tagStateRemove" class="btn btn-outline-danger btn-new-mail" @click="onClickRemoveTag"><i class="fa fa-minus"></i> Done </button>
+            <button v-else class="btn btn-outline-danger btn-new-mail" @click="onClickRemoveTag"><i class="fa fa-minus"></i> Remove tags</button>
           </li>
         </ul>
       </div>
@@ -50,7 +59,7 @@
 
 <script>
   import Layout from '../views/Layout'
-  import { hideFile } from '../firebase'
+  import { getTags, hideFile, removeTag } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
   import NewTag from 'components/NewTag'
@@ -115,18 +124,22 @@
         showingNewTag: state => state.showingNewTag,
         tags: state => state.tags
           .filter((t) => t.account === state.account.address)
-          .map(t => t.tag)
-          .sort((a, b) => a.localeCompare(b)),
+//          .map(t => t.tag)
+          .sort((a, b) => a.tag.localeCompare(b.tag)),
       }),
     },
     data () {
       return {
         currentTag: 'all',
+        tagStateRemove: false,
       }
     },
     methods: {
       updateCurrentTag (tag) {
         this.currentTag = tag
+      },
+      async _removeTag (tag) {
+        await removeTag(tag)
       },
       onClickNewTag () {
         this.showNewTag()
@@ -134,8 +147,14 @@
       fDate (date) {
         return moment(date).calendar()
       },
-      ignoreClick () {
+      ignoreClick ()
+      {
         return
+      },
+      onClickRemoveTag () {
+        console.log(this.tagStateRemove)
+        this.tagStateRemove = !this.tagStateRemove
+        this.updateCurrentTag("all")
       },
       ...mapActions([
         'showNewTag',
