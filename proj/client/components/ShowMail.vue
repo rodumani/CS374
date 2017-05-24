@@ -56,8 +56,7 @@
         mails: 'mails',
         tags: state => state.tags
           .filter((t) => t.account === state.account.address)
-          .map(t => t.tag)
-          .sort((a, b) => a.localeCompare(b)),
+          .sort((a, b) => a.tag.localeCompare(b.tag)),
       }),
     },
     methods: {
