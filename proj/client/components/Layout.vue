@@ -7,12 +7,14 @@
       <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="row">
           <div class="col-md-6 col-sm-6 search">
-            <div class="input-group">
-              <input class="form-control" type="text" placeholder="Search" />
-              <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
-            </span>
-            </div>
+            <el-tooltip class="item" effect="dark" content="Not supported" placement="right">
+              <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" disabled />
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button" disabled><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+            </el-tooltip>
           </div>
           <div class="col-md-6 col-sm-6 account">
             <div class="logout">
