@@ -32,27 +32,30 @@ $ firebase deploy
 Before deploy, you should login firebase with `firebase login`
 
 ## Dependencies 
-- vue.js
-- vuex
-- vue-router
-- vee-validate
-- element-ui
-- bootstrap v4
-- moment
-- firebase
+* code dependencies
+    - vue.js
+    - vuex
+    - vue-router
+    - vee-validate
+    - element-ui
+    - bootstrap v4
+    - moment
+    - firebase
 
-- babel
-- webpack
+* build dependencies
+    - babel
+    - webpack
 
 ## Structure
- - client/: web app codes
-    - components/
-        - vue components
+ - client/ : web app codes
+    - components/ : vue components
+        - App.vue : Root
+        - Layout.vue : Layout
     - router/
-        - index.js: routing with vue-router
+        - index.js : routing with vue-router
     - store/
-        - index.js: vuex state store
-    - app.js: main JavaScript file containing root vue component
-    - firebase.js: functions related to firebase api call
-    - index.js: webpack build endpoint
- - /static: static files (Ex: Images, favicon)
+        - index.js : vuex state store
+    - app.js : main JavaScript file containing root vue component
+    - firebase.js : functions related to firebase api call
+    - index.js : webpack build endpoint
+ - /static : static files (Ex: Images, favicon)
