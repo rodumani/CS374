@@ -3,17 +3,19 @@
 		<div v-if="mailitem">
 			<div class="showmail" id="title"> {{mailitem.title}} </div>
       <hr align="left">
-			<div class="row showmail" id="from">
-        <span class="col-md-1"><b>From</b></span><span class="col-md-7">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
+      <div class="mail-info">
+        <div class="row showmail" id="from">
+          <span class="col-md-1"><b>From</b></span><span class="col-md-7">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
+        </div>
+        <div class="row showmail" id="to">
+          <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to}}</span>
+        </div>
+        <div class="row showmail" id="sent">
+          <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
+        </div>
+        <hr align="left">
+        <div class="showmail" id="content"> {{mailitem.content}} </div>
       </div>
-			<div class="row showmail" id="to">
-        <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to}}</span>
-      </div>
-      <div class="row showmail" id="sent">
-        <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
-      </div>
-      <hr align="left">
-			<div class="showmail" id="content"> {{mailitem.content}} </div>
       <hr align="left">
 			<div class="showmail" id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
         <div><b>Attachments</b></div>
@@ -70,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-  span {
+  .mail-info span {
     padding: 0;
   }
   hr {
