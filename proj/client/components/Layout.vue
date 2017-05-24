@@ -28,7 +28,7 @@
           <slot></slot>
         </div>
       </div>
-      <NewMail v-if="showNewMail"></NewMail>
+      <NewMail v-if="showNewMail" :new-address="newAddress"></NewMail>
     </div>
   </div>
 </template>
@@ -48,6 +48,7 @@ export default {
     ...mapState({
       account: 'account',
       showNewMail: state => state.showNewMail,
+      newAddress: state => state.newAddress,
     }),
   },
   methods: {

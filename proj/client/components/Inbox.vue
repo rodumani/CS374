@@ -49,7 +49,7 @@
 </template>
 
 <script>
-  import Layout from '../views/Layout'
+  import Layout from './Layout'
   import moment from 'moment'
   import { mapState } from 'vuex'
 

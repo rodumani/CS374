@@ -5,10 +5,10 @@
       <hr align="left">
       <div class="mail-info">
         <div class="row showmail" id="from">
-          <span class="col-md-1"><b>From</b></span><span class="col-md-7">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
+          <span class="col-md-1"><b>From</b></span><span class="col-md-7 newMail" @click="onClickNewMail(mailitem.from.address)">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
         </div>
         <div class="row showmail" id="to">
-          <span class="col-md-1"><b>To</b></span><span class="col-md-7">{{mailitem.to}}</span>
+          <span class="col-md-1"><b>To</b></span><span class="col-md-7 newMail" @click="onClickNewMail(mailitem.to)">{{mailitem.to}}</span>
         </div>
         <div class="row showmail" id="sent">
           <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
@@ -29,46 +29,52 @@
 </template>
 
 <script>
-	import Layout from '../views/Layout'
-	import { mapState } from 'vuex'
-import moment from 'moment'
-import FilesTagRow from './FilesTagRow'
-import { removeMailTag } from '../firebase'
+	import Layout from './Layout'
+	import { mapState, mapActions } from 'vuex'
+  import moment from 'moment'
+  import FilesTagRow from './FilesTagRow'
+  import { removeMailTag } from '../firebase'
 
-export default {
-  components: {
-    Layout,
-    FilesTagRow,
-  },
-  computed: {
-    time () {
-      return moment(this.mailitem.sent).format('YYYY-MM-DD A h:mm:ss')
+  export default {
+    components: {
+      Layout,
+      FilesTagRow,
     },
-    mailitem () {
-      const key = this.$route.params.mailid
-      for (const m of this.mails) {
-        if (m.key === key) {
-          return m
+    computed: {
+      time () {
+        return moment(this.mailitem.sent).format('YYYY-MM-DD A h:mm:ss')
+      },
+      mailitem () {
+        const key = this.$route.params.mailid
+        for (const m of this.mails) {
+          if (m.key === key) {
+            return m
+          }
         }
-      }
+      },
+      ...mapState({
+        mails: 'mails',
+        tags: state => state.tags
+          .filter((t) => t.account === state.account.address)
+          .sort((a, b) => a.tag.localeCompare(b.tag)),
+      }),
     },
-    ...mapState({
-      mails: 'mails',
-      tags: state => state.tags
-        .filter((t) => t.account === state.account.address)
-        .sort((a, b) => a.tag.localeCompare(b.tag)),
-    }),
-  },
-  methods: {
-    downfile: function (file) {
-      window.open(file.link, '_blank')
-    },
-    async removeMailTag (tag) {
-      const key = this.$route.params.mailid
-      await removeMailTag(key, '0', tag) // cannot remove yet. tag don't have its keys
-    },
-  },
-}
+    methods: {
+      onClickNewMail (newAddress) {
+        this.showNewMail(newAddress)
+      },
+      ...mapActions([
+        'showNewMail',
+      ]),
+      downfile: function (file) {
+        window.open(file.link, '_blank')
+      },
+      async removeMailTag (tag) {
+        const key = this.$route.params.mailid
+        await removeMailTag(key, '0', tag) // cannot remove yet. tag don't have its keys
+      },
+    }
+  }
 </script>
 
 <style scoped>
@@ -112,5 +118,8 @@ export default {
   }
   .row-tags {
     padding: 0;
+  }
+  .newMail {
+    cursor: pointer;
   }
 </style>

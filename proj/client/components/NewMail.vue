@@ -48,18 +48,19 @@
   export default {
     components: {
     },
+    props: ["newAddress"],
     data () {
       return {
         body: '',
         alert: false,
         alertMessage: '',
-        to: '',
+        to: this.newAddress,
         title: '',
         file: null,
       }
     },
     mounted () {
-      this.$refs.inputTo.select()
+      this.$refs.inputTo.focus()
     },
     computed: {
       ...mapState({

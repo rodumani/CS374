@@ -8,6 +8,7 @@ const account = localStorage.getItem('account') ? JSON.parse(localStorage.getIte
 const store = {
   state: {
     showNewMail: false,
+    newAddress: "",
     showingNewTag: false,
     loading: true,
     mails: [],
@@ -15,11 +16,13 @@ const store = {
     account,
   },
   mutations: {
-    showNewMail (state) {
+    showNewMail (state, newAddress) {
       state.showNewMail = true
+      state.newAddress = newAddress
     },
     closeNewMail (state) {
       state.showNewMail = false
+      state.newAddress = ""
     },
     showNewTag (state) {
       state.showingNewTag = true
@@ -43,8 +46,8 @@ const store = {
     },
   },
   actions: {
-    showNewMail ({ commit }) {
-      commit('showNewMail')
+    showNewMail ({ commit }, newAddress) {
+      commit('showNewMail', newAddress)
     },
     closeNewMail ({ commit }) {
       commit('closeNewMail')

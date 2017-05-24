@@ -26,33 +26,34 @@
       <div class="col-md-9 col-sm-10 files">
         <div class="row">
           <div class="col-6 col-xl-6" v-for="file in filteredFiles">
-            <a :href="file.link" target="_blank">
-              <div class="card">
-                <div class="card-block">
-                  <h5 class="card-title">
+            <div class="card">
+              <div class="card-block">
+                <h5 class="card-title">
+                  <a :href="file.link" target="_blank">
                     {{file.name}}
-                  </h5>
-                  <div class="card-actions">
-                    <button v-if="!isHidden(file)" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
-                      hide
-                    </button>
-                    <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="unhideFile(file.mail.key, 0, file.fileType)" v-else >
-                      unhide
-                    </button>
-                  </div>
-                  <p class="card-text">
-                    <i class="fa fa-envelope-o"></i> {{file.mail.title}}<br/>
-                    <small>
-                      {{file.mail.from.name}}<br/>
-                      {{fDate(file.mail.sent)}}
-                    </small>
-                  </p>
-                  <div class="tags-row" @click.prevent="ignoreClick">
-                    <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
-                  </div>
+                    <small><i class="fa fa-download hover fa-sm"></i></small>
+                  </a>
+                </h5>
+                <div class="card-actions">
+                  <button v-if="!isHidden(file)" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
+                    hide
+                  </button>
+                  <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="unhideFile(file.mail.key, 0, file.fileType)" v-else >
+                    unhide
+                  </button>
+                </div>
+                <p class="card-text">
+                  <i class="fa fa-envelope-o"></i> {{file.mail.title}}<br/>
+                  <small>
+                    {{file.mail.from.name}}<br/>
+                    {{fDate(file.mail.sent)}}
+                  </small>
+                </p>
+                <div class="tags-row" @click.prevent="ignoreClick">
+                  <files-tag-row :file="file" :tags="tags" :mailKey="file.mail.key" :idx="0"></files-tag-row>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +63,7 @@
 </template>
 
 <script>
-  import Layout from '../views/Layout'
+  import Layout from './Layout'
   import { unhideFile, hideFile, removeTag, removeMailTag } from '../firebase'
   import { mapState, mapActions } from 'vuex'
   import FilesTagRow from './FilesTagRow'
@@ -260,10 +261,10 @@
     transition: border-color 0.3s, color 0.3s;
   }
   .card:hover {
-    --card-color: #337ab7;
-    border-color: var(--card-color);
-    color: var(--card-color);
-    cursor: pointer;
+    border-color: #337ab7;
+  }
+  .card:hover a {
+    color: #337ab7;
   }
   a {
     text-decoration: none;
@@ -292,5 +293,11 @@
   }
   .card:hover .btn-hide {
     display: block;
+  }
+  .fa-download.hover {
+    display: none;
+  }
+  .card:hover .fa-download.hover {
+    display: inline-block;
   }
 </style>
