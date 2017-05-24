@@ -3,15 +3,14 @@
     <div class="badge-wrapper" v-for="tag in sortedTags">
       <el-tag :closable="true" @close="removeTag(tag)" color="#999999">{{tag.name}}</el-tag>
     </div>
-    <div class="badge-wrapper">
+    <div class="badge-wrapper" v-show="options.length > 0">
       <el-select class="new-tag"
                  v-model="newTag"
                  size="small"
                  filterable
                  allow-create
                  placeholder="New tag"
-                 @change="onChangeNewTag"
-                 v-show="options.length > 0">
+                 @change="onChangeNewTag">
         <el-option
                 v-for="item in options"
                 :key="item"
@@ -83,25 +82,9 @@
 </script>
 
 <style scoped>
-  .row-tags,
-  .row-tags td {
-    border-top: none;
-    padding: 0 10px 10px;
-  }
   .badge-wrapper {
     display: inline-block;
     margin-top: 10px;
-    padding: 0 5px 0 5px;
-  }
-  .badge {
-    padding: 10px 11px;
-    font-size: 15px;
-  }
-  #hideDiv {
-    float: right;
-    margin-right: 10px
-  }
-  #hide {
-    /*background-color: ???*/
+    padding: 0 10px 0 0;
   }
 </style>
