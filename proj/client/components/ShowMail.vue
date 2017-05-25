@@ -1,23 +1,23 @@
 <template>
 	<Layout>
-		<div v-if="mailitem">
-			<div class="showmail" id="title"> {{mailitem.title}} </div>
+		<div class="showmail" v-if="mailitem">
+			<div id="title"> {{mailitem.title}} </div>
       <hr align="left">
       <div class="mail-info">
-        <div class="row showmail" id="from">
+        <div class="row" id="from">
           <span class="col-md-1"><b>From</b></span><span class="col-md-7 newMail" @click="onClickNewMail(mailitem.from.address)">{{mailitem.from.name}} <{{mailitem.from.address}}></span>
         </div>
-        <div class="row showmail" id="to">
+        <div class="row" id="to">
           <span class="col-md-1"><b>To</b></span><span class="col-md-7 newMail" @click="onClickNewMail(mailitem.to)">{{mailitem.to}}</span>
         </div>
-        <div class="row showmail" id="sent">
+        <div class="row" id="sent">
           <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
         </div>
         <hr align="left">
-        <div class="showmail" id="content"> {{mailitem.content}} </div>
+        <div id="content"> {{mailitem.content}} </div>
       </div>
       <hr align="left">
-			<div class="showmail" id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
+			<div id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
           <a :href="file.link" target="_blank">
@@ -81,13 +81,16 @@
   .mail-info span {
     padding: 0;
   }
+  .mail-info div {
+    margin-left: 10px;
+  }
   hr {
-    border-color: lightgray;
-    border-width: 2px;
-    width: 75%;
+    border: 1px solid lightgray;
+    width: 100%;
   }
   .showmail {
     margin-left: 10px;
+    width: 90%;
   }
   #title {
     font-size: 20px;
@@ -99,6 +102,9 @@
   #content {
     font-size: 17px;
     margin-top: 20px;
+    white-space: pre-line;
+    word-break: break-all;
+    width: 100%;
   }
   .filelist {
     display: inline-block;
