@@ -97,10 +97,16 @@ Other minor heuristic evaluations are not listed.
 ### Rohjoon Myung (20090336)
 
 #### Which part the UI did you directly contribute to?
+  I mainly contributed ‘tag’ functionality, such as adding a new tag, removing a tag, and listing files filtered by a tag. Also, from the feedback, I developed several small functions to improve usability like autofocusing when a small window pops up, handling keyboard input like esc and enter, and so on.
 
 #### What were some of the difficulties you faced?
+  I had never used vue framework before. Also, I was not familiar with html and css things. So, I need some time to be familiar with those things we used for the project.
+  Also, It was so hard to determine how could we make this button much more visible or how could we make this list not to be like a button, and so on. There are a lot of things to decide in UI, but it was the first time for us to consider such a perceptional things, it was a bit hard to figuring out the proper solution.
 
 #### List one useful implementation skill you learned while working on DP5 and DP6.
+ Now I’m much familiar with ES6 javascript syntax, and usage of it. The most interesting I’ve learned was that every single element of Javascript is an object so that I could add whatever I want such as functions, variables, and so on, to the object.
+ I’d been much familiar with Bootstrap so that I could easily modify html file much more nicely and decent. I could search whatever CSS I would like to apply, such as proper font color and size, layout of elements, a design of button, and so on.
+ And I could utilize vue framework much better so that I could easily add some functionality with simple & compact codes, which doesn’t need to be copied & pasted a lot.
 
 ### Changje Jeong (20110846)
 
