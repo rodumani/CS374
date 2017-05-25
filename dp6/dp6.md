@@ -106,10 +106,13 @@ Other minor heuristic evaluations are not listed.
 ### Changje Jeong (20110846)
 
 #### Which part the UI did you directly contribute to?
+I directly contribute to Login view, Inbox/Sent list view, and Files tab's file grid. Also, I built the basic layout of our project, e.g. Side Navbar, Topbar.
 
 #### What were some of the difficulties you faced?
+Because we made it without server, making data structure and logics to work properly with shared firebase database was hard. 
 
 #### List one useful implementation skill you learned while working on DP5 and DP6.
+I have known firebase before the class but I haven't used it. I've learned how to use firebase database and hosting on firebase hosting. It was good opportunity to learn many features and limitations of firebase database. Especially, firebase hosting is much easier than I expected.
 
 ### Seongwon Lee (20150556)
 
