@@ -1,10 +1,10 @@
 <template>
   <div class="page container-fluid">
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-12">
+      <div class="sidebar">
         <Sidebar></Sidebar>
       </div>
-      <div class="col-md-9 col-sm-9 col-xs-12">
+      <div class="content">
         <div class="row">
           <div class="col-md-6 col-sm-6 search">
             <el-tooltip class="item" effect="dark" content="Not supported" placement="right">
@@ -84,5 +84,45 @@ export default {
   .logout button {
     margin-top: 5px;
     cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+    .sidebar {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+      flex-basis: 100%;
+    }
+    .content {
+      width: 100%;
+      display: block;
+      flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 1280px) and (min-width: 641px) {
+    .sidebar {
+      max-width: 300px;
+      width: 25%;
+    }
+    .content {
+      width: 75%;
+    }
+  }
+
+  @media (min-width: 1281px) {
+    .sidebar {
+      width: 300px;
+    }
+
+    .content {
+      width: calc(100% - 300px);
+    }
+  }
+  .sidebar,
+  .content {
+    padding: 0 15px;
+    min-height: 1px;
+    position: relative;
   }
 </style>

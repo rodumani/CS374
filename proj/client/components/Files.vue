@@ -221,6 +221,14 @@
     height: calc(100vh - 80px);
     padding-bottom: 40px;
   }
+  @media (max-width: 640px) {
+    .tags {
+      height: auto;
+    }
+    .files {
+      height: auto;
+    }
+  }
   li {
     list-style-type: none;
     width: 100%;
