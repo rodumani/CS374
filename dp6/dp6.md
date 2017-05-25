@@ -37,13 +37,13 @@ https://github.com/rodumani/CS374/tree/master/proj
 ### Lessons from heuristic evaluation
 1. No way to remove tags.
 - Similar feedback mentioned more than 5 times.
-- We added 'Hide' function to remove tag. also, we can hide files on Files.
+- We added 'Hide' function to remove tag. also, we can hide files on Files tab.
 2. Cannot handle very long tag.
 - mentioned three times.
 - We added length restriction on tag size. User cannot make tag with more than 20 characters.
 3. Because Sent mail and received mail is in one box. Mixed mail is uncomfortable.
 - mentioned three times.
-- We divied our mail box to Sent and Inbox(received mail).
+- We divided our mail box to Sent and Inbox(received mail).
 4. The date format is not easily readable to human. (ex. 2017-05-11T04:18:03.427Z)
 - mentioned three times.
 - We actually showed date with system status. To solve this, we used moment.js for display dates and times beautifully.
@@ -150,32 +150,32 @@ We thought it is reasonable and this makes a user confused. So we correct it. No
 > - I want to distinguish the files I got and the ones I sent. 
 > - Files: group by receiver not sender (sender is always same, maybe)
 
-Most students would like to classify files sent and files recieved. Now, we just sort it and people could check weather it is sent or recieved though then sender's email. We're going to add this new feature, distinguishing files sent or received, before the user test. 
+Most students would like to classify files sent and files received. Now, we just sort it and people could check whether it is sent or received through the sender's email. We're going to add this new feature, distinguishing files sent or received, before the user test. 
 
 > - Files: Date is not human-friendly format2. (done)
 
 We agreed, so we reflect it. 
 
 ### Removing Tags (done)
-> - In sent page, tags delete is impossible**
+> - In sent page, tags delete is impossible
 > - tag is not removable. I mean the tag categories, not tag on each mail.
 
 This must be implemented. Now you can remove the tag by clicking 'remove tag' button, which changes the state of the list of tag. You cannot undo the action right now. 
 
 ### Handling empty tag (done)
-> - There shouldn’t be ‘new tag’ drop down ui when there is no more tag to add.
+> - There shouldn’t be 'new tag' drop down ui when there is no more tag to add.
 > - always the empty option appears
-> - Should not allow “empty tag”
+> - Should not allow "empty tag"
 
-Actually it was a bug. Now, a user cannot add an empty tag and also, the system doesn't show any tagging options to files if there is no tag to add. 
+Actually it was a bug. Now, a user cannot add an empty tag and also, the system don't show any tagging options to files if there is no tag to add. 
 
 ### Problems with hiding a file (done)
 > - Hide = remove? I could not see the hidden files again after refreshing
 > - Can I redo hide?
-> - I can’t undo when i click the hide button. x 
+> - I can’t undo when I click the hide button. 
 > - What does that ‘hide’ mean? It seems like in ‘unclassified’ page, ‘hide’ means to hide it. However in ‘All’ page, ‘hide’ means delete? Oh.. I was just curios so clicked it, but my files are no longer shown in the other folder either.. I think that ‘hide’ is quite a dangerous operation. So maybe pop-up for caution will be helpful. 
 
-Actually, `hide` button does not delete the file. It just make it not showing on the list. But this makes a user feel that the file is removed, so we add 'hide' field to list up separately, and undoing 'hide' status for a file to be re-shown on the file lise. 
+Actually, `hide` button do not delete the file. It just make it to disappear on the list. But this makes a user feel that the file is removed, so we add 'hide' field to list up separately, and undoing 'hide' status for a file to be re-shown on the file list. 
 
 ### Several technical problem (done)
 > - If I click ‘send’ button 3 times, it’s actually sent 3 times..
@@ -183,19 +183,19 @@ Actually, `hide` button does not delete the file. It just make it not showing on
 > - Files: ‘New Tags’ form position is changed by # of tags.
 > - I can see files with tag in set box but the ‘files’ tab does not show any single file. 
 
-As we didn't handle exceptions clicking a butotn while waiting for a response, several problems are happened. So we handle them, and also, fix an layout bug.
+As we didn't handle exceptions clicking a butotn while waiting for a response, several problems were happened. So we handled them, and also, fixed an layout bug.
 
 
 ### Tagging a file when sending a mail
 > - If would be also great if I can ‘tag’ a file when I am sending a email. 
 
-We thought it is good idea so that We’re going to add this before the user test. 
+We thought it is a good idea so that We’re going to add this before the user test. 
 
 
 ### Tagging on Sent view (done)
 > - I want to add tag in the “Sent” box
 
-We thought it is important for usability, we implement it right away. 
+We thought it is important for usability, we implemented it right away. 
 
 ### Problem on testing 
 > - I need more ‘resources’ to test inbox function 
@@ -203,21 +203,21 @@ We thought it is important for usability, we implement it right away.
 For a user to experience this system, we have to add several default data including emails and dummy files. We're going to define what data should we put as default when developing a user test, and implement it before the testing. 
 
 
-### Left navbar is too large 
+### Left navbar is too large (done)
 > - Left navbar is too large. I think it might be better to adjust the width of it.
 
-Only one student always points out this problem. But out team doesn't think it is a big problem, so we have just left this problem.
+Because the width of navbar is proportional to the size of window, some people might feel the left navbar was so large when the window is the full screen size. So, we add css to restrict maximum width of navbar. 
 
 ### A file specific mail sent notification
 > - Send: notify what type of mail is sent. (ex. New Image Mail is Sent)
 
-It is actually cool idea as giving a user concrete feedback of what file was sent. But we're not sure we can handle this before the semester end. We're going to planning weather we implement this or not on DP8 period. 
+It is actually cool idea as giving a user concrete feedback of what file was sent. But we're not sure we can handle this before the semester end. We're going to planning whether we implement this or not on DP8 period. 
 
 ### Future work (which we will not implement on this semester)
 #### Drag and Drop feature. 
 > - In ‘files’ page, I want direct manipulation of the files. I know I can put tags, then they go to the corresponding folder. However, it’d be greater if I can just drag and drop. Also, it’d be nicer if I can drag multiple files at the same time, and drop them. 
 
-It is so hard to implement and not that important to testing our main features. Also, it is too much for the hi-fi prototpye. So we drop it for this semester and have left it as a future work.
+It is so hard to implement and not much important to test as our main features. Also, it is too much for the hi-fi prototpye. So we drop it for this semester and have left it as a future work.
 
 #### previewing the file
 > - The image should be able to preview right away, clicking to open a new tab to view is not very effective.
@@ -244,8 +244,13 @@ First, we're going to add this feature, but as the time and implementation issue
 Maybe, the pagination might be helpful for this problem. But we thought this problem is not that important for verifying our main feature and testing to user, so we're not going to implement this. 
 
 
-2. (TA) I wish that your prototype could use extension of files to classify the attached files.
-Extension is a good cue about what this file is. And we are going to add 'Adding tag automatically' function later in process. So, we can add tag about extension automatically before user test started. For example, 'hwp' tag will be added automatically on '*.hwp' file, or 'doc' tag on '*.doc' file.
+2. (TA)
+There were two feedbacks from TA, and both feedbacks were helpful to us. So we gonna implement both feedbacks on our prototype.
 
-3. (TA) In the sent page, if there are many sent emails, the user cannot distinguish which emails have attached files or not. It would be better to emphasis the attached file mark or use tags.
+> - I wish that your prototype could use extension of files to classify the attached files.
+
+Extension is a good cue about what this file is. And we are going to add 'Adding tag automatically' function later in process. So, we can add tag about extension automatically before user test started. For example, 'hwp' tag will be added automatically on '\*.hwp' file, or 'doc' tag on '\*.doc' file.
+
+> - In the sent page, if there are many sent emails, the user cannot distinguish which emails have attached files or not. It would be better to emphasis the attached file mark or use tags.
+
 There were clip mark for representing this mail has attachments, but it was too small so hard to recognize when there are many emails. So we largen the clip mark to emphasize it.
