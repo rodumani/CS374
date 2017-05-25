@@ -70,6 +70,7 @@ function welcomeMails (address) {
           filename: 'pintos.pdf',
           link: 'https://firebasestorage.googleapis.com/v0/b/cs374-32b99.appspot.com/o/pintos.pdf?alt=media&token=c9de8dce-96eb-4362-9720-df56b5f8ac4e',
           hide: false,
+          tags: {},
         },
       },
     },
@@ -97,14 +98,21 @@ export function getMails (address, callback) {
       return
     }
 
+    let isNewUser = true
     for (const key of Object.keys(mails.val())) {
       const value = mails.val()[key]
       value.key = key
       ret.push(value)
+
+      if (value.from.address === 'no-reply@nanomario.com') {
+        isNewUser = false
+      }
     }
     callback(ret)
 
-    welcome(address)
+    if (isNewUser) {
+      welcome(address)
+    }
   })
 }
 
