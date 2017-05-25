@@ -38,8 +38,8 @@
 <script>
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
-
-import { mapState } from 'vuex'
+import { getMails, getTags } from '../firebase'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -57,7 +57,21 @@ export default {
     onClickLogout () {
       this.$router.push('/login')
     },
+    ...mapActions([
+      'setMails',
+      'setLoading',
+      'setTags',
+    ]),
   },
+  mounted () {
+    getMails(this.account.address, (mails) => {
+      this.setMails(mails.reverse())
+      this.setLoading(false)
+    })
+    getTags(this.account.address, (tags) => {
+      this.setTags(tags.sort())
+    })
+  }
 }
 </script>
 

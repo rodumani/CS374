@@ -7,11 +7,11 @@
           <li :class="{active: currentTag == 'unclassified'}" @click="!tagStateRemove&&updateCurrentTag('unclassified')">Unclassified</li>
           <li :class="{active: currentTag == 'hidden'}" @click="updateCurrentTag('hidden')">Hidden</li>
           <template v-for="tag in tags">
-            <li v-if="!tagStateRemove" :class="{active: currentTag == tag.tag}" @click="updateCurrentTag(tag.tag)">
-              {{tag.tag}}
+            <li v-if="!tagStateRemove" :class="{active: currentTag == tag}" @click="updateCurrentTag(tag)">
+              {{tag}}
             </li>
             <li v-else :class="{active: false}" class="text-danger" @click="_removeTag(tag)">
-              {{tag.tag}} <i class="fa fa-minus text-danger"></i>
+              {{tag}} <i class="fa fa-minus text-danger"></i>
             </li>
           </template>
           <li class="add-new-tag">
@@ -30,12 +30,12 @@
               <div class="card-block">
                 <h5 class="card-title">
                   <a :href="file.link" target="_blank">
-                    {{file.name}}
+                    {{file.filename}}
                     <small><i class="fa fa-download hover fa-sm"></i></small>
                   </a>
                 </h5>
                 <div class="card-actions">
-                  <button v-if="!isHidden(file)" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
+                  <button v-if="!file.hide" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
                     hide
                   </button>
                   <button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="unhideFile(file.mail.key, 0, file.fileType)" v-else >
@@ -79,18 +79,17 @@
     computed: {
       filteredFiles () {
         return this.files.filter((file) => {
-          const isHidden = this.isHidden(file)
           if (this.currentTag === 'all') {
-            return !isHidden
+            return !file.hide
           } else if (this.currentTag === 'unclassified') {
-            return !isHidden && (!file.tags || file.tags.length === 0)
+            return !file.hide && (!file.tags || file.tags.length === 0)
           } else if (this.currentTag === 'hidden') {
-            return isHidden
+            return file.hide
           } else if (!file.tags) {
             return false
-          } else if (!isHidden) {
-            for (const tag of Object.values(file.tags)) {
-              if (tag.name === this.currentTag) {
+          } else if (!file.hide) {
+            for (const tag of Object.keys(file.tags)) {
+              if (tag === this.currentTag) {
                 return true
               }
             }
@@ -100,42 +99,22 @@
         })
       },
       ...mapState({
+        account: 'account',
         files: state => {
           const files = []
-          state.mails
-            .filter((mail) => mail.to === state.account.address || mail.from.address === state.account.address)
-            .forEach((mail) => {
-              if (!mail.attachments) return
-              for (const attachment of mail.attachments) {
-                if (mail.to === state.account.address) {
-                  files.push({
-                    name: attachment.filename,
-                    link: attachment.link,
-                    toHide: attachment.toHide,
-                    fromHide: attachment.fromHide,
-                    tags: attachment.tags,
-                    mail: mail,
-                    fileType: 'toFile',
-                  })
-                } else {
-                  files.push({
-                    name: attachment.filename,
-                    link: attachment.link,
-                    toHide: attachment.toHide,
-                    fromHide: attachment.fromHide,
-                    tags: attachment.tags,
-                    mail: mail,
-                    fileType: 'fromFile',
-                  })
-                }
-              }
-            })
+          state.mails.forEach((mail) => {
+            if (!mail.attachments) return
+            for (const attachment of mail.attachments) {
+              files.push({
+                ...attachment,
+                mail,
+              })
+            }
+          })
           return files
         },
         showingNewTag: state => state.showingNewTag,
-        tags: state => state.tags
-          .filter((t) => t.account === state.account.address)
-          .sort((a, b) => a.tag.localeCompare(b.tag)),
+        tags: state => state.tags.sort()
       }),
     },
     data () {
@@ -149,23 +128,16 @@
         this.currentTag = tag
       },
       async _removeTag (tag) {
-        await removeTag(tag)
-        const removeTarget = []
+        await removeTag(this.account.address, tag)
+
         // remove all the file tag from the files
         this.filteredFiles.forEach((file) => {
-          for (const tagObj of Object.values(file.tags)) {
-            if (tagObj.name === tag.tag) {
-              const obj = {}
-              obj.mailKey = file.mail.key
-              obj.attachmentIdx = 0
-              const keys = Object.keys(file.tags)
-              obj.tag = { key : keys[0] }
-              removeTarget.push(obj)
+          if (!file.tags) return
+          for (const t of Object.keys(file.tags)) {
+            if (t === tag) {
+              removeMailTag(this.account.address, file.mail.key, 0, tag)
             }
           }
-        })
-        removeTarget.forEach((target) => {
-          removeMailTag(target.mailKey, target.attachmentIdx, target.tag)
         })
       },
       onClickNewTag () {
@@ -174,12 +146,8 @@
       fDate (date) {
         return moment(date).calendar()
       },
-      ignoreClick ()
-      {
-        return
-      },
+      ignoreClick () {},
       onClickRemoveTag () {
-        console.log(this.tagStateRemove)
         this.tagStateRemove = !this.tagStateRemove
         this.updateCurrentTag("all")
       },
@@ -190,18 +158,11 @@
       fDate (date) {
         return moment(date).calendar()
       },
-      isHidden: function (file) {
-        if (file.fileType === 'fromFile') {
-          return file.fromHide
-        } else {
-          return file.toHide
-        }
-      },
       async hideFile (mailKey, idx, fileType) {
-        await hideFile(mailKey, idx, fileType)
+        await hideFile(this.account.address, mailKey, idx, fileType)
       },
       async unhideFile (mailKey, idx, fileType) {
-        await unhideFile(mailKey, idx, fileType)
+        await unhideFile(this.account.address, mailKey, idx, fileType)
       },
     },
   }

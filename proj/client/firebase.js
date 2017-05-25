@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+import * as md5 from 'md5'
 
 const app = firebase.initializeApp({
   apiKey: 'AIzaSyAIabkecMC8i0cJvE-3YrPWB816k_0fYEY',
@@ -9,8 +10,8 @@ const app = firebase.initializeApp({
   messagingSenderId: '771327049053',
 })
 
-export function getMails (callback) {
-  firebase.database().ref('/mails/').on('value', mails => {
+export function getMails (address, callback) {
+  firebase.database().ref(`/${md5(address)}/mails/`).on('value', mails => {
     const ret = []
     if (!mails.val()) {
       callback(ret)
@@ -28,8 +29,6 @@ export function getMails (callback) {
 
 /* eslint-disable max-params*/
 export async function pushMail (body, { address, name }, to, title, file) {
-  const mailsRef = firebase.database().ref('/mails/')
-  const newMailRef = mailsRef.push()
   const newMailData = {
     content: body,
     from: {
@@ -47,65 +46,52 @@ export async function pushMail (body, { address, name }, to, title, file) {
     const ext = s.pop()
     const fileKey = (new Date()).valueOf()
     const resp = await firebase.storage().ref(`/${s.join('.')}-${fileKey}.${ext}`).put(file)
-    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, toHide: false, fromHide: false })
+    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, hide: false })
   }
-  newMailRef.set(newMailData)
+
+  // Receiver Inbox
+  const receiverMailsRef = firebase.database().ref(`${md5(to)}/mails/`)
+  await receiverMailsRef.push(newMailData)
+
+  if (to !== address) {
+    // Sender Sent
+    const senderMailsRef = firebase.database().ref(`${md5(address)}/mails/`)
+    await senderMailsRef.push(newMailData)
+  }
 }
 /* eslint-enable */
 
-export function getTags (callback) {
-  firebase.database().ref('/tags/').on('value', tags => {
+export function getTags (address, callback) {
+  firebase.database().ref(`${md5(address)}/tags/`).on('value', tags => {
     if (!tags.val()) {
       callback([])
       return
     }
-    const ret = []
-    for (const key of Object.keys(tags.val())) {
-      const value = tags.val()[key]
-      value.key = key
-      ret.push(value)
-    }
-    callback(ret)
+    callback(Object.keys(tags.val()))
   })
 }
 
-export async function addTags (account, newTag) {
-  await firebase.database().ref('/tags/').push({
-    account,
-    tag: newTag,
-  })
+export async function addTags (address, tag) {
+  await firebase.database().ref(`/${md5(address)}/tags/${tag}`).set(true)
 }
-export async function removeTag (tagToRemove) {
-  console.log(tagToRemove.key)
-  await firebase.database().ref(`/tags/${tagToRemove.key}`).remove()
+export async function removeTag (address, tag) {
+  await firebase.database().ref(`/${md5(address)}/tags/${tag}`).remove()
 }
 
-export async function putTag (mailKey, attachmentIdx, tag) {
-  await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags`).push({
-    name: tag,
-  })
+export async function putTag (address, mailKey, attachmentIdx, tag) {
+  await firebase.database().ref(`/${md5(address)}/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag}`).set(true)
 }
 
-export async function removeMailTag (mailKey, attachmentIdx, tag) {
-  console.log(tag)
-  await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag.key}`).remove()
-  console.log('/mails/' + mailKey + '/attachments/' + attachmentIdx + '/tags/' + tag.key)
+export async function removeMailTag (address, mailKey, attachmentIdx, tag) {
+  await firebase.database().ref(`${md5(address)}/mails/${mailKey}/attachments/${attachmentIdx}/tags/${tag}`).remove()
 }
 
-export async function hideFile (mailKey, attachmentIdx, fileType) {
-  if (fileType === 'fromFile') {
-    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ fromHide: true })
-  } else {
-    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ toHide: true })
-  }
+export async function hideFile (address, mailKey, attachmentIdx) {
+  await firebase.database().ref(`${md5(address)}/mails/${mailKey}/attachments/${attachmentIdx}/hide`).set(true)
 }
 
-export async function unhideFile (mailKey, attachmentIdx, fileType) {
-  if (fileType === 'fromFile') {
-    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ fromHide: false })
-  } else {
-    await firebase.database().ref(`/mails/${mailKey}/attachments/${attachmentIdx}`).update({ toHide: false })
-  }
+export async function unhideFile (address, mailKey, attachmentIdx) {
+  await firebase.database().ref(`${md5(address)}/mails/${mailKey}/attachments/${attachmentIdx}/hide`).set(false)
 }
 
 export default app

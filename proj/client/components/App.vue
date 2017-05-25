@@ -5,27 +5,7 @@
 </template>
 
 <script>
-  import firebase, { getMails, getTags } from '../firebase'
-  import { mapActions } from 'vuex'
-
-  export default {
-    methods: {
-      ...mapActions([
-        'setMails',
-        'setLoading',
-        'setTags',
-      ]),
-    },
-    mounted () {
-      getMails((mails) => {
-        this.setMails(mails.reverse())
-        this.setLoading(false)
-      })
-      getTags((tags) => {
-        this.setTags(tags.sort())
-      })
-    },
-  }
+  export default {}
 </script>
 
 <style>

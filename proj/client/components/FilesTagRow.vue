@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="badge-wrapper" v-for="tag in sortedTags">
-      <el-tag :closable="true" @close="removeMailTag(tag)" color="#999999">{{tag.name}}</el-tag>
+      <el-tag :closable="true" @close="removeMailTag(tag)" color="#999999">{{tag}}</el-tag>
     </div>
     <div class="badge-wrapper" v-show="options.length > 0">
       <el-select class="new-tag"
@@ -13,9 +13,9 @@
                  @change="onChangeNewTag">
         <el-option
                 v-for="item in options"
-                :key="item.tag"
-                :label="item.tag"
-                :value="item.tag">
+                :key="item"
+                :label="item"
+                :value="item">
         </el-option>
       </el-select>
     </div>
@@ -36,20 +36,14 @@
     computed: {
       sortedTags () {
         return this.file.tags
-          ? Object.keys(this.file.tags).map((key) => {
-            return {
-              key,
-              ...this.file.tags[key],
-            }
-          })
-            .sort((a, b) => a.name.localeCompare(b.name))
+          ? Object.keys(this.file.tags).sort()
           : []
       },
       options () {
         return this.tags ? this.tags.filter((tag) => {
           if (!this.file.tags) {
             return true
-          } else if (Object.values(this.file.tags).map(t => t.name).includes(tag.tag)) {
+          } else if (Object.keys(this.file.tags).includes(tag)) {
             return false
           }
           return true
@@ -64,15 +58,15 @@
         if (this.newTag === '') {
           return
         }
-        await putTag(this.mailKey, this.idx, this.newTag)
-        if (!this.tags.map(t => t.tag).includes(this.newTag)) {
+        await putTag(this.account.address, this.mailKey, this.idx, this.newTag)
+        if (!this.tags.includes(this.newTag)) {
           await addTags(this.account.address, this.newTag.substring(0, 20))
         }
 
         this.newTag = ''
       },
       async removeMailTag (tag) {
-        await removeMailTag(this.mailKey, this.idx, tag)
+        await removeMailTag(this.account.address, this.mailKey, this.idx, tag)
       },
       ...mapActions([
         'setMails',
