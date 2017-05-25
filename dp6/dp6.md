@@ -65,31 +65,30 @@ Other minor heuristic evaluations are not listed.
 ### Representative screenshots
 ![login page](./login.JPG)
 - This is login page of our mail system. You can login with vaild email address format and your name.
-
+---
 ![inbox](./inbox.JPG)
 - If you login, you can see received files on Inbox tab. Also, you can check their is clip image, if there is attachment in mail.
-
+---
 ![Warning when you sending mail](./warn_no_attached_file.JPG)
 - Task 1 related screenshot.
 - When you send a new mail, if some keywords about attachment included in your mail body but  there is no attached files, we give a warning when you click `Send` Button.
-
+---
 ![Files](./files.JPG)
  - Task 2 related screenshot.
  - If you click Files tab, you can watch our mail system's distinct feature from other mail systems. We helps you to manage attached files with tags. All files that you sent of received are managed by tags. Items are ordered in recently sent/received files. Lab_schedule.doc in screenshot is what I sent in Task 1.
-
- ![Filtered files](./illidan.JPG)
+---
+ ![Filtered files](./CS101_HW1.png)
  - Task 2 related screenshot.
  - Also, you can filter files with tags. We hope this feature helps graduate students manage files easily when they work as TA, or when they have some special events.
- - CS101_HW1 으로 필터링 시켜줘야하는데 안돼서 아직 사진 없음.
-
+---
  ![Adding new tag](./new_tag.JPG)
  - Task 3 related screenshot.
  - If you click `Add new tag` button, you can add new tag. For preventing broken design, tag size is limited as 20 characters.
-
+---
  ![Lab seminar tag added](./tag_added.JPG)
  - Task 3 related screenshot.
  - Finally, you can add proper tag to file!
-
+---
  ![Mail body](./mail_body.JPG)
  - Also, you can check your tags on Inbox/Sent showing mail page.
 
