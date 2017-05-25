@@ -88,11 +88,13 @@
             return isHidden
           } else if (!file.tags) {
             return false
-          }
-          for (const tag of Object.values(file.tags)) {
-            console.log(this.currentTag)
-            console.log('isHidden: ', isHidden)
-            return !isHidden && (tag.name === this.currentTag)
+          } else if (!isHidden) {
+            for (const tag of Object.values(file.tags)) {
+              if (tag.name === this.currentTag) {
+                return true
+              }
+            }
+            return false
           }
           return false
         })
