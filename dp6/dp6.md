@@ -131,8 +131,10 @@ I have known firebase before the class but I haven't used it. I've learned how t
 
 #### Which part the UI did you directly contribute to?
 I mainly implemented the modal that showed when user click `New Mail` Button, and sending data to Firebase. and I implemented tag showing when user watch mail body.
+
 #### What were some of the difficulties you faced?
 Actually I almost novice to Vue.js and Firebase, it was hard to use these tools well. I faced so many errors, so it made my coding speed slow. But I was able to get a lot of help from our team members - Thanks to team members.
+
 #### List one useful implementation skill you learned while working on DP5 and DP6.
 Alert in bootstrap was different with alert in javascript. Actually alert in javascript was something like modal, but we implemented alert as a div with v-show(makes div showed when some condition matched). Maybe, alert with div would be proper to these days web. And I was able to know how to use Firebase, and it helped me a lot when I do pr3.
 
