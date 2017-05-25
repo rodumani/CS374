@@ -9,8 +9,8 @@ Graduate students who suffer problems about attaching files on mail system & hop
 
 ## Tasks
 1. Try to send email to Prof. Juho Kim(juhokim@kaist.ac.kr) without file, including '첨부', 'attach', or 'attachment' in mail body. After that, send maill after attach file.
-2. Find a list view of attached files, check all attachments, and filter CS101_HW related file only.
-3. Add a new tag named ‘Lab-Seminar’, and apply it to the file that you sent in first task.
+2. Find a card view of attached files, check all attachments, and filter CS101_HW1 related file only.
+3. Add a new tag named ‘Lab Seminar’, and apply it to the file that you sent in first task.
 
 ## Implementation Notes
 
@@ -63,7 +63,35 @@ https://github.com/rodumani/CS374/tree/master/proj
 Other minor heuristic evaluations are not listed.
 
 ### Representative screenshots
+![login page](./login.JPG)
+- This is login page of our mail system. You can login with vaild email address format and your name.
 
+![inbox](./inbox.JPG)
+- If you login, you can see received files on Inbox tab. Also, you can check their is clip image, if there is attachment in mail.
+
+![Warning when you sending mail](./warn_no_attached_file.JPG)
+- Task 1 related screenshot.
+- When you send a new mail, if some keywords about attachment included in your mail body but  there is no attached files, we give a warning when you click `Send` Button.
+
+![Files](./files.JPG)
+ - Task 2 related screenshot.
+ - If you click Files tab, you can watch our mail system's distinct feature from other mail systems. We helps you to manage attached files with tags. All files that you sent of received are managed by tags. Items are ordered in recently sent/received files. Lab_schedule.doc in screenshot is what I sent in Task 1.
+
+ ![Filtered files](./illidan.JPG)
+ - Task 2 related screenshot.
+ - Also, you can filter files with tags. We hope this feature helps graduate students manage files easily when they work as TA, or when they have some special events.
+ - CS101_HW1 으로 필터링 시켜줘야하는데 안돼서 아직 사진 없음.
+
+ ![Adding new tag](./new_tag.JPG)
+ - Task 3 related screenshot.
+ - If you click `Add new tag` button, you can add new tag. For preventing broken design, tag size is limited as 20 characters.
+
+ ![Lab seminar tag added](./tag_added.JPG)
+ - Task 3 related screenshot.
+ - Finally, you can add proper tag to file!
+
+ ![Mail body](./mail_body.JPG)
+ - Also, you can check your tags on Inbox/Sent showing mail page.
 
 ## Individual Reflections
 
@@ -86,10 +114,11 @@ Other minor heuristic evaluations are not listed.
 ### Seongwon Lee (20150556)
 
 #### Which part the UI did you directly contribute to?
-
+I mainly implemented the modal that showed when user click `New Mail` Button, and sending data to Firebase. and I implemented tag showing when user watch mail body.
 #### What were some of the difficulties you faced?
-
+Actually I almost novice to Vue.js and Firebase, it was hard to use these tools well. I faced so many errors, so it made my coding speed slow. But I was able to get a lot of help from our team members - Thanks to team members.
 #### List one useful implementation skill you learned while working on DP5 and DP6.
+Alert in bootstrap was different with alert in javascript. Actually alert in javascript was something like modal, but we implemented alert as a div with v-show(makes div showed when some condition matched). Maybe, alert with div would be proper to these days web. And I was able to know how to use Firebase, and it helped me a lot when I do pr3.
 
 ### Seungmin Lee (20150566)
 
