@@ -131,10 +131,14 @@ Alert in bootstrap was different with alert in javascript. Actually alert in jav
 ### Seungmin Lee (20150566)
 
 #### Which part the UI did you directly contribute to?
+I mainly contributed showing a mail's specifications and contents (ShowMail.vue), hiding an attached file in the Files tab, and preventing generation of a duplicated tag or an empty tag.
 
 #### What were some of the difficulties you faced?
+I used npm(node package manager) and vue.js for the first time. It takes a lot of time to study and understand about the usage and structure of them. I only have used database with tables. It was quite unfamiliar to use firebase database, which is a json form.
 
 #### List one useful implementation skill you learned while working on DP5 and DP6.
+By working on DP5 and DP6, I have known and used about lots of libraries such as Bootstrap, Font Awesome, element-ui, moment, vuex, vue-router and how to apply these libraries using npm install or putting in the html head tag. I think I can find and use new more libraries that I need at anytime.
+
 
 ## Studio Reflections
 1. (Students)
