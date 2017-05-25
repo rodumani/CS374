@@ -151,16 +151,15 @@ By working on DP5 and DP6, I have known and used about lots of libraries such as
 
 
 ## Studio Reflections
-1. (Students)
-There are a lot of reflections from students. We classified the reflections in several categories and determine how important they are. If the task is done, we wrote '(done)' sign on the right of the category title or the reflection item.
+1. (Students) There are a lot of reflections from students. We classified the reflections in several categories and determine how important they are. If the task is done, we wrote '(done)' sign on the right of the category title or the reflection item.
 
-### Notify the error (done)
+#### Notify the error (done)
 > - It’s already implemented and it’s working well. Please note the mail address please to check it.
 > - New Mail: form validation is not kind, please note why this field incorrect.
 
 We thought it is reasonable and this makes a user confused. So we correct it. Now, if user enters an email address wrong, the error message exactly notify user what was wrong.
 
-### Files
+#### Files
 > - I want to distinguish the files I got and the ones I sent. 
 > - Files: group by receiver not sender (sender is always same, maybe)
 
@@ -170,20 +169,20 @@ Most students would like to classify files sent and files received. Now, we just
 
 We agreed, so we reflect it. 
 
-### Removing Tags (done)
+#### Removing Tags (done)
 > - In sent page, tags delete is impossible
 > - tag is not removable. I mean the tag categories, not tag on each mail.
 
 This must be implemented. Now you can remove the tag by clicking 'remove tag' button, which changes the state of the list of tag. You cannot undo the action right now. 
 
-### Handling empty tag (done)
+#### Handling empty tag (done)
 > - There shouldn’t be 'new tag' drop down ui when there is no more tag to add.
 > - always the empty option appears
 > - Should not allow "empty tag"
 
 Actually it was a bug. Now, a user cannot add an empty tag and also, the system don't show any tagging options to files if there is no tag to add. 
 
-### Problems with hiding a file (done)
+#### Problems with hiding a file (done)
 > - Hide = remove? I could not see the hidden files again after refreshing
 > - Can I redo hide?
 > - I can’t undo when I click the hide button. 
@@ -191,7 +190,7 @@ Actually it was a bug. Now, a user cannot add an empty tag and also, the system 
 
 Actually, `hide` button do not delete the file. It just make it to disappear on the list. But this makes a user feel that the file is removed, so we add 'hide' field to list up separately, and undoing 'hide' status for a file to be re-shown on the file list. 
 
-### Several technical problem (done)
+#### Several technical problem (done)
 > - If I click ‘send’ button 3 times, it’s actually sent 3 times..
 >-  clearly there’s something wrong with the send button. First it doesnt disappear, furthermore, it sends multiple mails, which is not cool.
 > - Files: ‘New Tags’ form position is changed by # of tags.
@@ -200,55 +199,55 @@ Actually, `hide` button do not delete the file. It just make it to disappear on 
 As we didn't handle exceptions clicking a butotn while waiting for a response, several problems were happened. So we handled them, and also, fixed an layout bug.
 
 
-### Tagging a file when sending a mail
+#### Tagging a file when sending a mail
 > - If would be also great if I can ‘tag’ a file when I am sending a email. 
 
 We thought it is a good idea so that We’re going to add this before the user test. 
 
 
-### Tagging on Sent view (done)
+#### Tagging on Sent view (done)
 > - I want to add tag in the “Sent” box
 
 We thought it is important for usability, we implemented it right away. 
 
-### Problem on testing 
+#### Problem on testing 
 > - I need more ‘resources’ to test inbox function 
 
 For a user to experience this system, we have to add several default data including emails and dummy files. We're going to define what data should we put as default when developing a user test, and implement it before the testing. 
 
 
-### Left navbar is too large (done)
+#### Left navbar is too large (done)
 > - Left navbar is too large. I think it might be better to adjust the width of it.
 
 Because the width of navbar is proportional to the size of window, some people might feel the left navbar was so large when the window is the full screen size. So, we add css to restrict maximum width of navbar. 
 
-### A file specific mail sent notification
+#### A file specific mail sent notification
 > - Send: notify what type of mail is sent. (ex. New Image Mail is Sent)
 
 It is actually cool idea as giving a user concrete feedback of what file was sent. But we're not sure we can handle this before the semester end. We're going to planning whether we implement this or not on DP8 period. 
 
-### Future work (which we will not implement on this semester)
-#### Drag and Drop feature. 
+#### Future work (which we will not implement on this semester)
+##### Drag and Drop feature. 
 > - In ‘files’ page, I want direct manipulation of the files. I know I can put tags, then they go to the corresponding folder. However, it’d be greater if I can just drag and drop. Also, it’d be nicer if I can drag multiple files at the same time, and drop them. 
 
 It is so hard to implement and not much important to test as our main features. Also, it is too much for the hi-fi prototpye. So we drop it for this semester and have left it as a future work.
 
-#### previewing the file
+##### Previewing the file
 > - The image should be able to preview right away, clicking to open a new tab to view is not very effective.
 
 We thought it is too much for the prototype.
 
-#### Subtag
+##### Subtag
 > - Can we have ‘tag’ and ‘subtag’? for example files with CS374 tags may have subtags ‘DP1’ ‘DP2’… 
 
 Also, it is too much for our prototype. We don't have enough time to implement this, and it is hard to implement because we have to re-consider the system design to do so.
 
-#### searching
+##### Searching
 > - Search: can we choose some directory(Inbox, Sent, File) to search?
 
 First, we're going to add this feature, but as the time and implementation issue, we couldn't do it. To implement search functionality, we should design the 'search result' page and implement it, but we don't have much time to do them.
 
-#### Length of the list of the email. 
+##### Length of the list of the email. 
 > - IT WOULD BE A HUGE PROBLEM IF THERE ARE A LOT OF MAILS BECAUSE
  IF SO, THE NUMBER OF TAGS WOULD BE INCREADIBLY HUGE 
  (THAT IS THE REASON WHY WE DONT USUALLY SEE THIS FEATURE IN MAIL SYSTEMS, THEY USE SEACH INSTEAD)
@@ -258,8 +257,7 @@ First, we're going to add this feature, but as the time and implementation issue
 Maybe, the pagination might be helpful for this problem. But we thought this problem is not that important for verifying our main feature and testing to user, so we're not going to implement this. 
 
 
-2. (TA)
-There were two feedbacks from TA, and both feedbacks were helpful to us. So we gonna implement both feedbacks on our prototype.
+2. (TA) There were two feedbacks from TA, and both feedbacks were helpful to us. So we gonna implement both feedbacks on our prototype.
 
 > - I wish that your prototype could use extension of files to classify the attached files.
 
