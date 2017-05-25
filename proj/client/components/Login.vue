@@ -6,19 +6,23 @@
         <div class="form-group row">
           <label class="col-3 col-form-label" for="email">email</label>
           <div class="col-9">
-            <input type="email" id="email" name="email" :class="['form-control', {'has-error': errors.has('email')}]" placeholder="example@example.org" v-model="address" v-validate="'required|email'" autofocus/>
+            <input type="email" id="email" name="email" :class="['form-control', {'has-error': errors.has('email')}]"
+                   placeholder="example@example.org"
+                   v-model="address" v-validate="'required|email'" data-vv-delay="1000" autofocus/>
             <span v-show="errors.has('email')" class="pull-right is-danger">The email address is invaild.</span>
           </div>
         </div>
         <div class="form-group row">
           <label class="col-3 col-form-label" for="name">name</label>
           <div class="col-9">
-            <input :class="['form-control', {'has-error': errors.has('name')}]" type="text" id="name" name="name" v-model="name" placeholder="Gildong Hong" v-validate="'required'" />
+            <input :class="['form-control', {'has-error': errors.has('name')}]" type="text" id="name" name="name"
+                   v-model="name" placeholder="Gildong Hong"
+                   v-validate="'required'" data-vv-delay="1000" />
             <span v-show="errors.has('name')" class="pull-right is-danger">Name is required</span>
           </div>
         </div>
         <div class="form-group pull-right">
-          <button class="btn btn-primary" :disabled="errors.any()">Login</button>
+          <button class="btn btn-primary" :disabled="errors.any() || name.length === 0">Login</button>
         </div>
       </form>
     </div>
