@@ -8,7 +8,7 @@ const account = localStorage.getItem('account') ? JSON.parse(localStorage.getIte
 const store = {
   state: {
     showNewMail: false,
-    newAddress: "",
+    newAddress: '',
     showingNewTag: false,
     loading: true,
     mails: [],
@@ -22,7 +22,7 @@ const store = {
     },
     closeNewMail (state) {
       state.showNewMail = false
-      state.newAddress = ""
+      state.newAddress = ''
     },
     showNewTag (state) {
       state.showingNewTag = true

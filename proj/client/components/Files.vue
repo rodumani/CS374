@@ -148,22 +148,20 @@
       },
       async _removeTag (tag) {
         await removeTag(tag)
-        var removeTarget = []
+        const removeTarget = []
         // remove all the file tag from the files
         this.filteredFiles.forEach((file) => {
           for (const tagObj of Object.values(file.tags)) {
             if (tagObj.name === tag.tag) {
-              var obj = {}
+              const obj = {}
               obj.mailKey = file.mail.key
               obj.attachmentIdx = 0
-              var keys = Object.keys(file.tags)
-              console.log(keys)
-              obj.tag = {key : keys[0]}
+              const keys = Object.keys(file.tags)
+              obj.tag = { key : keys[0] }
               removeTarget.push(obj)
             }
           }
         })
-        console.log(removeTarget)
         removeTarget.forEach((target) => {
           removeMailTag(target.mailKey, target.attachmentIdx, target.tag)
         })
