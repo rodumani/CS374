@@ -38,7 +38,7 @@
 <script>
 import Sidebar from 'components/Sidebar'
 import NewMail from 'components/NewMail'
-import { getMails, getTags } from '../firebase'
+import { getMails, getTags, getFilters } from '../firebase'
 import { mapState, mapActions } from 'vuex'
 
 export default {
@@ -61,6 +61,7 @@ export default {
       'setMails',
       'setLoading',
       'setTags',
+      'setFilters',
     ]),
   },
   mounted () {
@@ -70,6 +71,9 @@ export default {
     })
     getTags(this.account.address, (tags) => {
       this.setTags(tags.sort())
+    })
+    getFilters(this.account.address, (filters) => {
+      this.setFilters(filters)
     })
   }
 }

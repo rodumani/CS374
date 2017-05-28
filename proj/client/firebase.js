@@ -87,6 +87,8 @@ function welcome (address) {
     // Put Welcome Mail
     firebase.database().ref(`/${md5(address)}/mails/${key}`).set(mails[key])
   }
+
+  firebase.database().ref(`/${md5(address)}/filters/`).push({ type: 'ext', value: true })
 }
 
 export function getMails (address, callback) {
@@ -136,8 +138,11 @@ export async function pushMail (body, { address, name }, to, title, file) {
     ext = s.pop()
     const fileKey = (new Date()).valueOf()
     const resp = await firebase.storage().ref(`/${s.join('.')}-${fileKey}.${ext}`).put(file)
-    const tags = {}
-    tags[ext] = true
+    let tags = {}
+
+    // Automatic Tags
+    const filters = await getFiltersOnce(to)
+    tags = applyTags(newMailData, filters, file, { ext, filename: file.name })
     newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, hide: false, tags })
   }
 
@@ -154,6 +159,42 @@ export async function pushMail (body, { address, name }, to, title, file) {
   }
 }
 /* eslint-enable */
+
+function applyTags (mail, filters, hasAttachment = false, { ext = null, filename = null }) {
+  const tags = {}
+  for (const filter of filters) {
+    switch (filter.type) {
+      case 'ext':
+        if (hasAttachment && filter.value) {
+          tags[ext] = true
+        }
+        break
+      case 'title':
+        if (mail.title && mail.title.includes(filter.value)) {
+          tags[filter.tag] = true
+        }
+        break
+      case 'sender':
+        if (mail.from.address.includes(filter.value)) {
+          tags[filter.tag] = true
+        }
+        break
+      case 'content':
+        if (mail.content.includes(filter.value)) {
+          tags[filter.tag] = true
+        }
+        break
+      case 'attachment_title':
+        if (hasAttachment && filename.includes(filter.value)) {
+          tags[filter.tag] = true
+        }
+        break
+      default:
+        break
+    }
+  }
+  return tags
+}
 
 export function getTags (address, callback) {
   firebase.database().ref(`${md5(address)}/tags/`).on('value', tags => {
@@ -186,6 +227,43 @@ export async function hideFile (address, mailKey, attachmentIdx) {
 
 export async function unhideFile (address, mailKey, attachmentIdx) {
   await firebase.database().ref(`${md5(address)}/mails/${mailKey}/attachments/${attachmentIdx}/hide`).set(false)
+}
+
+export async function getFiltersOnce (address) {
+  const resp = await firebase.database().ref(`${md5(address)}/filters/`).once('value')
+  const filters = resp.val()
+  const ret = []
+  for (const key of Object.keys(filters)) {
+    const value = filters[key]
+    value.key = key
+    ret.push(value)
+  }
+  return ret
+}
+
+export function getFilters (address, callback) {
+  firebase.database().ref(`${md5(address)}/filters/`).on('value', (resp) => {
+    if (!resp.val()) {
+      callback([])
+    } else {
+      const filters = resp.val()
+      const ret = []
+      for (const key of Object.keys(filters)) {
+        const value = filters[key]
+        value.key = key
+        ret.push(value)
+      }
+      callback(ret)
+    }
+  })
+}
+
+export async function removeFilter (address, key) {
+  await firebase.database().ref(`${md5(address)}/filters/${key}/`).remove()
+}
+
+export async function addFilter (address, filter) {
+  await firebase.database().ref(`${md5(address)}/filters/`).push(filter)
 }
 
 export default app
