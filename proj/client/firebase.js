@@ -150,6 +150,7 @@ export async function pushMail (body, { address, name }, to, title, file) {
     // Sender Sent
     const senderMailsRef = firebase.database().ref(`${md5(address)}/mails/`)
     await senderMailsRef.push(newMailData)
+    firebase.database().ref(`${md5(to)}/tags/${ext}`).set(true)
   }
 }
 /* eslint-enable */
