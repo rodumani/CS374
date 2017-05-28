@@ -6,23 +6,28 @@
         <div class="form-group row">
           <label class="col-3 col-form-label" for="email">email</label>
           <div class="col-9">
-            <input type="email" id="email" name="email" :class="['form-control', {'has-error': errors.has('email')}]"
-                   placeholder="example@example.org"
-                   v-model="address" v-validate="'required|email'" data-vv-delay="1000" autofocus/>
-            <span v-show="errors.has('email')" class="pull-right is-danger">The email address is invaild.</span>
+            <el-tooltip class="item" effect="dark" :content="errors.first('email')"
+                        placement="top" :value="errors.has('email')" manual>
+              <input type="email" id="email" name="email" :class="['form-control', {'has-error': errors.has('email')}]"
+                     placeholder="example@example.org"
+                     v-model="address" v-validate="'required|email'" data-vv-delay="1000" autofocus/>
+            </el-tooltip>
           </div>
         </div>
         <div class="form-group row">
           <label class="col-3 col-form-label" for="name">name</label>
           <div class="col-9">
-            <input :class="['form-control', {'has-error': errors.has('name')}]" type="text" id="name" name="name"
-                   v-model="name" placeholder="Gildong Hong"
-                   v-validate="'required'" data-vv-delay="1000" />
-            <span v-show="errors.has('name')" class="pull-right is-danger">Name is required</span>
+            <el-tooltip class="item" effect="dark" :content="errors.first('name')"
+                        placement="bottom" :value="errors.has('name')" manual>
+              <input :class="['form-control', {'has-error': errors.has('name')}]" type="text" id="name" name="name"
+                     v-model="name" placeholder="Gildong Hong"
+                     v-validate="'required'" data-vv-delay="1000" />
+            </el-tooltip>
           </div>
         </div>
         <div class="form-group pull-right">
-          <button class="btn btn-primary" :disabled="errors.any() || name.length === 0">Login</button>
+          <button :class="['btn', {'btn-primary': !errors.any(), 'btn-danger': errors.any()}]"
+                  :disabled="errors.any() || name.length === 0">Login</button>
         </div>
       </form>
     </div>
