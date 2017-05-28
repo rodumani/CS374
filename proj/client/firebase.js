@@ -129,18 +129,22 @@ export async function pushMail (body, { address, name }, to, title, file) {
     sent: (new Date()).toISOString(),
     attachments: [],
   }
+  let ext
   if (file) {
     // Upload to firebase storage
     const s = file.name.split('.')
-    const ext = s.pop()
+    ext = s.pop()
     const fileKey = (new Date()).valueOf()
     const resp = await firebase.storage().ref(`/${s.join('.')}-${fileKey}.${ext}`).put(file)
-    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, hide: false })
+    const tags = {}
+    tags[ext] = true
+    newMailData.attachments.push({ filename: file.name, link: resp.downloadURL, hide: false, tags })
   }
 
   // Receiver Inbox
   const receiverMailsRef = firebase.database().ref(`${md5(to)}/mails/`)
   await receiverMailsRef.push(newMailData)
+  firebase.database().ref(`${md5(to)}/tags/${ext}`).set(true)
 
   if (to !== address) {
     // Sender Sent
