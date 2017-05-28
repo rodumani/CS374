@@ -20,7 +20,7 @@
 			<div id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
         <div><b>Attachments</b></div>
 				<div class="filelist" v-for="file in mailitem.attachments">
-          <a :href="file.link" target="_blank">
+          <a :href="file.link" download>
             <button class="btn btn-outline-primary files">{{file.filename}}</button>
           </a>
           <files-tag-row :file="file" :tags="tags" :mailKey="mailitem.key" :idx="0"></files-tag-row>
