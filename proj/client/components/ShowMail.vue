@@ -14,7 +14,7 @@
           <span class="col-md-1"><b>Date</b></span><span class="col-md-7">{{time}}</span>
         </div>
         <hr align="left">
-        <div id="content"> {{mailitem.content}} </div>
+        <div id="content"> {{mailitem.content}} <span class="empty-mail" v-show="!mailitem.content">(This mail doesn't have any text.)</span></div>
       </div>
       <hr align="left">
 			<div id="attach" v-show="mailitem.attachments && mailitem.attachments.length > 0">
@@ -116,16 +116,11 @@
   .btn {
     cursor: pointer;
   }
-  .attachmentTags {
-    margin: 3px;
-
-    display: inline-block;
-    padding: 0 5px 0 0;
-  }
-  .row-tags {
-    padding: 0;
-  }
   .newMail {
     cursor: pointer;
+  }
+
+  .empty-mail {
+    color: darkgray;
   }
 </style>
