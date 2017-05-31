@@ -142,3 +142,20 @@ Team should prepare:
 
 ### Summary of session
   // TODO
+
+
+# Studio Reflections
+
+> Asking about privacy was good. it should be reflected to all user test, too.
+
+We stated our informed consent to every participants, and we carefully considered their privacy and other human rights.
+
+> Task includes research about how to manage files, but there is no questions about it.
+
+> Will your team use think aloud strategy?
+
+
+- 프라이버시에 대해서 이야기한거 좋았다. 그런거 모든 유저 태스트에 반영되어야 한다.
+- 테스크 부분/ 매니지 파일 하고 파일 찾고 이런게 있는데, 그런 테스크에 관련된 질문이 전혀 없다. 
+- think loud 전략을 쓸거냐?
+- 사실 잘 모르겠다. 소리를 녹음하는 이유는 녹화된 화면의 context를 조금 더 잘 이해하기 위함이기 때문에, 그런 방식을 취할지는 아직 잘 모르겠다.
