@@ -55,11 +55,91 @@ Team should prepare:
   Thank you for your precious time. (Finishing greetings, freely)
 
 
-# Testing: Session observations
-// TODO
+# Session observations
+  > We took pictures of each participant on their back when they are experiencing our system. However as we didn’t make any protocol to take a picture except for taking him/her on their back, the quality of the picture is extremely not consistent. Please understand.
 
-  Before running actual sessions, do a couple dry rehearsals within your team or with your friends. Carefully follow the protocol you have written up, and debug it. As you make observations, focus on usability issues and whether participants find the interface actually useful.
-  Reflection: Usability lessons
-  What did you learn about the usability of your interface? Revisit your interface design, tasks, personas, POV, and user needs, and review if any of them needs revision or additional work.
- 
- 
+## P1
+### Participant information
+  ![P1 Image](./participants/p1.jpeg)
+
+* Who? 
+  - Graduate school student of Civil & Environmental Engineering Department
+  - Mainly using KAIST Mail
+  - Never have TA experience
+
+* How did you recruit?
+  - Friend of Seongwon Lee
+* Why does she represent target users? 
+  - Because she is a graduate student.
+
+### Summary of session
+  // TODO
+  
+## P2
+### Participant information
+  ![P2 Image](./participants/p2.jpeg)
+
+* Who? 
+  - Graduate school student of Mechanical Engineering Department
+  - Mainly using Gmail. Forwarding KAIST Mail to Gmail.
+  - Never have TA experience
+
+* How did you recruit?
+  - Friend of SeungMin Lee
+* Why does he she represent target users? 
+  - Because he is a graduate student.
+
+### Summary of session
+  // TODO
+
+## P3
+### Participant information
+  ![P3 Image](./participants/p3.jpeg)
+
+* Who? 
+  - Graduate school student of Materials Science and Engineering Department
+  - Mainly using KAIST Mail
+  - Never have TA experience
+
+* How did you recruit?
+  - Friend of SeungMin Lee
+* Why does he represent target users? 
+  - Because he is a graduate student.
+
+### Summary of session
+  // TODO
+
+## P4
+### Participant information
+  ![P4 Image](./participants/p4.jpeg)
+
+* Who? 
+  - Graduate school student of Electrical Engineering Department
+  - Mainly using GMail
+  - Never have TA experience
+
+* How did you recruit?
+  - Friend of Seongwon Lee
+* Why does he represent target users? 
+  - Because he is a graduate student.
+
+### Summary of session
+  // TODO
+
+## P5
+### Participant information
+  ![P5 Image](./participants/p5.jpeg)
+
+* Who? 
+  - Graduate school student of Computer Science Department
+  - Ph.D candidate at [KAIST HCI Lab](http://hcil.kaist.ac.kr/)
+  - Mainly using GMail
+  - He has many TA experiences. He is currently working as CS206 Data Structure TA.
+
+* How did you recruit?
+  - Friend of Changje Jeong, Rohjoon Myung 
+* Why does he represent target users? 
+  - Because he is a graduate student.
+
+### Summary of session
+  // TODO
