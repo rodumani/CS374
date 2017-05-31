@@ -162,6 +162,59 @@ Team should prepare:
   - He found the file is disappeared after add first tag on a file if the file view is filtered by `unclassified` and it makes hard to add second tag.
   - He wanted to create a new tag on sent / inbox mail view.
 
+# Usability issue
+1. When there is no file on a new tag, which is created by a user, some people try to add a file on an empty tag-filtered page. (P1, P4)
+* High
+* We thought that this usability problem happend as a user were confused concepts between `folder` and `tag`. So, we're going to emphasize the `tag` functionality by adding `#` symbol, and so on, and re-test it.
+
+2. Many people did not understand what `hidden` button represents. (P1, P5)
+* High
+* We thought the word `hidden` is not appropriate. Actually, the functionality of `hidden` is exactly same as `archive` in mail system, and the name `archive` is much affordable. So, we're going to rename `hidden` to `archive`.  
+
+3. Many people try to add a new tag by typing on ‘drop down menu of selecting a new tag’ on each file cards. (P2, P5)
+* High
+* To improve usability, we have to add a new tag button or any functionality adding a new tag on the dropdown menu of showing tags.
+
+4. When people sent a new mail with a file, most people have had trouble finding the file they sent. (P3, P5)
+* High
+* First, we're going to show the sent mail when sending a new mail for a feedback of sending a mail. On the mail detail page, people could see what file they've sent and add a new tag on it. 
+* On the other hand, we thought as the list of tags is not properly arranged by their characteristics, people got in trouble when finding a file as they were confused which button to click on the files page. So we classify the basic buttons like 'Add', 'Unclassified', and other added tags and re-arrange them.  
+
+5. We cannot create a new tag on sent / inbox mail view. (P5)
+* High
+* Through the solution of #3, we could solve the problem #5 at the same time.
+
+6. There is no way to add a tag when writing or sending a mail. (P4, P5)
+* High
+* We are going to create a functionality of adding a tag when sending a new mail.
+
+7. Some people want to see the number of files each tag holds. (P1)
+* Mid
+* We thought this is not critical but if it does, it might be good for usability, so we would implement it.
+
+8. Most people expect to download the file by clicking the file-card, but it shows the preview on a new tab (P3, P4)
+* Low
+* It was a browser issue, and we thought it is not a big deal. To solve this problem, we should add some code for a browser not to show a preview of the file. We're going to implement this if we got some time. 
+
+9. Some people want to `star` to the important files. (P1)
+* Low
+* We thought it is not important to verify our main feature, managing a file with tags. But most people are familiar with 'archiving and starring email', we realize they afford to do it on the file list. So, if we have some more time after the iteration, we're going to implement this for the first time. 
+
+10. When adding 2 tags on a single file at the same time, if the file view is filtered by `unclassified`, the file is disappeared right after a new tag is added to it. (P5)
+* Low
+* It might be great if we delay the update and queuing the user action, and execute them at once! But the time cost to implement this might be so high that we're not going to solve this right now. If we have some more time after the iteration, then we're going to consider this to implement or not.
+ 
+ 
+
+## High-level reflections: 
+ <!--High-level reflections are thoughtful and insightful? -->
+1. What did you overall learn from the user testing experience?
+- There were a lot of exceptions when testing the system. Users' actions were always different from our expectations. 
+- 
+
+2. What would you do differently for better results and insights?
+- 
+
 
 # Studio Reflections
 
@@ -171,6 +224,8 @@ We stated our informed consent to every participants, and we carefully considere
 
 > Task includes research about how to manage files, but there is no questions about it.
 
+It was quite difficult to prepare task specific questions because every use might behaved differently. So, without making questions in advance, we wanted to get a deeper understanding of the user's actions and our task progression by asking directly when the user did something unique.
+
 > Will your team use think aloud strategy?
 
 We recorded sound but it was not for think aloud strategy but for understanding context of recorded screen. So we didn't use it.
@@ -178,4 +233,4 @@ We recorded sound but it was not for think aloud strategy but for understanding 
 # Plan for iteration
 
 // TODO
-You'll have an additional week to finalize your overall design process. Discuss in your team how to use this time most effectively, and make a few concrete goals. Justify your goals.
+<!--You'll have an additional week to finalize your overall design process. Discuss in your team how to use this time most effectively, and make a few concrete goals. Justify your goals.-->
