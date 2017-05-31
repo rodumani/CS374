@@ -9,7 +9,6 @@ Team should prepare:
 - Camera or smartphone to take a picture.
 - Team should open website with chrome before starting a test.
 
---- 
 ## Introduction and informed consent
 ### Introduction
   We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. They have some difficulties in handling many mail’s attachment at once. So we are going to give a solution which can help to reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
