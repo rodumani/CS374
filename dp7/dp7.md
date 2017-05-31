@@ -1,4 +1,5 @@
-# CS374 DP7 - Team NanoMario
+# CS374 - DP7
+### Team NanoMario
 
 # Planning: Written protocol
 ## Instructions for preparation and setting up the testing environment
@@ -154,3 +155,8 @@ We stated our informed consent to every participants, and we carefully considere
 > Will your team use think aloud strategy?
 
 We recorded sound but it was not for think aloud strategy but for understanding context of recorded screen. So we didn't use it.
+
+# Plan for iteration
+
+// TODO
+You'll have an additional week to finalize your overall design process. Discuss in your team how to use this time most effectively, and make a few concrete goals. Justify your goals.
