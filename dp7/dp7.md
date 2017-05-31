@@ -1,5 +1,4 @@
-# CS374 - DP7
-### Team NanoMario
+# CS374 DP7 - Team NanoMario
 
 # Planning: Written protocol
 ## Instructions for preparation and setting up the testing environment
