@@ -68,11 +68,15 @@ Team should prepare:
 
 * How did you recruit?
   - Friend of Seongwon Lee
+
 * Why does she represent target users? 
   - Because she is a graduate student.
 
 ### Summary of session
-  // TODO
+  - She successfully finished Task 1 and she said it is helpful feature.
+  - She didn't understand what "Hidden" is meaning.
+  - During task 3, she tried to add a file on an empty tag-filtered page("Lab Seminar" pag) which is created by a user.
+  - She had difficulty to use macOS especially switching Korean <-> English.
   
 ## P2
 ### Participant information
@@ -85,11 +89,14 @@ Team should prepare:
 
 * How did you recruit?
   - Friend of SeungMin Lee
+
 * Why does he she represent target users? 
   - Because he is a graduate student.
 
 ### Summary of session
-  // TODO
+  - He successfully finished Task 1.
+  - He tried to add a new tag on ‘drop down menu of selecting a new tag’ on each file cards.
+  - He had difficulty to use macOS especially changing Korean <-> English.
 
 ## P3
 ### Participant information
@@ -102,11 +109,14 @@ Team should prepare:
 
 * How did you recruit?
   - Friend of SeungMin Lee
+
 * Why does he represent target users? 
   - Because he is a graduate student.
 
 ### Summary of session
-  // TODO
+  - He successfully finished Task 1 and Task 2.
+  - He said he was confused on Task 3 because he misunderstood the task.
+  - He had difficulty to use macOS especially changing Korean <-> English.
 
 ## P4
 ### Participant information
@@ -119,11 +129,15 @@ Team should prepare:
 
 * How did you recruit?
   - Friend of Seongwon Lee
+
 * Why does he represent target users? 
   - Because he is a graduate student.
 
 ### Summary of session
-  // TODO
+  - He successfully finished Task 1 and Task 2.
+  - He visited to "Lab Seminar" tab before going to "All".
+  - During task 3, he tried to add a file on an empty tag-filtered page("Lab Seminar" pag) which is created by a user.
+  - He expects to download the file by clicking the file-card, but it shows the preview on a new tab
 
 ## P5
 ### Participant information
@@ -136,12 +150,17 @@ Team should prepare:
   - He has many TA experiences. He is currently working as CS206 Data Structure TA.
 
 * How did you recruit?
-  - Friend of Changje Jeong, Rohjoon Myung 
+  - Friend of Changje Jeong, Rohjoon Myung
+
 * Why does he represent target users? 
   - Because he is a graduate student.
 
 ### Summary of session
-  // TODO
+  - He successfully finished Task 1 and Task 2.
+  - He didn't understand what "Hidden" is meaning.
+  - He tried to add a new tag on ‘drop down menu of selecting a new tag’ on each file cards.
+  - He found the file is disappeared after add first tag on a file if the file view is filtered by `unclassified` and it makes hard to add second tag.
+  - He wanted to create a new tag on sent / inbox mail view.
 
 
 # Studio Reflections
