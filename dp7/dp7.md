@@ -38,25 +38,32 @@ Team should prepare:
 ## Task list & instruction:
   > We don’t need instruction because our system is similar with existing mail system, and we already give sufficient information about how to use our system on tutorial part.
 
-  1. Try to send email to Prof. Juho Kim(juhokim@kaist.ac.kr) without attachment. Please include words such as '첨부', 'attach', or 'attachment' in mail body. 
-  2. After trying without attachment, try it again with attachment.
-  3. Find a menu for exploring attachments. Check all attachments, and find CS101_HW1 related attachments only.
-  4. Add a new tag named ‘Lab Seminar’, and apply it to the file that you have sent on the first task. 
-  5. Feel free to use. Do whatever you want.
+  1. Try to send email to Prof. Juho Kim(juhokim@kaist.ac.kr) without attachment. Please include words such as '첨부', 'attach', or 'attachment' in mail body. After trying without attachment, try it again with attachment.
+  2. Find a menu for exploring attachments. Check all attachments, and find CS101_HW1 related attachments only.
+  3. Add a new tag named ‘Lab Seminar’, and apply it to the file that you have sent on the first task. 
+  4. Feel free to use. Do whatever you want.
 
 ## Recording strategy
-  We’re going to record the screen by Mac’s `QuickTime Player`, which could record the screen and the voice at the same time. 
+  We’re going to record the screen by Mac’s `QuickTime Player`, which could record the screen and the voice at the same time. Also, we take a photo of each participant, and write an insight from each participants during an interview.
 
 ## Questionnaires, Interview questions
+We asked 3 common questions to all users, and we asked task related questions to participants individually, as we expected everyone's task will be performed differently.
+
+### Common questions
   1. What do you think of the error message when an attachment is not on the mail sending a mail.
   2. What do you think of the ‘clip’ icon? What reminds you? Do you recognize it? 
   3. Is there any unnatural or unusual features?
+### Individual questions (most frequent things)
+  1. Why do you hesitate when applying a new tag? (P1, P3, P4)
+  2. What reminds you when you see 'hidden' button? (P1, P5)  
+  3. Why do you try to type in tag-list dropdown menu when creating a new tag? (P2, P5)
+
 
 ## Debrief prompt:
-  First, we should give a participant a great thank with smile.
-  Our project is to help graduate students deal with attachments more efficiently, one of the grievances of using email.
-  Thanks to you, I think we can improve our system in a better way.
-  Thank you for your precious time. (Finishing greetings, freely)
+  - First, we should give a participant a great thank with smile.
+  - Our project is to help graduate students deal with attachments more efficiently, one of the grievances of using email.
+  - Thanks to you, I think we can improve our system in a better way.
+  - Thank you for your precious time. (Finishing greetings, freely)
 
 
 # Session observations
