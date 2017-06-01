@@ -75,7 +75,7 @@ Team should prepare:
   - Friend of Seongwon Lee
 
 * Why does she represent target users? 
-  - Because she is a graduate student.
+  - Because she is a graduate student. She also mainly using mail system for sharing attachments with others.
 
 ### Summary of session
   - She successfully finished Task 1 and she said it is helpful feature.
@@ -95,8 +95,8 @@ Team should prepare:
 * How did you recruit?
   - Friend of SeungMin Lee
 
-* Why does he she represent target users? 
-  - Because he is a graduate student.
+* Why does he represent target users? 
+  - Because he is a graduate student. We interviewed him on dp1, and he only uses mail system when sharing files. 
 
 ### Summary of session
   - He successfully finished Task 1.
@@ -116,7 +116,7 @@ Team should prepare:
   - Friend of SeungMin Lee
 
 * Why does he represent target users? 
-  - Because he is a graduate student.
+  - He is a graduate student who uses a mail system only when sharing files. Also, we interviewed him on dp1 so that we expect him to give us more thought on our system.
 
 ### Summary of session
   - He successfully finished Task 1 and Task 2.
@@ -129,7 +129,7 @@ Team should prepare:
 
 * Who? 
   - Graduate school student of Electrical Engineering Department
-  - Mainly using GMail
+  - Mainly using Gmail
   - Never have TA experience
 
 * How did you recruit?
@@ -151,14 +151,14 @@ Team should prepare:
 * Who? 
   - Graduate school student of Computer Science Department
   - Ph.D candidate at [KAIST HCI Lab](http://hcil.kaist.ac.kr/)
-  - Mainly using GMail
+  - Mainly using Gmail
   - He has many TA experiences. He is working as CS206 Data Structure TA.
 
 * How did you recruit?
   - Friend of Changje Jeong, Rohjoon Myung
 
 * Why does he represent target users? 
-  - Because he is a graduate student.
+  - Because he is a graduate student. And he worked many years as TA, so he can provide different perspective.
 
 ### Summary of session
   - He successfully finished Task 1 and Task 2.
