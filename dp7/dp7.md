@@ -212,21 +212,21 @@ Team should prepare:
  
 
 ## High-level reflections: 
- <!--High-level reflections are thoughtful and insightful? -->
 1. What did you overall learn from the user testing experience?
 - There were a lot of exceptions when testing the system. Users' actions were always different from our expectations. 
-- 
+- Most people were not familiar with Mac interface. We learned that it is more important to provide an environment in which the user can easily test, rather than a good environment for us to test.
+- Recording the whole computer screen with voice was great. We could review each test so easily. We first wondered if we could not understand whether user clicked something or not, but the click sound was also recorded so that we could easily understand what user was doing.
 
 2. What would you do differently for better results and insights?
-- 
-
+- We would prepare window based notebook for a user to be much familiar with so that they could easily focus on the test itself. 
+- Users were smarter than we expected. We would test by making the task more difficult. We think that if we let the user consider more for the tasks, we could find more usability problems.
+- We would prepare some more advanced questions to discover more usability problems.
 
 # Studio Reflections
 
 > Asking about privacy was good. it should be reflected to all user test, too.
 
 We stated our informed consent to every participants, and we carefully considered their privacy and other human rights.
-
 > Task includes research about how to manage files, but there is no questions about it.
 
 It was quite difficult to prepare task specific questions because every use might behaved differently. So, without making questions in advance, we wanted to get a deeper understanding of the user's actions and our task progression by asking directly when the user did something unique.
@@ -246,5 +246,3 @@ We recorded sound but it was not for think aloud strategy but for understanding 
 2. After that, we are going to run another user tests until June 10th, to clarify whether our usability issues were solved or not. 
 3. Before the final presentation, we are going to fix bugs and other critical usability issues discovered on the iteration #1 and #2 (which are written above). 
 4. If we have some more time before the final presentation, we would solve low usability issues. 
-
-<!--You'll have an additional week to finalize your overall design process. Discuss in your team how to use this time most effectively, and make a few concrete goals. Justify your goals.-->
