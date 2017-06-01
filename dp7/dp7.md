@@ -2,17 +2,22 @@
 ### Team NanoMario
 
 # Planning: Written protocol
+
+We described our protocol in English on report, but our participants were all Korean, so we explained protocol in Korean language to participants. We tried hard to convey the same content as English. 
+
 ## Instructions for preparation and setting up the testing environment
 Valid website URL: https://cs374-32b99.firebaseapp.com
 
 Team should prepare:
 - The MacBook Pro (Retina, 13-inch, Mid 2014)
+  - For recording screen and voice. Use `QuickTime Player`.
 - Camera or smartphone to take a picture.
 - Team should open website with chrome before starting a test.
 
 ## Introduction and informed consent
 ### Introduction
   We want to give a better way to manage attachments to people who share files with e-mail. Especially, this service is for graduate students who have to send/receive mail with attachment. They have some difficulties in handling many mail’s attachment at once. So we are going to give a solution which can help to reduce mistakes in sending emails without attachments, and manage attachments easier with tagging.
+  
   When you start test, you can login with mail what you use in first page. But it is not a mail system that really works, so it won’t show mail what you sent in real mail system, or really send mail even you click ‘Send Mail’ button on our system. So, feel free to use our system. When you login our system, you can see three components on our left sidebar.
  
 ### Informed consent
