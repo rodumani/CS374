@@ -170,43 +170,63 @@ Team should prepare:
 # Usability issue
 1. When there is no file on a new tag, which is created by a user, some people try to add a file on an empty tag-filtered page. (P1, P4)
 * High
+* Related to Task 3
+* Learnability, Efficiency
 * We thought that this usability problem happened as a user were confused concepts between `folder` and `tag`. So, we're going to emphasize the `tag` functionality by adding `#` symbol, and so on, and re-test it.
 
 2. Many people did not understand what `hidden` button represents. (P1, P5)
 * High
+* Related to Task 2
+* Learnability
 * We thought the word `hidden` is not appropriate. Actually, the functionality of `hidden` is exactly same as `archive` in mail system, and the name `archive` is much affordable. So, we're going to rename `hidden` to `archive`.  
 
 3. Many people try to add a new tag by typing on ‘drop down menu of selecting a new tag’ on each file cards. (P2, P5)
 * High
+* Related to Task 3
+* Learnability, Efficiency
 * To improve usability, we have to add a new tag button or any functionality adding a new tag on the dropdown menu of showing tags.
 
-4. When people sent a new mail with a file, most people have had trouble finding the file they sent. (P3, P5)
+4. After people send a new mail with an attachment, most people have trouble with finding the attachment they sent. (P3, P5)
 * High
+* Related to Task 3
+* Learnability 
 * First, We are going to add a link to the sent mail at the toast("Your mail has been sent").
 * On the other hand, we thought the list of tags is not properly composed. Some users got in trouble to find a button to click to find a file at the files page during Task 3. So we'll recompose the default buttons (e.g. 'Add', 'Unclassified'), and other user-created tags.  
 
-5. We cannot create a new tag on sent / inbox mail view. (P5)
+5. Cannot create a new tag on sent / inbox mail view. (P5)
 * High
+* Related to Task 3
+* Efficiency
 * Through the solution of #3, we could solve the problem #5 at the same time.
 
 6. There is no way to add a tag when writing or sending a mail. (P4, P5)
 * High
+* New feature request
+* Efficiency
 * We are going to create a functionality of adding a tag when sending a new mail.
 
 7. Some people want to see the number of files each tag holds. (P1)
 * Mid
+* New feature request
+* Efficiency
 * We thought this is not critical but if it does, it might be good for usability, so we might implement it.
 
 8. Most people expect to download the file by clicking the file-card, but it shows the preview on a new tab (P3, P4)
 * Low
+* Related to Task 2
+* Efficiency
 * It was a browser issue, and we thought it is not a big deal. To solve this problem, we should add some code for a browser not to show a preview of the file. We're going to implement this if we got some time. 
 
 9. Some people want to `star` to the important files. (P1)
 * Low
+* New feature request
+* Efficiency
 * We thought it is not important to verify our main feature, managing a file with tags. But most people are familiar with 'archiving and starring email', we realize they afford to do it on the file list. So, if we have some more time after the iteration, we're going to implement this for the first time. 
 
-10. When adding 2 tags on a single file at the same time, if the file view is filtered by `unclassified`, the file is disappeared right after a new tag is added to it. (P5)
+10. The file is disappeared after adding first tag on a file if the file view is filtered by `unclassified` and it makes hard to add second tag. (P5)
 * Low
+* Related to Task 3
+* Efficiency
 * It might be great if we delay the update and queuing the user action, and execute them at once! But the time cost to implement this might be so high that we're not going to solve this right now. If we have some more time after the iteration, then we're going to consider this to implement or not.
  
  
