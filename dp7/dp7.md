@@ -236,6 +236,15 @@ It was quite difficult to prepare task specific questions because every use migh
 We recorded sound but it was not for think aloud strategy but for understanding context of recorded screen. So we didn't use it.
 
 # Plan for iteration
+## Goal
+1. We would solve the high and mid usability issues.
+2. We sould verify our solutions by running another user tests. 
+3. There would be no bugs and functionalities not intended by us.
 
-// TODO
+## Plan
+1. First, we are going to implement solutions to resolve high and mid usability issues discovered on the user test, which is explained on `Usability issue` part, until June 8th.
+2. After that, we are going to run another user tests until June 10th, to clarify whether our usability issues were solved or not. 
+3. Before the final presentation, we are going to fix bugs and other critical usability issues discovered on the iteration #1 and #2 (which are written above). 
+4. If we have some more time before the final presentation, we would solve low usability issues. 
+
 <!--You'll have an additional week to finalize your overall design process. Discuss in your team how to use this time most effectively, and make a few concrete goals. Justify your goals.-->
