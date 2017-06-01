@@ -21,14 +21,14 @@ Team should prepare:
   When you start test, you can login with mail what you use in first page. But it is not a mail system that really works, so it won’t show mail what you sent in real mail system, or really send mail even you click ‘Send Mail’ button on our system. So, feel free to use our system. When you login our system, you can see three components on our left sidebar.
  
 ### Informed consent
-  1.  We are going to record the video of the computer screen and the audio using computer mic while you are using our service.
+  1. We are going to record the video of the computer screen and the audio using computer mic while you are using our service.
   2. We might take pictures at the back of you while using our service, but it WILL NOT INCLUDE any personal information of you.
   3. We are going to give some questions during and after the testing and we’ll write down the answers.
   4. Keep in mind that we’re testing the computer system. We’re not testing you.
   5. The system is likely to have problems in it that make it hard to use. We need your help to find those problems.
   6. Your test results will be completely confidential.
   7. You can stop the test and leave at any time.
-  8. you should ask “Do you have any questions I can answer before we begin?” Try to answer any questions the user has. 
+  8. If you have any questions before we begin, please ask us.
 
 ## Tutorial or training
   > Because our system is similar with existing mail system, we may not need a tutorial. But if a user don’t understand what is going on, then we are going to explain the system detail less than 1 minute.
@@ -45,12 +45,12 @@ Team should prepare:
   5. Feel free to use. Do whatever you want.
 
 ## Recording strategy
-  We’re going to record the whole screen by Mac’s `QuickTime Player`, which could record the screen and the voice at the same time. 
+  We’re going to record the screen by Mac’s `QuickTime Player`, which could record the screen and the voice at the same time. 
 
 ## Questionnaires, Interview questions
   1. What do you think of the error message when an attachment is not on the mail sending a mail.
-  2. What do you think of ‘clip’ icon? What reminds you? Do you recognize it? 
-  3. Was there any unnatural or unusual features?
+  2. What do you think of the ‘clip’ icon? What reminds you? Do you recognize it? 
+  3. Is there any unnatural or unusual features?
 
 ## Debrief prompt:
   First, we should give a participant a great thank with smile.
@@ -80,7 +80,7 @@ Team should prepare:
 ### Summary of session
   - She successfully finished Task 1 and she said it is helpful feature.
   - She didn't understand what "Hidden" is meaning.
-  - During task 3, she tried to add a file on an empty tag-filtered page("Lab Seminar" pag) which is created by a user.
+  - During task 3, she tried to add a file on an empty tag-filtered page("Lab Seminar" page) which is created by a user.
   - She had difficulty to use macOS especially switching Korean <-> English.
   
 ## P2
@@ -152,7 +152,7 @@ Team should prepare:
   - Graduate school student of Computer Science Department
   - Ph.D candidate at [KAIST HCI Lab](http://hcil.kaist.ac.kr/)
   - Mainly using GMail
-  - He has many TA experiences. He is currently working as CS206 Data Structure TA.
+  - He has many TA experiences. He is working as CS206 Data Structure TA.
 
 * How did you recruit?
   - Friend of Changje Jeong, Rohjoon Myung
@@ -164,13 +164,13 @@ Team should prepare:
   - He successfully finished Task 1 and Task 2.
   - He didn't understand what "Hidden" is meaning.
   - He tried to add a new tag on ‘drop down menu of selecting a new tag’ on each file cards.
-  - He found the file is disappeared after add first tag on a file if the file view is filtered by `unclassified` and it makes hard to add second tag.
+  - He found the file is disappeared after adding first tag on a file if the file view is filtered by `unclassified` and it makes hard to add second tag.
   - He wanted to create a new tag on sent / inbox mail view.
 
 # Usability issue
 1. When there is no file on a new tag, which is created by a user, some people try to add a file on an empty tag-filtered page. (P1, P4)
 * High
-* We thought that this usability problem happend as a user were confused concepts between `folder` and `tag`. So, we're going to emphasize the `tag` functionality by adding `#` symbol, and so on, and re-test it.
+* We thought that this usability problem happened as a user were confused concepts between `folder` and `tag`. So, we're going to emphasize the `tag` functionality by adding `#` symbol, and so on, and re-test it.
 
 2. Many people did not understand what `hidden` button represents. (P1, P5)
 * High
@@ -182,8 +182,8 @@ Team should prepare:
 
 4. When people sent a new mail with a file, most people have had trouble finding the file they sent. (P3, P5)
 * High
-* First, we're going to show the sent mail when sending a new mail for a feedback of sending a mail. On the mail detail page, people could see what file they've sent and add a new tag on it. 
-* On the other hand, we thought as the list of tags is not properly arranged by their characteristics, people got in trouble when finding a file as they were confused which button to click on the files page. So we classify the basic buttons like 'Add', 'Unclassified', and other added tags and re-arrange them.  
+* First, We are going to add a link to the sent mail at the toast("Your mail has been sent").
+* On the other hand, we thought the list of tags is not properly composed. Some users got in trouble to find a button to click to find a file at the files page during Task 3. So we'll recompose the default buttons (e.g. 'Add', 'Unclassified'), and other user-created tags.  
 
 5. We cannot create a new tag on sent / inbox mail view. (P5)
 * High
@@ -195,7 +195,7 @@ Team should prepare:
 
 7. Some people want to see the number of files each tag holds. (P1)
 * Mid
-* We thought this is not critical but if it does, it might be good for usability, so we would implement it.
+* We thought this is not critical but if it does, it might be good for usability, so we might implement it.
 
 8. Most people expect to download the file by clicking the file-card, but it shows the preview on a new tab (P3, P4)
 * Low
