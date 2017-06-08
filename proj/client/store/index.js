@@ -11,6 +11,7 @@ const store = {
     newAddress: '',
     showingNewTag: false,
     loading: true,
+    showAllTag : true,
     mails: [],
     tags: [],
     filters: [],
@@ -48,6 +49,14 @@ const store = {
     setLoading (state, loading) {
       state.loading = loading
     },
+    changeAllTag (state) {
+      if (state.showAllTag == true) {
+        state.showAllTag = false
+      }
+      else {
+        state.showAllTag = true
+      }
+    }
   },
   actions: {
     showNewMail ({ commit }, newAddress) {
@@ -76,6 +85,9 @@ const store = {
     },
     setLoading ({ commit }, loading) {
       commit('setLoading', loading)
+    },
+    changeAllTag ({ commit }) {
+      commit('changeAllTag')
     },
   },
 }
