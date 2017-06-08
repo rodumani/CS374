@@ -233,6 +233,9 @@ export async function getFiltersOnce (address) {
   const resp = await firebase.database().ref(`${md5(address)}/filters/`).once('value')
   const filters = resp.val()
   const ret = []
+  if (!filters) {
+    return ret;
+  }
   for (const key of Object.keys(filters)) {
     const value = filters[key]
     value.key = key
