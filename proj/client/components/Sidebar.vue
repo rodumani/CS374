@@ -17,6 +17,9 @@
         <router-link tag="li" active-class="active" to="/files">
           Files
         </router-link>
+        <router-link tag="li" active-class="active" to="/settings">
+          Settings
+        </router-link>
       </ul>
     </nav>
   </div>

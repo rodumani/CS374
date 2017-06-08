@@ -5,6 +5,7 @@ import Files from '../components/Files'
 import ShowMail from '../components/ShowMail'
 import Login from '../components/Login'
 import store from '../store/index'
+import Settings from '../components/Settings'
 
 Vue.use(Router)
 
@@ -16,6 +17,7 @@ const router = new Router({
     { path: '/inbox', component: Inbox, props: { type: 'Inbox' }},
     { path: '/sent', component: Inbox, props: { type: 'Sent' }},
     { path: '/files', component: Files },
+    { path: '/settings', component: Settings },
     { path: '/inbox/:mailid', component: ShowMail },
     { path: '/sent/:mailid', component: ShowMail },
   ],
