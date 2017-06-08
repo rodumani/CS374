@@ -35,7 +35,8 @@ For (2), it could be things you've already accomplished since user testing or pl
 - During the additional user test held on the iteration period, we found another new bug. A user could not send a mail to un-registered users, i.e. a user who had never used our program. So we've fix it.
 ### New features
 - TODO : 새로 만든 기능들에 대해서 적어야 할듯. 그 유저빌리티 이슈 수정하기 위한 것. 이건 월요일에 마무리 정리합시다.
-
+1. Auto tagging
+A user could create a condition and a tag to add if the condition matches.
 
 ## What did you learn?
 - 뭘 배웠니?
