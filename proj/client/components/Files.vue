@@ -34,7 +34,7 @@
 						<div class="card">
 							<div class="card-block">
 								<h5 class="card-title">
-									<a :href="file.link" target="_blank">
+									<a :href="file.link" download>
 										{{file.filename}}
 										<small><i class="fa fa-download hover fa-sm"></i></small>
 									</a>
