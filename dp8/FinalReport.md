@@ -1,11 +1,20 @@
-# CS374 - DP7
+# CS374 - DP8
 ### Team NanoMario
 
 # Studio Presentation
-(1) Summarize findings from your user testing
+1. Summarize findings from your user testing
+- Many people tried to add a file at the new tag page which is empty.
+- Many people did not understand what hidden button represents.
+- Many people try to add a new tag by typing on ‘drop down menu of selecting a new tag’ on each file cards.
 
-(2) report progress on your iteration. 
-For (2), it could be things you've already accomplished since user testing or plan to cover. Your studiomates and TA will provide feedback on how you might most effectively use the last week for the best outcome.
+2. Report progress on your iteration. 
+
+- Our goal was to fix existing bugs, and to implement new features from user testing feedbacks.
+- We had fixed several bugs found on the user test.
+- We took another user test to verify our prototype again.
+- We tried to implement new features to resolve usability issue found on the user test period.
+
+<!--For (2), it could be things you've already accomplished since user testing or plan to cover. Your studiomates and TA will provide feedback on how you might most effectively use the last week for the best outcome.-->
 
 # Final Presenation
 ## What part of the design process you want to convey to the audience
@@ -31,12 +40,25 @@ For (2), it could be things you've already accomplished since user testing or pl
 
 ## What changes did you make? Show concrete examples and data whenever applicable.
 ### Bug Fix
-- TODO : 고친 버그 목록 담기.
-- During the additional user test held on the iteration period, we found another new bug. A user could not send a mail to un-registered users, i.e. a user who had never used our program. So we've fix it.
+1. File is not downloaded
+
+We fixed it so that now it starts downloading files on `files` page when a user clicks a file card.
+
+2. When a sender tags a file, `file view` of a receiver also has a tag but there is no tag list. (이거 창제가 구현했던건데 정확한 내용이 뭐더라..)
+
+
+3. A user could not send a mail to un-registered users, i.e. a user who had never used our program.
+
+This bug was found during the additional user test held on the iteration period.  So we've fix it.
+
+
 ### New features
 - TODO : 새로 만든 기능들에 대해서 적어야 할듯. 그 유저빌리티 이슈 수정하기 위한 것. 이건 월요일에 마무리 정리합시다.
 1. Auto tagging
+
 A user could create a condition and a tag to add if the condition matches.
+
+2. 
 
 ## What did you learn?
 - 뭘 배웠니?
@@ -47,21 +69,32 @@ A user could create a condition and a tag to add if the condition matches.
 -  
 
 # Individual reflection
-Each member should write this part on their own, reflecting on their personal experience. Merge all members' mini-reports in the final report. Please answer the following questions:
-## What part of the UI implementation did you contribute to?
-
-## What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
-
-## Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
-
-
-
-# Individual reflection
 ## Rohjoon Myung (20090336)
+1. What part of the UI implementation did you contribute to?
+
+2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
+
+3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
+
 
 ## Changje Jeong (20110846)
+1. What part of the UI implementation did you contribute to?
+
+2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
+
+3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
 
 ## Seongwon Lee (20150556)
+1. What part of the UI implementation did you contribute to?
+
+2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
+
+3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
 
 ## Seungmin Lee (20150566)
 
+1. What part of the UI implementation did you contribute to?
+
+2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
+
+3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
