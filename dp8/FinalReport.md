@@ -80,9 +80,21 @@
 ## Rohjoon Myung (20090336)
 1. What part of the UI implementation did you contribute to?
 
+- Adding a tag to a file.
+- Remiving a tag 
+- Handling keyboard input
+
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
 
+- The teamwork was really great. Every meeting was done very efficent so that we had never been spending whole night to write a report or prepare something.
+- Luckly, everything was fine. Sometimes one of team members was sick or tired. Then we all understood his health and let him rest. He worked really well after getting better. 
+- For a good teamwork, understand and trust each other is the most important thing. We trusted each other, so we let him rest when he was sick or tired, as we knew that he will be better and do his work well on next time. 
+
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
+
+- I learned the importance and power of prototype. Before we dived into the design process, I wondered how a paper prototype would work, and the paper prototype works really well. Through that, I found that a good prototype does not need to be well-crafted, but it  needs to have a clear features we want to test.
+- For a web-based GUI implementation, technically I learned CSS / HTML / Firebase-db. Also I learned there are a lot of libraries for a programmer to make a web very delicate and well-formed, such as Bootstrap. 
+
 
 ## Changje Jeong (20110846)
 1. What part of the UI implementation did you contribute to?
