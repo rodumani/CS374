@@ -61,13 +61,15 @@
 - TODO : 새로 만든 기능들에 대해서 적어야 할듯. 그 유저빌리티 이슈 수정하기 위한 것. 이건 월요일에 마무리 정리합시다.
 1. Auto tagging
 
-A user could create a condition and a tag to add if the condition matches.
+- A user could create a condition and a tag to add if the condition matches.
 
 2. Notify user that mail body is empty
 
-Actually, this feature is not related with our Point of View and HMW things. But for the improved usability experience on using prototype, we add this functionality.
+- Actually, this feature is not related with our Point of View and HMW things. But for the improved usability experience on using prototype, we add this functionality.
 
 3. Automatic tagging with file extension
+
+- A user could manage their files with file extensions. A system adds a tag to each files with its file extension automatically. 
 
 
 ## 3-3. What did you learn? (from the iteration)
