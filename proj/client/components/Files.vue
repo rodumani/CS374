@@ -13,7 +13,7 @@
 						<li v-if="!tagStateRemove" :class="{active: currentTag == tag}" @click="updateCurrentTag(tag)">&nbsp;&nbsp;&nbsp;# {{tag}}
 						</li>
 						<li v-else :class="{active: false}" class="text-danger" @click="_removeTag(tag)">
-							{{tag}} <i class="fa fa-minus text-danger"></i>
+							&nbsp;&nbsp;&nbsp;# {{tag}} <i class="fa fa-minus text-danger"></i>
 						</li>
 					</template>
 					<li :class="{active: currentTag == 'hidden'}" @click="updateCurrentTag('hidden')">
