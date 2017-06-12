@@ -25,9 +25,12 @@
 
 - `UI screenshots or walkthrough` part might be the most exciting and strongest, because Many of the prototype's features are designed to meet user needs and address a variety of usability issues.
 
+# 3. Video
+You could watch our video in [here](https://www.youtube.com/watch?v=UbCikJJBA-A&feature=youtu.be). 
 
-# 3. Iteration
-## 3-1. How did you spend the DP8 period for iteration? Why?
+
+# 4. Iteration
+## 4-1. How did you spend the DP8 period for iteration? Why?
 1.  We fixed several bugs found on DP7 period. 
     
 - To make our prototype running smoothly, we had to fix bugs. To finalize our prototype, we fixed bugs. 
@@ -42,7 +45,7 @@
 
 4. We could not implement rest of the issues becuase we don't have much time to prepare the final exams.
 
-## 3-2. What changes did you make? Show concrete examples and data whenever applicable.
+## 4-2. What changes did you make? Show concrete examples and data whenever applicable.
 ### Bug Fix
 1. File was not downloaded but showed on a new chrome tab
 
@@ -71,12 +74,12 @@
 - A user could manage their files with file extensions. A system adds a tag to each files with its file extension automatically. 
 
 
-## 3-3. What did you learn? (from the iteration)
+## 4-3. What did you learn? (from the iteration)
 - We learned what the true design process is! By fixing several usability issues and doing a user test again, our team fully understood a design Process based on making a prototype, testing to users, finding usability issues, which is included in iteration process.
 - The more we repeated the Iteration process, the better the quality of the prototype.
 - It is always difficult to finalize.
 
-# 4. Individual reflection
+# 5. Individual reflection
 ## Rohjoon Myung (20090336)
 1. What part of the UI implementation did you contribute to?
 
