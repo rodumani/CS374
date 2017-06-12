@@ -2,12 +2,12 @@
 ### Team NanoMario
 
 # 1. Studio Presentation
-1-1. Summarize findings from your user testing
+## 1-1. Summarize findings from your user testing
 - Many people tried to add a file at the new tag page which is empty.
 - Many people did not understand what hidden button represents.
 - Many people try to add a new tag by typing on ‘drop down menu of selecting a new tag’ on each file cards.
 
-1-2. Report progress on your iteration. 
+## 1-2. Report progress on your iteration. 
 
 - Our goal was to fix existing bugs, and to implement new features from user testing feedbacks.
 - We had fixed several bugs found on the user test.
@@ -46,13 +46,15 @@
 ### Bug Fix
 1. File was not downloaded but showed on a new chrome tab
 
-Most people afforded to download the file when click the files. We fixed it so that now it starts downloading files on `files` page when a user clicks a file card.
+- Most people afforded to download the file when click the files. We fixed it so that now it starts downloading files on `files` page when a user clicks a file card.
 
-2. When a sender tags a file, `file view` of a receiver also has a tag but there is no tag list. (이거 창제가 구현했던건데 정확한 내용이 뭐더라..)
+2. When a sender tags a file, on a receiver's view, the file has a tag, which is not expected.
+
+- We modified a tag to be managed separately for each user.
 
 3. A user could not send a mail to un-registered users, i.e. a user who had never used our program.
 
-This bug was found during the additional user test held on the iteration period.  So we've fix it.
+- This bug was found during the additional user test held on the iteration period.  So we've fix it.
 
 
 ### New features
