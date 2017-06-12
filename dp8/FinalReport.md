@@ -84,13 +84,13 @@ You could watch our video in [here](https://www.youtube.com/watch?v=UbCikJJBA-A&
 1. What part of the UI implementation did you contribute to?
 
 - Adding a tag to a file.
-- Remiving a tag 
+- Removing a tag 
 - Handling keyboard input
 
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
 
 - The teamwork was really great. Every meeting was done very efficent so that we had never been spending whole night to write a report or prepare something.
-- Luckly, everything was fine. Sometimes one of team members was sick or tired. Then we all understood his health and let him rest. He worked really well after getting better. 
+- Luckily, everything was fine. Sometimes one of team members was sick or tired. Then we all understood his health and let him rest. He worked really well after getting better. 
 - For a good teamwork, understand and trust each other is the most important thing. We trusted each other, so we let him rest when he was sick or tired, as we knew that he will be better and do his work well on next time. 
 
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
@@ -108,10 +108,19 @@ You could watch our video in [here](https://www.youtube.com/watch?v=UbCikJJBA-A&
 
 ## Seongwon Lee (20150556)
 1. What part of the UI implementation did you contribute to?
+- I mainly implemented the modal that showed when user click `New Mail` Button. Also I managed sending it's data to Firebase.
+- I implemented tag showing when user watch mail body.
 
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
+- Luckily I met really good teammates, so I got many helps from them. I was able to get much inspiration from teammates, and learned how to coding frontend. We actively exchanged opinions and it were very positive for our team.
+- But we used more and more times for DP as time goes by. Maybe our team was able to manage time more efficient. Long group meetings made us tired. To solve this, we used much time with teammates - not for preparing HCI DP or making prototype, but for playing together! We went to karaoke, or ate meal together. This has made our relationship stronger and made the schedule more bearable.
+- Using private time with team members can strengthen team's power. Also, sharing ideas actively with teammates is really important for making better result. So, talking much time with teammates about anything - for team works, or for private things - is important.
+
 
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
+- I learned user testing part is really important. Even if the UI has been carefully designed, it can be inconvenient to use. It can't be watched by developer's eye, but only by user. So, it is much better to make UI a little bit better than to create a complete UI at once. It is much more efficient!
+- I was almost novice to Vue.js and Firebase and other frameworks. But thanks to teammates, I got many helps from them and learned how to use them. Also, I used the Bootstrap for the first time and learned how to implement alert with a div tag. In addition, I have been introduced to several useful libraries like Moment.js.
+
 
 
 ## Seungmin Lee (20150566)
