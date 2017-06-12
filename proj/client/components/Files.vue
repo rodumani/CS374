@@ -17,7 +17,7 @@
 						</li>
 					</template>
 					<li :class="{active: currentTag == 'hidden'}" @click="updateCurrentTag('hidden')">
-						Hidden
+						Archived
 					</li>
 					<li class="add-new-tag">
 						<button class="btn btn-outline-primary btn-new-mail" @click="onClickNewTag"><i class="fa fa-plus"></i> Add new tag</button>
@@ -41,10 +41,10 @@
 								</h5>
 								<div class="card-actions">
 									<button v-if="!file.hide" class="btn btn-link btn-sm btn-hide" @click.prevent.stop="hideFile(file.mail.key, 0, file.fileType)">
-										hide
+										archive
 									</button>
 									<button class="btn btn-link btn-sm btn-hide" @click.prevent.stop="unhideFile(file.mail.key, 0, file.fileType)" v-else >
-										unhide
+										un-archive
 									</button>
 								</div>
 								<p class="card-text">
