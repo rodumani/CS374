@@ -146,13 +146,11 @@ I've learned how to get solutions from an abstract idea. At the beginning of the
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
 
 - Very luckily, all of team members were great and our team performed the best every time. Every team members participated in the project enthusiastically, and I really appreciate the efforts of our team memebers. We handled works very efficiently by dividing up and assigning the works to do.
-- Because our team usually met at night, sometimes we were tired and exhausted. We overcame this problem by working in pairs.
+- Because our team usually met at night, sometimes we were tired and exhausted. We overcame this problem by working in pairs, which is very effective method of work because it encourages each other and easily corrects missed parts.
 - By doing the CS374 team project, I learned that communicating with team members, dividing and assigning work are very important in team projects. Also, I learned that working in pairs is a really good idea.
 
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
 
-- 
-- 
-By working on DP5 and DP6, I have known and used about lots of libraries such as Bootstrap, Font Awesome, element-ui, moment, vuex, vue-router and how to apply these libraries using npm install or putting in the html head tag. I think I can find and use new more libraries that I need at anytime.
-
+- At the beginning step of the design process, I had a lot of curiosity about the process itself. However, through the process, I realized that every step of the design process is very meaningful and necessary. I learned that making prototype, especially for making paper protoype, works very well and even effectively, efficiently. From now on, I'll gonna make paper prototype first before implementing my idea. Also, I learned that user testing is very much informative and always gives helpful feedback.
+- It was the first time for me to focus on web-based GUI implementation. Through the team project, I learned lots of frontend libraries such as Bootstrap, Font Awesome, element-ui, moment, vuex, vue-router, and how to apply these libraries by using npm or putting in the html head tag.
 
