@@ -102,9 +102,21 @@ You could watch our video in [here](https://www.youtube.com/watch?v=UbCikJJBA-A&
 ## Changje Jeong (20110846)
 1. What part of the UI implementation did you contribute to?
 
+- Login
+- Inbox / Sent mails list
+- Files tab file grid
+- Automatic Tagging
+- Base layouts : SideNavbar, Topbar
+
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
 
+Our team worked very well on every iterations. I think it's because our team has become friendly. I already know Rohjoon for 6 years, and SeungMin and Seongwon have been friend even before CS374 team project. As we leanred at early CS374 class, it made us as psychologically safe.
+I tried to adopt Vue.js and some other modern web development frameworks to our team but this could have been difficult to other teammates. Although it's complexity, thank to our teammates who have succesfully learned and finished design project. Because our team are all from Computer Science department, it was hard to make our prototype more pretty (although it's not the main point of design project, I wanted to make it more pretty). 
+I've learned becoming close with teammates is really important. I think it's important to be able to say "I have a problem". If any of teammates have problem, but if he(she) doesn't share about it to team, it can slow the team down.
+
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
+
+I've learned how to get solutions from an abstract idea. At the beginning of the design project, I didn't expect we would make this kind of product. During user interviews, implementations, and user testings, our ideas became concrete and useful solutions. About web-based GUI implementation, I've learned the most of users are accusstomed to use complex functionality of web app and they expected similar functionalities from our prototype. Because there are a lot of high quality web applications nowadays, users usage patterns are also be changed during few years.
 
 ## Seongwon Lee (20150556)
 1. What part of the UI implementation did you contribute to?
