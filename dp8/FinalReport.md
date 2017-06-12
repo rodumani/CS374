@@ -40,9 +40,9 @@
 
 ## What changes did you make? Show concrete examples and data whenever applicable.
 ### Bug Fix
-1. File is not downloaded
+1. File was not downloaded but showed on a new chrome tab
 
-We fixed it so that now it starts downloading files on `files` page when a user clicks a file card.
+Most people afforded to download the file when click the files. We fixed it so that now it starts downloading files on `files` page when a user clicks a file card.
 
 2. When a sender tags a file, `file view` of a receiver also has a tag but there is no tag list. (이거 창제가 구현했던건데 정확한 내용이 뭐더라..)
 
@@ -58,15 +58,22 @@ This bug was found during the additional user test held on the iteration period.
 
 A user could create a condition and a tag to add if the condition matches.
 
-2. 
+2. Notify user that mail body is empty
 
-## What did you learn?
+Actually, this feature is not related with our Point of View and HMW things. But for the improved usability experience on using prototype, we add this functionality.
+
+3. Automatic tagging with file extension
+
+
+## What did you learn? (from the iteration)
 - 뭘 배웠니?
 - 서래 고기는 맛있다.
 - 성원이는 잠을 잘잔다.
 - 수업이 매우 알차서 주변에 강추해야겠다.
-- We learned what true design process is! By fixing several usability issues and doing a user test, our team fully understood a design Process based on making a prototype, testing to users, finding usability issues, and do some iterations 
--  
+- We learned what the true design process is! By fixing several usability issues and doing a user test again, our team fully understood a design Process based on making a prototype, testing to users, finding usability issues, which is included in iteration process.
+- As an iteration process repeated, the quality of prototype is getting better.
+- TODO : 더 없나.
+
 
 # Individual reflection
 ## Rohjoon Myung (20090336)
