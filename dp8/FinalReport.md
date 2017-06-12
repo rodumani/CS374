@@ -26,7 +26,7 @@
 - `UI screenshots or walkthrough` part might be the most exciting and strongest, because Many of the prototype's features are designed to meet user needs and address a variety of usability issues.
 
 # 3. Video
-You could watch our video in [here](https://www.youtube.com/watch?v=UbCikJJBA-A&feature=youtu.be). 
+You could watch our video in [here](https://www.youtube.com/watch?v=5jWhazmm_C8&feature=youtu.be).
 
 
 # 4. Iteration
