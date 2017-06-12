@@ -72,14 +72,9 @@
 
 
 ## 3-3. What did you learn? (from the iteration)
-- 뭘 배웠니?
-- 서래 고기는 맛있다.
-- 성원이는 잠을 잘잔다.
-- 수업이 매우 알차서 주변에 강추해야겠다.
 - We learned what the true design process is! By fixing several usability issues and doing a user test again, our team fully understood a design Process based on making a prototype, testing to users, finding usability issues, which is included in iteration process.
-- As an iteration process repeated, the quality of prototype is getting better.
-- TODO : 더 없나.
-
+- The more we repeated the Iteration process, the better the quality of the prototype.
+- It is always difficult to finalize.
 
 # 4. Individual reflection
 ## Rohjoon Myung (20090336)
