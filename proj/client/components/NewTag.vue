@@ -55,7 +55,7 @@
     },
     methods: {
       async onClickAdd () {
-        var tagAlready = this.tags.filter((item)=> item.tag == this.newTagName)
+        var tagAlready = this.tags.filter((item) => item == this.newTagName)
         if (tagAlready.length > 0) {
           this.alert = true
           this.alertMessage = 'The tag "' + this.newTagName + '" already exists!'

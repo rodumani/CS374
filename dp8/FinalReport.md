@@ -135,9 +135,24 @@ I've learned how to get solutions from an abstract idea. At the beginning of the
 
 
 
-## Seungmin Lee (20150566)
+## SeungMin Lee (20150566)
 1. What part of the UI implementation did you contribute to?
+
+- showing a mail's specifications and contents (ShowMail.vue)
+- archiving an attached file in the Files tab
+- preventing generation of a duplicated tag or an empty tag
+- adding hierarchy and `#` icon to the tag list
 
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
 
+- Very luckily, all of team members were great and our team performed the best every time. Every team members participated in the project enthusiastically, and I really appreciate the efforts of our team memebers. We handled works very efficiently by dividing up and assigning the works to do.
+- Because our team usually met at night, sometimes we were tired and exhausted. We overcame this problem by working in pairs.
+- By doing the CS374 team project, I learned that communicating with team members, dividing and assigning work are very important in team projects. Also, I learned that working in pairs is a really good idea.
+
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
+
+- 
+- 
+By working on DP5 and DP6, I have known and used about lots of libraries such as Bootstrap, Font Awesome, element-ui, moment, vuex, vue-router and how to apply these libraries using npm install or putting in the html head tag. I think I can find and use new more libraries that I need at anytime.
+
+
