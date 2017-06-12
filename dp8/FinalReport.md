@@ -83,7 +83,6 @@ Actually, this feature is not related with our Point of View and HMW things. But
 
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
 
-
 ## Changje Jeong (20110846)
 1. What part of the UI implementation did you contribute to?
 
@@ -98,8 +97,8 @@ Actually, this feature is not related with our Point of View and HMW things. But
 
 3. Throughout the team-based design project experience, what did you learn about the user-centered design process and web-based GUI implementation?
 
-## Seungmin Lee (20150566)
 
+## Seungmin Lee (20150566)
 1. What part of the UI implementation did you contribute to?
 
 2. What worked well and not in your team? How did you overcome any hurdle in teamwork? What lesson about teamwork did you learn that you might apply to your next team project?
